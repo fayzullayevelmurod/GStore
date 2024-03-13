@@ -29,10 +29,30 @@ input[type="search"]::-webkit-search-results-decoration {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[48px] rounded-xl flex items-center relative transition-all duration-200;
 }
 
+.btn:hover {
+	@apply bg-slate-800
+}
+
+.btn-light {
+	@apply flex items-center space-x-2 text-sm font-medium leading-3.5 text-slate-900 duration-200 bg-slate-100 px-4 py-[14px] rounded-xl
+}
+
+.btn-light:hover {
+	@apply bg-slate-900 text-white
+}
+
+.btn-light:hover svg path {
+	@apply fill-white
+}
+
 .btn.focus,
 .btn:focus {
 	box-shadow: none;
 	outline: 0px;
+}
+
+.hover-svg:hover svg path {
+	@apply fill-white;
 }
 
 .menu-btn>div>span {
@@ -50,7 +70,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .menu-box:hover>svg>path {
-	fill: #fff;
+	@apply fill-white;
 }
 
 /* swiper */
@@ -67,4 +87,21 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	@apply opacity-100
+}
+
+/* products */
+.products-cards {
+	@apply flex justify-between gap-[15px] flex-wrap;
+}
+
+.products-cards>div {
+	@apply max-w-[232px] w-full flex-1
+}
+
+.product-btn.active {
+	@apply bg-transparent border-slate-900 text-slate-900
+}
+
+.product-btn__icon.active {
+	/* @apply w-[25px] h-[25px] */
 }
