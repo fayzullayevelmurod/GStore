@@ -2075,7 +2075,7 @@ input {
     width: 12px;
   }
 
-  .slider-img {
+  .slide-box .slider-img {
     width: 10px !important;
     display: none;
   }
@@ -2182,6 +2182,10 @@ input {
 
   .xs\:flex {
     display: flex;
+  }
+
+  .xs\:hidden {
+    display: none;
   }
 
   .xs\:h-12 {

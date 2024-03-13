@@ -368,7 +368,7 @@ input {
 		@apply w-[12px] h-[11px];
 	}
 
-	.slider-img {
+	.slide-box .slider-img {
 		width: 10px !important;
 		display: none;
 	}
