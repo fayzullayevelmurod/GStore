@@ -26,7 +26,7 @@
 			<div class="header-top bg-slate-100 py-2">
 				<div class="container">
 					<div class="flex justify-between">
-						<div class="flex gap-8">
+						<div class="sm:flex gap-8 hidden">
 							<a class="flex items-center gap-[10px] info-text" href="#!">
 								<img src="src/images/icons/location.svg" alt="location icon" width="11" height="13">
 								Москва
@@ -36,7 +36,7 @@
 								Мы принимаем оплату в криптовалюте
 							</a>
 						</div>
-						<div class="flex gap-8">
+						<div class="flex gap-8 sm:w-auto w-full sm:justify-start justify-between">
 							<a class="flex items-center gap-[10px] info-text" href="#!">
 								<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt icon" width="12" height="10">
 								1 USDT = 91,87 ₽
@@ -51,14 +51,22 @@
 			</div>
 
 			<div class="container">
-				<div class="flex items-end justify-between mt-4 mb-6">
-					<div class="flex items-end">
-						<a href="#!">
-							<img src="src/images/icons/company-logo.svg" alt="company-logo" width="172" height="56">
-						</a>
-						<div class="flex ml-9 gap-3">
-							<button class="menu-btn btn space-x-3">
-								<span>Каталог</span>
+				<div class="relative flex xs:flex-wrap gap-y-3 gap-2 items-end justify-between mt-4 mb-6">
+					<div
+						class="flex sm:flex-row flex-col  gap-y-4 sm:items-end lg:w-auto xs:w-full w-fit lg:justify-start justify-between">
+						<div class="sm:block flex items-end justify-between">
+							<a href="#!">
+								<img class="xs:w-auto xs:h-auto w-[94px] h-[30px]" src="src/images/icons/company-logo.svg"
+									alt="company-logo" width="172" height="56">
+							</a>
+							<a class="sm:hidden flex items-center gap-[10px] info-text absolute bottom-[56px] right-0" href="#!">
+								<img src="src/images/icons/location.svg" alt="location icon" width="16" height="16">
+								Кременчуг-Константиновское
+							</a>
+						</div>
+						<div class="flex sm:ml-9 xs:gap-3 gap-2 w-fit">
+							<button class="menu-btn btn xs:space-x-3">
+								<span class="xs:block hidden">Каталог</span>
 								<div class="space-y-1 px-[3.42px] py-[6.75px]">
 									<span class="bg-white relative w-[13.17px] h-[1.5px] rounded-sm block"></span>
 									<span class="bg-white relative w-[13.17px] h-[1.5px] rounded-sm block"></span>
@@ -66,7 +74,7 @@
 							</button>
 							<div class="relative">
 								<input type="search" placeholder="Найти"
-									class="w-[348px] h-[48px] px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
+									class="xs:w-[348px] max-w-[190px]  xs:h-12 h-10 px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
 								<button class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd"
@@ -81,11 +89,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex items-center gap-3">
+					<div class="flex items-center xs:gap-3 gap-2 lg:w-auto xs:w-full w-fit lg:justify-start justify-between">
 						<div class="relative group">
 							<input class="hidden dark-mode__btn" type="checkbox" id="darkMode">
 							<label for="darkMode"
-								class="group text-black menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl duration-200">
+								class="group text-black menu-box cursor-pointer xs:w-12 xs:h-12 w-10 h-10 flex flex-col items-center justify-center bg-slate-100 rounded-xl duration-200">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 									stroke="currentColor" class="moon-icon w-6 h-6">
 									<path stroke-linecap="round" stroke-linejoin="round"
@@ -100,7 +108,7 @@
 							</label>
 						</div>
 						<div
-							class="relative menu-box group cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="relative menu-box group cursor-pointer w-12 h-12 xs:flex hidden flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M9.90165 1.80976C10.0374 2.13839 10.0914 2.52506 10.0914 2.93342V8.18342H11.9164C12.593 8.18342 13.3746 8.3901 13.6937 9.0966C14.0129 9.80331 13.6504 10.525 13.2038 11.0297C13.2035 11.03 13.2032 11.0304 13.2029 11.0307L6.89607 18.1956C6.6263 18.5019 6.33024 18.7564 6.01159 18.9136C5.68976 19.0723 5.28648 19.1566 4.88095 19.0043C4.47501 18.8519 4.22685 18.5227 4.08955 18.1904C3.95376 17.8618 3.89977 17.4751 3.89977 17.0667V11.8168H2.07477C1.40293 11.8168 0.623657 11.6125 0.304157 10.9076C-0.0145855 10.2044 0.342607 9.48296 0.783354 8.97515L0.786784 8.97119L7.09513 1.80454C7.36491 1.49831 7.66096 1.24372 7.97961 1.08656C8.30144 0.92783 8.70472 0.843605 9.11025 0.995852C9.51619 1.14825 9.76436 1.4775 9.90165 1.80976ZM8.22087 2.79586C8.2208 2.79593 8.22094 2.79578 8.22087 2.79586L1.91457 9.96022C1.79596 10.0972 1.73551 10.2025 1.70679 10.271C1.77678 10.2937 1.89501 10.3168 2.07477 10.3168H4.64977C5.06398 10.3168 5.39977 10.6525 5.39977 11.0668V17.0667C5.39977 17.2674 5.41907 17.4122 5.44261 17.5109C5.52597 17.4522 5.63683 17.3558 5.77013 17.2045L12.0785 10.0379L12.08 10.0361C12.199 9.90175 12.2601 9.79792 12.2893 9.73031C12.2186 9.70701 12.0988 9.68342 11.9164 9.68342H9.34143C8.92722 9.68342 8.59143 9.34763 8.59143 8.93342V2.93342C8.59143 2.7328 8.57213 2.58798 8.54859 2.4893C8.46523 2.54798 8.35418 2.64457 8.22087 2.79586ZM5.49588 17.658C5.49588 17.658 5.49562 17.6577 5.49513 17.6569L5.49588 17.658Z"
@@ -116,7 +124,7 @@
 							</div>
 						</div>
 						<div
-							class="menu-box group relative cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="menu-box group relative cursor-pointer w-12 h-12 xs:flex hidden flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M0.546961 2.07078C1.21959 0.86401 2.51566 0.041748 4.00121 0.041748H11.5012C11.8464 0.041748 12.1262 0.32157 12.1262 0.666748V9.00008C12.1262 10.2619 11.0964 11.2917 9.83455 11.2917H9.00121C8.65603 11.2917 8.37621 11.0119 8.37621 10.6667C8.37621 10.3216 8.65603 10.0417 9.00121 10.0417H9.83455C10.406 10.0417 10.8762 9.57157 10.8762 9.00008V1.29175H4.00121C2.98676 1.29175 2.09952 1.8528 1.63881 2.67936C1.47076 2.98086 1.09011 3.08905 0.7886 2.921C0.487094 2.75294 0.378908 2.37229 0.546961 2.07078Z"
@@ -153,7 +161,7 @@
 							</div>
 						</div>
 						<div
-							class="relative group menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="relative group menu-box cursor-pointer w-12 h-12 xs:flex hidden flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M9.99984 2.4165C5.81168 2.4165 2.4165 5.81168 2.4165 9.99984C2.4165 14.188 5.81168 17.5832 9.99984 17.5832C14.188 17.5832 17.5832 14.188 17.5832 9.99984C17.5832 5.81168 14.188 2.4165 9.99984 2.4165ZM0.916504 9.99984C0.916504 4.98325 4.98325 0.916504 9.99984 0.916504C15.0164 0.916504 19.0832 4.98325 19.0832 9.99984C19.0832 15.0164 15.0164 19.0832 9.99984 19.0832C4.98325 19.0832 0.916504 15.0164 0.916504 9.99984Z"
@@ -177,9 +185,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="w-[1px] h-6 bg-slate-200"></div>
+						<div class="w-[1px] h-6 bg-slate-200 xs:block hidden"></div>
 						<div
-							class="menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="menu-box cursor-pointer w-12 h-12 xs:flex hidden flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -187,7 +195,7 @@
 							</svg>
 						</div>
 						<div
-							class="relative menu-box group cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="relative menu-box group cursor-pointer w-12 h-12 xs:flex hidden flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M10.0016 2.41675C8.11465 2.41675 6.58496 3.94644 6.58496 5.83342C6.58496 7.72039 8.11465 9.25008 10.0016 9.25008C11.8886 9.25008 13.4183 7.72039 13.4183 5.83342C13.4183 3.94644 11.8886 2.41675 10.0016 2.41675ZM5.08496 5.83342C5.08496 3.11801 7.28623 0.916748 10.0016 0.916748C12.717 0.916748 14.9183 3.11801 14.9183 5.83342C14.9183 8.54882 12.717 10.7501 10.0016 10.7501C7.28623 10.7501 5.08496 8.54882 5.08496 5.83342Z"
@@ -206,7 +214,7 @@
 									</p>
 								</div> -->
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl py-6">
-									<h5 class="px-6 pb-[6px] text-slate-900 text-base leading-[17.6px] font-medium cursor-pointer">
+									<h5 class="px-6 pb-[6px] text-slate-900 text-base leading-[17.6px] font-medium">
 										Профиль</h5>
 									<button
 										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
@@ -236,7 +244,7 @@
 							</div>
 						</div>
 						<div
-							class="menu-box group relative cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
+							class="menu-box group relative cursor-pointer xs:w-12 xs:h-12 w-10 h-10 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M7.87097 1.13544C8.16427 1.42793 8.16492 1.90281 7.87244 2.1961L4.85577 5.2211C4.56328 5.5144 4.08841 5.51505 3.79511 5.22257C3.50181 4.93008 3.50116 4.4552 3.79365 4.16191L6.81031 1.13691C7.1028 0.843609 7.57768 0.842954 7.87097 1.13544Z"
@@ -260,8 +268,8 @@
 
 							<div class="absolute top-full pt-4 z-10 right-0 cursor-auto group-hover:block hidden">
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl p-6">
-									<div class="flex items-center justify-between">
-										<h6 class="text-slate-900 text-sm leading-[17.6px] font-medium cursor-pointer">
+									<div class="flex items-center justify-between gap-2">
+										<h6 class="text-slate-900 text-sm leading-[17.6px] font-medium">
 											Корзина</h6>
 										<span class="product-count text-xs text-slate-500 leading-[13.2px] hidden">3 шт.</span>
 									</div>
@@ -286,7 +294,7 @@
 													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
-												<div class="flex items-center justify-between">
+												<div class="flex items-center justify-between gap-2">
 													<p class="text-xs leading-[13.2px] text-slate-500">Осталось</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">8 шт.</p>
 												</div>
@@ -301,7 +309,7 @@
 													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
-												<div class="flex items-center justify-between">
+												<div class="flex items-center justify-between gap-2">
 													<p class="text-xs leading-[13.2px] text-slate-500">Осталось</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">8 шт.</p>
 												</div>
@@ -316,7 +324,7 @@
 													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
-												<div class="flex items-center justify-between">
+												<div class="flex items-center justify-between gap-2">
 													<p class="text-xs leading-[13.2px] text-slate-500">Осталось</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">8 шт.</p>
 												</div>
@@ -328,45 +336,45 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex space-x-2 product-categories">
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+				<div class="flex space-x-2 product-categories overflow-x-auto no-scroll xs:mr-0 -mr-4">
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/phone.svg" alt="phone" width="24" height="24">
 						</div>
 						<p class="info">Смартфоны</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/laptop.svg" alt="laptop" width="24" height="24">
 						</div>
 						<p class="info">Ноутбуки</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/tablet.svg" alt="tablet" width="24" height="24">
 						</div>
 						<p class="info">Планшеты</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/stylers.svg" alt="stylers" width="24" height="24">
 						</div>
 						<p class="info">Стайлеры</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/consoles.svg" alt="consoles" width="24" height="24">
 						</div>
 						<p class="info">Приставки</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
+					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
-						<div class="bg-slate-200 rounded-full overflow-hidden">
+						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/accessories.svg" alt="accessories" width="24" height="24">
 						</div>
 						<p class="info">Акссесуары</p>
@@ -381,70 +389,86 @@
 			<!-- discount-section -->
 			<section class="mt-8">
 				<div class="container">
-					<div class="flex gap-8 flex-wrap">
-						<div class="swiper max-w-[800px] w-full discount-swiper">
+					<div class="flex xs:gap-8 gap-4 md:flex-row flex-col">
+						<div class="swiper max-w-[800px] w-full discount-swiper xs:pb-0 pb-[21px]">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="bg-discount-banner p-8 pb-[58px] rounded-32 bg-no-repeat bg-cover text-white">
+									<div
+										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
 										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium text-[40px] leading-[44px] mb-3">Раскрываемновые <br> горизонты</h1>
-										<p class="leading-[22px] mb-4">Выгода до десяти тысяч рублей</p>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+											Раскрываем <br> новые горизонты</h1>
+										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
@@ -452,34 +476,39 @@
 							<div class="swiper-pagination"></div>
 						</div>
 
-						<div class="swiper discount-swiper-two flex-1">
+						<div class="swiper discount-swiper-two xs:pb-0 pb-[21px] flex-1">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -495,30 +524,35 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -534,30 +568,35 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -573,30 +612,35 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -612,30 +656,35 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -651,30 +700,35 @@
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
-										<div class="flex items-center justify-between">
-											<p class="font-medium leading-3">До конца акции</p>
+										class="text-white xs:p-8 p-4 xs:pb-[58px] h-full xs:rounded-32 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500">
+										<div class="flex items-center justify-between gap-2">
+											<p class="font-medium leading-3 xs:text-base text-xs">До конца акции</p>
 											<div class="timer flex items-center text-sm  font-medium">
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="days">11</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="hours">09</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
-												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
+												<div
+													class="bg-white xs:rounded-[8px] rounded-[4px] flex flex-col xs:w-8 xs:h-8 w-6 h-6 items-center justify-center">
+													<span class="leading-3.5 xs:text-sm text-xs text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
-										<h3 class="font-medium text-2xl leading-[26px] my-4">Глобальная распродажа всех смартфонов</h3>
-										<div class="flex items-center justify-between gap-4">
-											<div class="bg-white rounded-2xl py-[19px] px-3">
+										<h3 class="font-medium xs:text-2xl text-[20px] xs:leading-[26px] leading[22px] xs:my-4 my-3">
+											Глобальная
+											распродажа всех смартфонов</h3>
+										<div class="flex items-center justify-between gap-4 max-w-[320px] w-full">
+											<div class="bg-white rounded-2xl py-[19px] px-3 xs:w-auto xs:h-auto w-[84px] h-[104px]">
 												<img src="src/images/discount-product-1.png" alt="discount-product-1" width="80" height="90">
 											</div>
 											<div>
-												<h5 class="max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
+												<h5 class="xs:max-w-[200px] font-medium text-base leading-[17px]">iPhone 15 Pro 256GB Natural
 													Titanium</h5>
 												<div class="flex justify-between items-center mt-2 mb-4">
 													<span class="font-medium text-sm leading-3.5 text-[#fde1c1]">Осталось</span>
@@ -693,7 +747,7 @@
 						</div>
 					</div>
 
-					<div class="flex mt-6 space-x-4 services-cards">
+					<div class="flex mt-6 space-x-4 services-cards no-scroll overflow-x-auto">
 						<div class="min-w-[292px] w-full p-4 rounded-3xl flex items-start space-x-4 bg-slate-100">
 							<div class="rounded-full w-10 h-10 flex items-center justify-center bg-slate-900">
 								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -801,7 +855,7 @@
 			<!-- products section -->
 			<section>
 				<div class="container">
-					<div class="flex justify-between items-center mt-14 mb-12">
+					<div class="flex justify-between items-center xs:mt-14 xs:mb-12 mb-4 mt-8">
 						<h1 class="title-text">Смартфоны</h1>
 						<button class="btn-light">
 							<span>Все товары</span>
@@ -816,14 +870,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-1.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-1.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -831,18 +890,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
+										<p class="xs:text-sm text-xs font-medium leading-[1] xs:leadi3.2pxng-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -882,14 +944,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-1.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-1.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -897,18 +964,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
+										<p class="xs:text-sm text-xs font-medium leading-[1] xs:leadi3.2pxng-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -948,14 +1018,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-1.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-1.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -963,18 +1038,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
+										<p class="xs:text-sm text-xs font-medium leading-[1] xs:leadi3.2pxng-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1014,14 +1092,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-1.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-1.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1029,18 +1112,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
+										<p class="xs:text-sm text-xs font-medium leading-[1] xs:leadi3.2pxng-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1084,7 +1170,7 @@
 			<!-- products section -->
 			<section>
 				<div class="container">
-					<div class="flex justify-between items-center mt-20 mb-12">
+					<div class="flex justify-between items-center xs:mt-20 xs:mb-12 mt-8 mb-4">
 						<h1 class="title-text">Ноутбуки</h1>
 						<button class="btn-light">
 							<span>Все товары</span>
@@ -1099,14 +1185,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-2.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-2.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1114,18 +1205,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs font-medium leading-[1] xs:leadi3.2pxng-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1165,14 +1259,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Новинка</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-3.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-3.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1180,18 +1279,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs font-medium leading-[13.2px] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1231,14 +1333,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-4.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-4.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1246,18 +1353,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs font-medium leading-[13.2px] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1297,14 +1407,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Новинка</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-5.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-5.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1312,18 +1427,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs font-medium 3.2pxleading-[1] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1367,14 +1485,16 @@
 			<!-- gift and delivery section -->
 			<section class="mt-20">
 				<div class="container">
-					<div class="flex gap-8">
-						<div class="bg-gift-banner flex-1 bg-no-repeat bg-cover p-8 rounded-32">
-							<div class="flex items-end justify-between">
-								<h2 class="font-medium text-[32px] leading-[35.2px] text-white max-w-[377px]">Оставьте видео отзыв
+					<div class="flex gap-8 992:flex-row flex-col">
+						<div class="bg-gift-banner flex-1 bg-no-repeat bg-cover xs:p-8 xs:rounded-32 rounded-2xl p-4">
+							<div class="flex xs:flex-row flex-col  xs:items-end justify-between">
+								<h2
+									class="font-medium xs:text-[32px] xs:mb-0 mb-3 text-[20px] leading-[22px] xs:leading-[35.2px] text-white max-w-[377px]">
+									Оставьте видео отзыв
 									на товар и получите
 									подарок!
 								</h2>
-								<a class="btn-light" href="#!">
+								<a class="btn-light w-fit" href="#!">
 									<span>Подробнее</span>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1384,12 +1504,15 @@
 								</a>
 							</div>
 						</div>
-						<div class="bg-delivery-banner flex-1 bg-no-repeat bg-cover p-8 rounded-32 flex flex-col justify-end">
-							<div class="flex justify-between items-end pt-auto">
-								<h2 class="font-medium text-[32px] leading-[35.2px] text-white max-w-[387px]">Как оплатить
+						<div
+							class="bg-delivery-banner flex-1 bg-no-repeat bg-cover xs:p-8 xs:rounded-32 rounded-2xl p-4 flex flex-col justify-end">
+							<div class="flex xs:flex-row flex-col justify-between xs:items-end pt-auto">
+								<h2
+									class="font-medium xs:text-[32px] xs:mb-0 mb-3 text-[20px] leading-[22px] xs:leading-[35.2px] text-white max-w-[387px]">
+									Как оплатить
 									товари отследить доставку
 								</h2>
-								<a class="btn-light" href="#!">
+								<a class="btn-light w-fit" href="#!">
 									<span>Подробнее</span>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1406,7 +1529,7 @@
 			<!-- products section -->
 			<section>
 				<div class="container">
-					<div class="flex justify-between items-center mt-14 mb-12">
+					<div class="flex justify-between items-center xs:mt-14 xs:mb-12 mt-8 mb-4">
 						<h1 class="title-text">Ноутбуки</h1>
 						<button class="btn-light">
 							<span>Все товары</span>
@@ -1421,14 +1544,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-2.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-2.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1436,18 +1564,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs font-medium 3.2pxleading-[1] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1487,14 +1618,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Новинка</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-3.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-3.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1502,18 +1638,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs fo3.2pxnt-medium leading-[1] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1553,14 +1692,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-blue-50 text-blue-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Подарок за отзыв</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-4.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-4.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1568,18 +1712,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm text-xs fo3.2pxnt-medium leading-[1] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1619,14 +1766,19 @@
 						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
-									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="xs:text-xs text-[10px] leading-[11px] bg-teal-50 text-teal-600 font-medium xs:leading-[14.4px] py-1 px-2 rounded-full">
 										Скидка
 										20%</div>
-									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+									<div
+										class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full xs:block hidden">
 										Новинка</div>
 								</div>
-								<img class="mx-auto" src="src/images/product-img-5.png" alt="product-img-1" width="232" height="262">
-								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+								<img class="mx-auto product-img" src="src/images/product-img-5.png" alt="product-img-1" width="232"
+									height="262">
+								<h5
+									class="max-w-[232px] xs:my-3 my-2 font-medium xs:text-base text-xs xs:leading-[17.6px] leading-[13.2px]">
+									iPhone 15 Pro 256GB Natural
 									Titanium
 								</h5>
 							</div>
@@ -1634,18 +1786,21 @@
 								<div class="flex items-start justify-between">
 									<div class="flex items-center space-x-1">
 										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
-										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+										<p class="xs:text-sm 3.2pxtext-xs font-medium leading-[1] xs:leading-[15.4px]">560 USDT</p>
 									</div>
 									<div class="space-y-1">
-										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
-										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">145 900 ₽</p>
+										<p
+											class="xs:text-sm text-[12px] leaidng-[13.2px] line-through font-medium xs:leading-[15.4px] text-slate-500">
+											179 900 ₽</p>
 									</div>
 								</div>
-								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+								<div
+									class="flex xs:my-3 mt-2 mb-4 justify-between text-slate-500 xs:leading-[15.4px] xs:text-sm text-xs leading-[13.2px]">
 									<span class="inline-block">Наличие</span>
 									<span class="inline-block">8 шт.</span>
 								</div>
-								<div class="flex items-center justify-between">
+								<div class="flex items-center justify-between gap-2">
 									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
 										data-product-btn>
 										<span>В корзину</span>
@@ -1690,25 +1845,27 @@
 			<section class="mt-20">
 				<div class="container">
 					<div
-						class="bg-benefits-banner h-[334px] text-white bg-cover bg-no-repeat flex flex-col justify-center items-center py-20 rounded-32">
-						<h2 class="leading-[35px] text-[32px] font-medium mb-3">Получите максимум выгоды</h2>
-						<p class="leading-[22.4px]">Оставьте почту, чтобы узнавать о сезонных акицях, скидках и бонусах</p>
-						<div class="my-4 relative">
-							<form class="flex gap-4">
+						class="bg-benefits-banner h-[334px] text-white bg-cover bg-no-repeat flex flex-col justify-center items-center xs:py-20 xs:rounded-32 rounded-2xl py-10 px-4 text-center">
+						<h2 class="xs:leading-[35px] xs:text-[32px] text-[20px] leading-[22px] font-medium xs:mb-3 mb-2">Получите
+							максимум выгоды</h2>
+						<p class="xs:text-base text-sm xs:leading-[22.4px] leading-[19.6px]">Оставьте почту, чтобы узнавать
+							о сезонных акицях, скидках и бонусах</p>
+						<div class="xs:my-4 my-2 relative w-full">
+							<form class="flex xs:flex-row flex-col xs:gap-4 gap-3">
 								<div class="relative">
 									<input
-										class="benefits-input placeholder:text-slate-500 text-sm outline-none border border-transparent leading-[15.4px] text-slate-900 py-[14px] px-4 min-w-[224px] rounded-xl w-full"
+										class="benefits-input placeholder:text-slate-500 text-sm outline-none border border-transparent leading-[15.4px] text-slate-900 py-[14px] xs:px-4 px-3 xs:min-w-[224px] rounded-xl w-full"
 										type="email" name="email" placeholder="Почта" data-benefits-input>
 									<img class="check-icon hidden absolute top-1/2 -translate-y-1/2 right-[16px]"
 										src="src/images/icons/check-icon.svg" alt="check-icon">
 								</div>
-								<button type="submit" class="btn" data-send-btn>Отправить</button>
+								<button type="submit" class="btn justify-center" data-send-btn>Отправить</button>
 							</form>
 							<div
 								class="warning-text hidden text-red-600 w-fit bg-red-50 text-xs font-medium py-1 px-2 rounded-full block mt-[6px]">
 								Текст ошибки</div>
 						</div>
-						<p class="text-xs leading-[14.4px] max-w-[377px] text-center">Нажимая «Отправить» вы соглашаетесь
+						<p class="xs:text-xs xs:leading-[14.4px] text-[10px] leading-[12px] max-w-[377px] text-center">Нажимая «Отправить» вы соглашаетесь
 							с условиями
 							использования сайта
 							и Политикой обработки персональных

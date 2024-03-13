@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			clickable: true,
 		},
 		speed: 1000,
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
 	});
 
 	// discount-swiper-two
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			clickable: true,
 		},
 		speed: 1000,
-		autoplay: {
-			delay: 3500,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false,
+		// },
 	});
 
 	// reviews-swiper
