@@ -3,17 +3,52 @@
 @tailwind utilities;
 
 body {
-  @apply font-SF-Pro-Display font-normal text-slate-900;
+	@apply font-SF-Pro-Display font-normal text-slate-900;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
 }
 
 .container {
-  @apply max-w-[1216px] mx-auto;
+	@apply max-w-[1216px] mx-auto;
 }
 
 .title-text {
-  @apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal	;
+	@apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal;
 }
 
 .info-text {
-  @apply text-sm font-normal leading-4 text-slate-900 tracking-normal	;
+	@apply text-sm font-normal leading-3.5 text-slate-900 tracking-normal;
+}
+
+.btn {
+	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[48px] rounded-xl flex items-center relative transition-all duration-200;
+}
+
+.btn.focus,
+.btn:focus {
+	box-shadow: none;
+	outline: 0px;
+}
+
+.menu-btn>div>span {
+	@apply transition-all duration-300;
+}
+
+.menu-btn.active>div>span:first-child {
+	transform: rotate(50deg);
+	top: 4px;
+}
+
+.menu-btn.active>div>span:last-child {
+	transform: rotate(-50deg);
+	top: -1.5px;
+}
+
+.menu-box:hover>svg>path {
+	fill: #fff;
 }
