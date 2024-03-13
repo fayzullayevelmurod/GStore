@@ -23,7 +23,7 @@
 
 		<!-- header -->
 		<header>
-			<div class="bg-slate-100 py-2">
+			<div class="header-top bg-slate-100 py-2">
 				<div class="container">
 					<div class="flex justify-between">
 						<div class="flex gap-8">
@@ -66,7 +66,7 @@
 							</button>
 							<div class="relative">
 								<input type="search" placeholder="Найти"
-									class="w-[348px] h-[48px] px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px] text-slate-900 rounded-xl">
+									class="w-[348px] h-[48px] px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
 								<img class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer" src="src/images/icons/search.svg"
 									alt="search icon" width="18" height="18">
 							</div>
@@ -74,20 +74,21 @@
 					</div>
 					<div class="flex items-center gap-3">
 						<div class="relative group">
-							<button
-								class="group dark-mode__btn menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl duration-200">
+							<input class="hidden dark-mode__btn" type="checkbox" id="darkMode">
+							<label for="darkMode"
+								class="group text-black menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl duration-200">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-									stroke="currentColor" class="animate-spin animate-fade w-6 h-6">
+									stroke="currentColor" class="moon-icon w-6 h-6">
 									<path stroke-linecap="round" stroke-linejoin="round"
-										d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+										d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
 								</svg>
-							</button>
-							<div class="absolute top-full flex z-10 pt-2 space-x-3 duration-300 scale-y-0 group-hover:scale-y-100">
-								<div class="rounded-full w-8 h-8 cursor-pointer bg-slate-950"></div>
-								<div class="rounded-full w-8 h-8 cursor-pointer bg-slate-900"></div>
-								<div class="rounded-full w-8 h-8 cursor-pointer bg-[#1F2937]"></div>
-								<div class="rounded-full w-8 h-8 cursor-pointer bg-[#0A0A0A]"></div>
-							</div>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+									stroke="currentColor" class="sun-icon hidden w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+								</svg>
+
+							</label>
 						</div>
 						<div
 							class="relative menu-box group cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
@@ -189,35 +190,35 @@
 
 							<div class="absolute top-full pt-4 z-10 right-0 cursor-auto group-hover:block hidden">
 								<!-- <div class="min-w-[258px] p-6 w-full bg-white rounded-3xl shadow-2xl">
-									<h5 class="text-slate-900 text-base leading-[17.6px] font-medium cursor-pointer">Вход или регистрация
+									<h5 class=" text-base leading-[17.6px] font-medium cursor-pointer">Вход или регистрация
 									</h5>
 									<p class="text-sm leading-[18.2px] text-slate-500 mt-3">
 										Вы сможете отслеживать заказ, оставлять отзывы и пополнять баланс
 									</p>
 								</div> -->
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl py-6">
-									<h5 class="px-6 pb-[6px] text-slate-900 text-base leading-[17.6px] font-medium cursor-pointer">
+									<h5 class="px-6 pb-[6px]  text-base leading-[17.6px] font-medium cursor-pointer">
 										Профиль</h5>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover:text-slate-900 focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Личные данные</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover:text-slate-900 focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Баланс</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover:text-slate-900 focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Заказы</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover:text-slate-900 focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Отзывы</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
@@ -251,7 +252,7 @@
 							<div class="absolute top-full pt-4 z-10 right-0 cursor-auto group-hover:block hidden">
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl p-6">
 									<div class="flex items-center justify-between">
-										<h6 class="text-slate-900 text-sm leading-[17.6px] font-medium cursor-pointer">
+										<h6 class=" text-sm leading-[17.6px] font-medium cursor-pointer">
 											Корзина</h6>
 										<span class="product-count text-xs text-slate-500 leading-[13.2px] hidden">3 шт.</span>
 									</div>
@@ -270,10 +271,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -285,10 +286,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -300,10 +301,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -437,17 +438,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -464,7 +465,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -476,17 +477,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -503,7 +504,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -515,17 +516,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -542,7 +543,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -554,17 +555,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -581,7 +582,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -593,17 +594,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -620,7 +621,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -632,17 +633,17 @@
 										class="text-white p-8 pb-[58px] h-full rounded-32 bg-gradient-to-br from-yellow-500 to-orange-500">
 										<div class="flex items-center justify-between">
 											<p class="font-medium leading-3">До конца акции</p>
-											<div class="timer flex items-center text-sm text-slate-900 font-medium">
+											<div class="timer flex items-center text-sm  font-medium">
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="days">11</span>
+													<span class="leading-3.5 text-slate-900" id="days">11</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="hours">09</span>
+													<span class="leading-3.5 text-slate-900" id="hours">09</span>
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
 												</div>
 											</div>
 										</div>
@@ -659,7 +660,7 @@
 													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">8 шт.</span>
 												</div>
 												<div class="flex justify-between items-center">
-													<span class="font-normal text-sm leading-3.5 text-[#fde1c1]">179 900 ₽</span>
+													<span class="font-normal text-sm leading-3.5 line-through text-[#fde1c1]">179 900 ₽</span>
 													<span class="font-medium text-sm leading-3.5">145 900 ₽</span>
 												</div>
 											</div>
@@ -791,7 +792,7 @@
 						</button>
 					</div>
 					<div class="products-cards">
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -857,7 +858,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -923,7 +924,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -989,7 +990,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1074,7 +1075,7 @@
 						</button>
 					</div>
 					<div class="products-cards">
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1140,7 +1141,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1206,7 +1207,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1272,7 +1273,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1396,7 +1397,7 @@
 						</button>
 					</div>
 					<div class="products-cards">
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1462,7 +1463,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1528,7 +1529,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1594,7 +1595,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-card text-slate-900 flex flex-col justify-between">
+						<div class="product-card  flex flex-col justify-between">
 							<div>
 								<div class="flex space-x-1 mb-3">
 									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
@@ -1668,8 +1669,215 @@
 			<section class="mt-20">
 				<div class="container">
 					<div
-						class="bg-benefits-banner bg-cover bg-no-repeat flex flex-col justify-center items-center py-20 rounded-32">
-						<h2>Получите максимум выгоды</h2>
+						class="bg-benefits-banner h-[334px] text-white bg-cover bg-no-repeat flex flex-col justify-center items-center py-20 rounded-32">
+						<h2 class="leading-[35px] text-[32px] font-medium mb-3">Получите максимум выгоды</h2>
+						<p class="leading-[22.4px]">Оставьте почту, чтобы узнавать о сезонных акицях, скидках и бонусах</p>
+						<div class="my-4 relative">
+							<form class="flex gap-4">
+								<div class="relative">
+									<input
+										class="benefits-input placeholder:text-slate-500 text-sm outline-none border border-transparent leading-[15.4px] text-slate-900 py-[14px] px-4 min-w-[224px] rounded-xl w-full"
+										type="email" name="email" placeholder="Почта" data-benefits-input>
+									<img class="check-icon hidden absolute top-1/2 -translate-y-1/2 right-[16px]"
+										src="src/images/icons/check-icon.svg" alt="check-icon">
+								</div>
+								<button type="submit" class="btn" data-send-btn>Отправить</button>
+							</form>
+							<div
+								class="warning-text hidden text-red-600 w-fit bg-red-50 text-xs font-medium py-1 px-2 rounded-full block mt-[6px]">
+								Текст ошибки</div>
+						</div>
+						<p class="text-xs leading-[14.4px] max-w-[377px] text-center">Нажимая «Отправить» вы соглашаетесь
+							с условиями
+							использования сайта
+							и Политикой обработки персональных
+							данных.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- product-reviews -->
+			<section class="mt-14">
+				<div class="container">
+					<div class="flex justify-between mb-6">
+						<h2 class="title-text">Последние отзывы</h2>
+						<div class="flex space-x-3">
+							<button class="btn-light">
+								<span>Оставить отзыв</span>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M2.75766 2.7576C2.2432 3.27206 1.9334 4.09249 1.9334 5.33334V8.66667C1.9334 10.2816 2.26167 11.0566 2.7285 11.4651C3.21516 11.8909 4.01068 12.0667 5.3334 12.0667H5.66673C5.87498 12.0667 6.07377 12.1313 6.22739 12.2074C6.37884 12.2825 6.55446 12.4026 6.6821 12.5761L7.68007 13.9067C7.8034 14.0711 7.92504 14.1067 8.00007 14.1067C8.07509 14.1067 8.19673 14.0711 8.32007 13.9067L9.32236 12.5703C9.56076 12.2566 9.93639 12.0667 10.3334 12.0667H10.6667C11.9076 12.0667 12.728 11.7569 13.2425 11.2424C13.7569 10.7279 14.0667 9.90752 14.0667 8.66667V5.33334C14.0667 4.09249 13.7569 3.27206 13.2425 2.7576C12.728 2.24314 11.9076 1.93334 10.6667 1.93334H5.3334C4.09255 1.93334 3.27212 2.24314 2.75766 2.7576ZM1.90913 1.90907C2.72801 1.0902 3.90758 0.733337 5.3334 0.733337H10.6667C12.0926 0.733337 13.2721 1.0902 14.091 1.90907C14.9099 2.72795 15.2667 3.90752 15.2667 5.33334V8.66667C15.2667 10.0925 14.9099 11.2721 14.091 12.0909C13.2721 12.9098 12.0926 13.2667 10.6667 13.2667H10.3334C10.3173 13.2667 10.2933 13.2765 10.2783 13.2957C10.2781 13.2959 10.2785 13.2954 10.2783 13.2957L9.28007 14.6267C8.9634 15.0489 8.50504 15.3067 8.00007 15.3067C7.49509 15.3067 7.03673 15.0489 6.72007 14.6267L5.72621 13.3015C5.71958 13.2966 5.70872 13.2897 5.69441 13.2826C5.67843 13.2747 5.66412 13.2695 5.65446 13.2669C5.65412 13.2668 5.65379 13.2668 5.65348 13.2667H5.3334C3.98945 13.2667 2.78497 13.1091 1.9383 12.3682C1.0718 11.61 0.733398 10.3851 0.733398 8.66667V5.33334C0.733398 3.90752 1.09026 2.72795 1.90913 1.90907Z"
+										fill="#0F172A" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M4.06641 5.33334C4.06641 5.00197 4.33504 4.73334 4.66641 4.73334H11.3331C11.6644 4.73334 11.9331 5.00197 11.9331 5.33334C11.9331 5.66471 11.6644 5.93334 11.3331 5.93334H4.66641C4.33504 5.93334 4.06641 5.66471 4.06641 5.33334Z"
+										fill="#0F172A" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M4.06641 8.66659C4.06641 8.33522 4.33504 8.06659 4.66641 8.06659H8.66641C8.99778 8.06659 9.26641 8.33522 9.26641 8.66659C9.26641 8.99796 8.99778 9.26659 8.66641 9.26659H4.66641C4.33504 9.26659 4.06641 8.99796 4.06641 8.66659Z"
+										fill="#0F172A" />
+								</svg>
+							</button>
+							<div class="flex space-x-3">
+								<div class="swiper-button__prev btn-light w-11 h-11 cursor-pointer rotate-180">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+											fill="#0F172A" />
+									</svg>
+								</div>
+								<div class="swiper-button__next btn-light w-11 h-11 cursor-pointer">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+											fill="#0F172A" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper reviews-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="bg-slate-100 p-6 rounded-3xl">
+									<div class="flex space-x-3 mb-4">
+										<div class="bg-white rounded-full w-[52px] h-[52px] leading-[52px] text-center text-[#0D9488]">АК
+										</div>
+										<div>
+											<h5>Антон К.</h5>
+											<div
+												class="mt-2 bg-[#0D9488] px-2 py-1 rounded-full text-white font-medium text-sm leading-[14.4px]">
+												Подтверждённый отзыв</div>
+										</div>
+									</div>
+									<h6 class="font-medium text-sm leading-[15.4px]">Достоинства</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Новый, не вскрытый, полностью рабочий.
+										Проверил все на сайте. Идёт в комплекте
+										оригинальный блок для зарядки, матовая
+										защитная плёнка, и чехол прозрачный</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Недостатки</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Не обнаружено</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Товар</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">iPhone 15PRO 512GB</p>
+									<div class="flex gap-3">
+										<img src="src/images/product-reviews-1.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-2.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-3.png" alt="product-reviews-img" width="104" height="128">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="bg-slate-100 p-6 rounded-3xl">
+									<div class="flex space-x-3 mb-4">
+										<div class="bg-white rounded-full w-[52px] h-[52px] leading-[52px] text-center text-[#0D9488]">АК
+										</div>
+										<div>
+											<h5>Антон К.</h5>
+											<div
+												class="mt-2 bg-[#0D9488] px-2 py-1 rounded-full text-white font-medium text-sm leading-[14.4px]">
+												Подтверждённый отзыв</div>
+										</div>
+									</div>
+									<h6 class="font-medium text-sm leading-[15.4px]">Достоинства</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Новый, не вскрытый, полностью рабочий.
+										Проверил все на сайте. Идёт в комплекте
+										оригинальный блок для зарядки, матовая
+										защитная плёнка, и чехол прозрачный</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Недостатки</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Не обнаружено</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Товар</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">iPhone 15PRO 512GB</p>
+									<div class="flex gap-3">
+										<img src="src/images/product-reviews-1.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-2.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-3.png" alt="product-reviews-img" width="104" height="128">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="bg-slate-100 p-6 rounded-3xl">
+									<div class="flex space-x-3 mb-4">
+										<div class="bg-white rounded-full w-[52px] h-[52px] leading-[52px] text-center text-[#0D9488]">АК
+										</div>
+										<div>
+											<h5>Антон К.</h5>
+											<div
+												class="mt-2 bg-[#0D9488] px-2 py-1 rounded-full text-white font-medium text-sm leading-[14.4px]">
+												Подтверждённый отзыв</div>
+										</div>
+									</div>
+									<h6 class="font-medium text-sm leading-[15.4px]">Достоинства</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Новый, не вскрытый, полностью рабочий.
+										Проверил все на сайте. Идёт в комплекте
+										оригинальный блок для зарядки, матовая
+										защитная плёнка, и чехол прозрачный</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Недостатки</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Не обнаружено</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Товар</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">iPhone 15PRO 512GB</p>
+									<div class="flex gap-3">
+										<img src="src/images/product-reviews-1.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-2.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-3.png" alt="product-reviews-img" width="104" height="128">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="bg-slate-100 p-6 rounded-3xl">
+									<div class="flex space-x-3 mb-4">
+										<div class="bg-white rounded-full w-[52px] h-[52px] leading-[52px] text-center text-[#0D9488]">АК
+										</div>
+										<div>
+											<h5>Антон К.</h5>
+											<div
+												class="mt-2 bg-[#0D9488] px-2 py-1 rounded-full text-white font-medium text-sm leading-[14.4px]">
+												Подтверждённый отзыв</div>
+										</div>
+									</div>
+									<h6 class="font-medium text-sm leading-[15.4px]">Достоинства</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Новый, не вскрытый, полностью рабочий.
+										Проверил все на сайте. Идёт в комплекте
+										оригинальный блок для зарядки, матовая
+										защитная плёнка, и чехол прозрачный</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Недостатки</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Не обнаружено</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Товар</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">iPhone 15PRO 512GB</p>
+									<div class="flex gap-3">
+										<img src="src/images/product-reviews-1.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-2.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-3.png" alt="product-reviews-img" width="104" height="128">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="bg-slate-100 p-6 rounded-3xl">
+									<div class="flex space-x-3 mb-4">
+										<div class="bg-white rounded-full w-[52px] h-[52px] leading-[52px] text-center text-[#0D9488]">АК
+										</div>
+										<div>
+											<h5>Антон К.</h5>
+											<div
+												class="mt-2 bg-[#0D9488] px-2 py-1 rounded-full text-white font-medium text-sm leading-[14.4px]">
+												Подтверждённый отзыв</div>
+										</div>
+									</div>
+									<h6 class="font-medium text-sm leading-[15.4px]">Достоинства</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Новый, не вскрытый, полностью рабочий.
+										Проверил все на сайте. Идёт в комплекте
+										оригинальный блок для зарядки, матовая
+										защитная плёнка, и чехол прозрачный</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Недостатки</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">Не обнаружено</p>
+									<h6 class="font-medium text-sm leading-[15.4px]">Товар</h6>
+									<p class="mt-2 mb-4 text-slate-500 text-base leading-[18.2px]">iPhone 15PRO 512GB</p>
+									<div class="flex gap-3">
+										<img src="src/images/product-reviews-1.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-2.png" alt="product-reviews-img" width="104" height="128">
+										<img src="src/images/product-reviews-3.png" alt="product-reviews-img" width="104" height="128">
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1677,8 +1885,106 @@
 		</main>
 
 		<!-- footer -->
-		<footer class="mt-14">
+		<footer class="mt-14 bg-slate-900 pt-8">
+			<div class="container flex items-start justify-between flex-wrap gap-10">
+				<div>
+					<a class="mb-6 inline-block" href="#!">
+						<img src="src/images/icons/gstore-logo.svg" alt="gstore-logo" width="176" height="56">
+					</a>
+					<p class="text-slate-500 text-sm leading-[15.4px]">© 2016–2024 «Gstore»</p>
+				</div>
 
+				<div class="flex gap-[50px]">
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">GStore</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">О компании</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Контакты</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Оплата и доставка</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Медиа</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Акции</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-sm leading-[15.4px] inline-block" href="#!">Отзывы</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Смартфоны</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-sm leading-[15.4px]inline-block" href="#!">Samsung</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Ноутбуки</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-sm leading-[15.4px] inline-block" href="#!">Xiaomi</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Планшеты</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Стайлеры</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Dyson</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Приставки</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Playstation</a>
+							</li>
+							<li>
+								<a class="text-slate-500 text-sm leading-[15.4px]inline-block" href="#!">Xbox</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h5 class="text-white font-medium leading-[17.6px] text-base mb-6">Акссесуары</h5>
+						<ul>
+							<li>
+								<a class="text-slate-500 text-base leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bg-slate-700 w-full h-[1px] mt-14"></div>
+			<div class="container py-4 flex items-center justify-between">
+				<p class="text-slate-500 text-sm leading-[15.4px]">Политика обработки персональных данных</p>
+				<p class="text-slate-500 text-sm leading-[15.4px]">
+					Возникли сложности? Пишите в бот —
+					<a href="#!">@gstore_help</a>
+				</p>
+			</div>
 		</footer>
 
 	</div>

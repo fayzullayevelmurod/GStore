@@ -5,9 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	const sunIcon = document.querySelector('.sun-icon');
 	const darkModeBtn = document.querySelector('.dark-mode__btn');
 	const body = document.body;
-	darkModeBtn.addEventListener('click', () => {
-		// body.classList.toggle('dark');
-	})
+
+	darkModeBtn.addEventListener('change', () => {
+		if (darkModeBtn.checked) {
+			body.classList.add('dark');
+			localStorage.setItem('darkMode', 'enabled');
+			moonIcon.classList.add('hidden');
+			sunIcon.classList.remove('hidden');
+		} else {
+			moonIcon.classList.remove('hidden');
+			sunIcon.classList.add('hidden');
+			body.classList.remove('dark');
+			localStorage.removeItem('darkMode');
+		}
+	});
+
+	// Saqlangan dark mode holatini tekshirish
+	const savedDarkMode = localStorage.getItem('darkMode');
+	if (savedDarkMode === 'enabled') {
+		body.classList.add('dark');
+		darkModeBtn.checked = true;
+		moonIcon.classList.add('hidden');
+		sunIcon.classList.remove('hidden');
+	}
+
 
 	// responsive navbar
 
@@ -39,6 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			delay: 3500,
 			disableOnInteraction: false,
 		},
+	});
+
+	// reviews-swiper
+	var swiper = new Swiper(".reviews-swiper", {
+		spaceBetween: 32,
+		slidesPerView: 3,
+		navigation: {
+			nextEl: '.swiper-button__next',
+			prevEl: '.swiper-button__prev',
+		},
+		loop: true,
+		grabCursor: true,
+		speed: 1000,
 	});
 
 	// Timer
@@ -115,5 +149,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+	// form validation
+	function validateEmail(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.(?:com|net|org|ru)$/i;
+		return emailRegex.test(email);
+	}
 
+	const warningText = document.querySelector('.warning-text');
+	const emailField = document.querySelector('[data-benefits-input]');
+	const validateCheckIcon = document.querySelector('.check-icon');
+
+	emailField.addEventListener('input', () => {
+		const emailValue = emailField.value.trim();
+		if (validateEmail(emailValue)) {
+			warningText.classList.add('hidden');
+			emailField.classList.remove('warning');
+			emailField.classList.add('active');
+			validateCheckIcon.classList.remove('hidden')
+		} else {
+			validateCheckIcon.classList.add('hidden')
+			warningText.classList.remove('hidden');
+			emailField.classList.remove('active');
+			emailField.classList.add('warning');
+		}
+	})
 })
