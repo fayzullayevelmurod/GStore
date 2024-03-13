@@ -37,6 +37,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	@apply flex items-center space-x-2 text-sm font-medium leading-3.5 text-slate-900 duration-200 bg-slate-100 px-4 py-[14px] rounded-xl
 }
 
+
 .btn-light:hover {
 	@apply bg-slate-900 text-white
 }
@@ -101,7 +102,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .product-btn.active {
 	@apply bg-transparent border-slate-900 text-slate-900
 }
+.tooltip .tooltip-text {
+	visibility: hidden;
+	text-align: center;
+	padding: 2px 6px;
+	position: absolute;
+	z-index: 100;
+}
 
-.product-btn__icon.active {
-	/* @apply w-[25px] h-[25px] */
+.tooltip:hover .tooltip-text {
+	visibility: visible;
 }
