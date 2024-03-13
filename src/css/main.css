@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply font-SF-Pro-Display font-normal text-slate-900;
+}
+
 .container {
-	max-width: 100%;
-	margin: 0 auto;
+  @apply max-w-[1216px] mx-auto;
+}
+
+.title-text {
+  @apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal	;
+}
+
+.info-text {
+  @apply text-sm font-normal leading-4 text-slate-900 tracking-normal	;
 }
