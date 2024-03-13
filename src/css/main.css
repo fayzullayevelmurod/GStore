@@ -52,3 +52,19 @@ input[type="search"]::-webkit-search-results-decoration {
 .menu-box:hover>svg>path {
 	fill: #fff;
 }
+
+/* swiper */
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	@apply w-fit left-8 bottom-7
+}
+
+.swiper-pagination-bullet {
+	@apply w-6 h-[2px] rounded-3xl opacity-[40%] bg-white;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	@apply opacity-100
+}
