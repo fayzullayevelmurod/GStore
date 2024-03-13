@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	// dark mode
+	const moonIcon = document.querySelector('.moon-icon');
+	const sunIcon = document.querySelector('.sun-icon');
+	const darkModeBtn = document.querySelector('.dark-mode__btn');
+	const body = document.body;
+	darkModeBtn.addEventListener('click', () => {
+		// body.classList.toggle('dark');
+	})
+
 	// responsive navbar
 
 	// swiper

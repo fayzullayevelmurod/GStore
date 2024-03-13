@@ -15,6 +15,9 @@ module.exports = {
 			},
 			backgroundImage: {
 				'discount-banner': "url('../images/discounts-banner.png')",
+				'gift-banner': "url('../images/gift.png')",
+				'delivery-banner': "url('../images/delivery.png')",
+				'benefits-banner': "url('../images/benefits-banner.png')",
 			},
 			borderRadius: {
 				"32": "32px"

@@ -73,6 +73,22 @@
 						</div>
 					</div>
 					<div class="flex items-center gap-3">
+						<div class="relative group">
+							<button
+								class="group dark-mode__btn menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl duration-200">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+									stroke="currentColor" class="animate-spin animate-fade w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+								</svg>
+							</button>
+							<div class="absolute top-full flex z-10 pt-2 space-x-3 duration-300 scale-y-0 group-hover:scale-y-100">
+								<div class="rounded-full w-8 h-8 cursor-pointer bg-slate-950"></div>
+								<div class="rounded-full w-8 h-8 cursor-pointer bg-slate-900"></div>
+								<div class="rounded-full w-8 h-8 cursor-pointer bg-[#1F2937]"></div>
+								<div class="rounded-full w-8 h-8 cursor-pointer bg-[#0A0A0A]"></div>
+							</div>
+						</div>
 						<div
 							class="relative menu-box group cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,6 +167,7 @@
 								</div>
 							</div>
 						</div>
+						<div class="w-[1px] h-6 bg-slate-200"></div>
 						<div
 							class="menu-box cursor-pointer w-12 h-12 flex flex-col items-center justify-center bg-slate-100 rounded-xl hover:bg-slate-900 duration-200">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -795,8 +812,8 @@
 										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="text-base font-medium leading-[15.4px]">145 900 ₽</p>
-										<p class="text-base font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
 									</div>
 								</div>
 								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
@@ -861,8 +878,8 @@
 										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="text-base font-medium leading-[15.4px]">145 900 ₽</p>
-										<p class="text-base font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
 									</div>
 								</div>
 								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
@@ -927,8 +944,8 @@
 										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="text-base font-medium leading-[15.4px]">145 900 ₽</p>
-										<p class="text-base font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
 									</div>
 								</div>
 								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
@@ -993,8 +1010,8 @@
 										<p class="text-sm font-medium leading-[15.4px]">1 560 $</p>
 									</div>
 									<div class="space-y-1">
-										<p class="text-base font-medium leading-[15.4px]">145 900 ₽</p>
-										<p class="text-base font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
 									</div>
 								</div>
 								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
@@ -1038,6 +1055,621 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- products section -->
+			<section>
+				<div class="container">
+					<div class="flex justify-between items-center mt-20 mb-12">
+						<h1 class="title-text">Ноутбуки</h1>
+						<button class="btn-light">
+							<span>Все товары</span>
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+									fill="#0F172A" />
+							</svg>
+						</button>
+					</div>
+					<div class="products-cards">
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Подарок за отзыв</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-2.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Новинка</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-3.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Подарок за отзыв</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-4.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Новинка</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-5.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- gift and delivery section -->
+			<section class="mt-20">
+				<div class="container">
+					<div class="flex gap-8">
+						<div class="bg-gift-banner flex-1 bg-no-repeat bg-cover p-8 rounded-32">
+							<div class="flex items-end justify-between">
+								<h2 class="font-medium text-[32px] leading-[35.2px] text-white max-w-[377px]">Оставьте видео отзыв
+									на товар и получите
+									подарок!
+								</h2>
+								<a class="btn-light" href="#!">
+									<span>Подробнее</span>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+											fill="#0F172A"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="bg-delivery-banner flex-1 bg-no-repeat bg-cover p-8 rounded-32 flex flex-col justify-end">
+							<div class="flex justify-between items-end pt-auto">
+								<h2 class="font-medium text-[32px] leading-[35.2px] text-white max-w-[387px]">Как оплатить
+									товари отследить доставку
+								</h2>
+								<a class="btn-light" href="#!">
+									<span>Подробнее</span>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+											fill="#0F172A"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- products section -->
+			<section>
+				<div class="container">
+					<div class="flex justify-between items-center mt-14 mb-12">
+						<h1 class="title-text">Ноутбуки</h1>
+						<button class="btn-light">
+							<span>Все товары</span>
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+									fill="#0F172A" />
+							</svg>
+						</button>
+					</div>
+					<div class="products-cards">
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Подарок за отзыв</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-2.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Новинка</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-3.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-blue-50 text-blue-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Подарок за отзыв</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-4.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-card text-slate-900 flex flex-col justify-between">
+							<div>
+								<div class="flex space-x-1 mb-3">
+									<div class="text-xs bg-teal-50 text-teal-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Скидка
+										20%</div>
+									<div class="text-xs bg-orange-50 text-orange-600 font-medium leading-[14.4px] py-1 px-2 rounded-full">
+										Новинка</div>
+								</div>
+								<img class="mx-auto" src="src/images/product-img-5.png" alt="product-img-1" width="232" height="262">
+								<h5 class="max-w-[232px] my-3 font-medium text-base leading-[17.6px]">iPhone 15 Pro 256GB Natural
+									Titanium
+								</h5>
+							</div>
+							<div>
+								<div class="flex items-start justify-between">
+									<div class="flex items-center space-x-1">
+										<img src="src/images/icons/tether-usdt.svg" alt="tether-usdt" width="13" height="12">
+										<p class="text-sm font-medium leading-[15.4px]">560 USDT</p>
+									</div>
+									<div class="space-y-1">
+										<p class="font-medium leading-[15.4px] text-sm">145 900 ₽</p>
+										<p class="text-sm line-through font-medium leading-[15.4px] text-slate-500">179 900 ₽</p>
+									</div>
+								</div>
+								<div class="flex my-3 justify-between text-slate-500 leading-[15.4px] text-sm">
+									<span class="inline-block">Наличие</span>
+									<span class="inline-block">8 шт.</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<button class="btn max-w-[176px] justify-between w-full product-btn border border-slate-900"
+										data-product-btn>
+										<span>В корзину</span>
+										<svg class="product-btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29639 0.908428C6.53103 1.14242 6.53155 1.52232 6.29756 1.75695L3.88422 4.17696C3.65023 4.41159 3.27033 4.41212 3.0357 4.17813C2.80106 3.94413 2.80054 3.56424 3.03453 3.3296L5.44786 0.909598C5.68185 0.67496 6.06175 0.674436 6.29639 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.70269 0.908428C9.93733 0.674436 10.3172 0.67496 10.5512 0.909598L12.9646 3.3296C13.1985 3.56424 13.198 3.94413 12.9634 4.17813C12.7287 4.41212 12.3488 4.41159 12.1149 4.17696L9.70152 1.75695C9.46753 1.52232 9.46805 1.14242 9.70269 0.908428Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M2.09979 4.60248C2.06826 4.62361 1.9334 4.71496 1.9334 5.23314C1.9334 5.55335 1.97141 5.73315 2.00859 5.82882C2.0377 5.90374 2.06047 5.91497 2.06492 5.91716C2.06517 5.91729 2.06537 5.91738 2.0655 5.91746C2.08547 5.92897 2.14038 5.95104 2.28018 5.96131C2.38722 5.96918 2.49641 5.96836 2.63698 5.96731C2.69067 5.96691 2.74893 5.96647 2.8134 5.96647H13.1867C13.2512 5.96647 13.3095 5.96691 13.3631 5.96731C13.5037 5.96836 13.6129 5.96918 13.7199 5.96131C13.8598 5.95104 13.9147 5.92897 13.9346 5.91746C13.9348 5.91738 13.935 5.91729 13.9352 5.91716C13.9397 5.91497 13.9624 5.90374 13.9915 5.82882C14.0287 5.73316 14.0667 5.55335 14.0667 5.23314C14.0667 4.71496 13.9319 4.62361 13.9003 4.60248C13.8042 4.53813 13.6152 4.4998 13.1867 4.4998H2.8134C2.38497 4.4998 2.19588 4.53813 2.09979 4.60248ZM1.432 3.60546C1.87092 3.31148 2.42182 3.2998 2.8134 3.2998H13.1867C13.5783 3.2998 14.1292 3.31148 14.5681 3.60546C15.0716 3.94267 15.2667 4.51799 15.2667 5.23314C15.2667 6.00446 15.0932 6.63477 14.5338 6.95715C14.2863 7.09981 14.0225 7.14232 13.8079 7.15809C13.6479 7.16985 13.4689 7.16841 13.3142 7.16718C13.2693 7.16682 13.2265 7.16647 13.1867 7.16647H2.8134C2.77366 7.16647 2.73083 7.16682 2.68595 7.16718C2.53125 7.16841 2.35227 7.16985 2.19224 7.15809C1.97767 7.14232 1.71383 7.09981 1.4663 6.95715C0.906921 6.63477 0.733398 6.00446 0.733398 5.23314C0.733398 4.51799 0.928539 3.94267 1.432 3.60546Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.50527 8.73315C6.83664 8.73315 7.10527 9.00178 7.10527 9.33315V11.6998C7.10527 12.0312 6.83664 12.2998 6.50527 12.2998C6.1739 12.2998 5.90527 12.0312 5.90527 11.6998V9.33315C5.90527 9.00178 6.1739 8.73315 6.50527 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M9.57266 8.73315C9.90403 8.73315 10.1727 9.00178 10.1727 9.33315V11.6998C10.1727 12.0312 9.90403 12.2998 9.57266 12.2998C9.24129 12.2998 8.97266 12.0312 8.97266 11.6998V9.33315C8.97266 9.00178 9.24129 8.73315 9.57266 8.73315Z"
+												fill="white" />
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M13.7798 6.07726C14.1053 6.13967 14.3185 6.45409 14.2561 6.77953L13.1361 12.6194C13.1361 12.6194 13.1361 12.6193 13.1361 12.6194C13.0186 13.2329 12.8611 13.944 12.3584 14.4708C11.83 15.0244 11.0387 15.2665 9.92682 15.2665H5.90682C4.85603 15.2665 4.07194 15.0037 3.52822 14.4531C3.00142 13.9196 2.79401 13.2063 2.68149 12.5242L1.74132 6.76316C1.68795 6.43611 1.90981 6.12772 2.23685 6.07435C2.5639 6.02098 2.87228 6.24283 2.92566 6.56988L3.86549 12.3289C3.86552 12.329 3.86546 12.3287 3.86549 12.3289C3.9663 12.9397 4.1223 13.3468 4.38209 13.6099C4.62504 13.856 5.05095 14.0665 5.90682 14.0665H9.92682C10.8883 14.0665 11.287 13.8553 11.4903 13.6423C11.7192 13.4024 11.835 13.0334 11.9575 12.3937L13.0776 6.55351C13.14 6.22807 13.4544 6.01484 13.7798 6.07726Z"
+												fill="white" />
+										</svg>
+									</button>
+									<div
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
+												fill="#0F172A" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- benefits-section -->
+			<section class="mt-20">
+				<div class="container">
+					<div
+						class="bg-benefits-banner bg-cover bg-no-repeat flex flex-col justify-center items-center py-20 rounded-32">
+						<h2>Получите максимум выгоды</h2>
 					</div>
 				</div>
 			</section>
