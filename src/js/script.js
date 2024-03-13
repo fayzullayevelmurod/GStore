@@ -76,53 +76,59 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// Timer
+
 	const deadline = '2024-03-25';
 
 	function getTimeRemaining(endtime) {
-		let days, hours, minutes;
+		let days, hours, seconds;
 		const timer = Date.parse(endtime) - Date.parse(new Date());
 
 		if (timer <= 0) {
 			days = 0;
 			hours = 0;
-			minutes = 0;
+			seconds = 0;
 		} else {
 			days = Math.floor(timer / (1000 * 60 * 60 * 24));
 			hours = Math.floor((timer / (1000 * 60 * 60)) % 24);
-			minutes = Math.floor((timer / 1000 / 60) % 60);
+			seconds = Math.floor((timer / 1000) % 60)
 		}
 
-		return { timer, days, hours, minutes };
+		return { timer, days, hours, seconds };
 	}
 
-	function getZero(num) {
-		if (num >= 0 && num < 10) {
-			return `0${num}`;
-		} else {
-			return num;
-		}
-	}
 
 	function setClock(selector, endtime) {
-		const timer = document.querySelector(selector),
-			days = timer.querySelector('#days'),
-			hours = timer.querySelector('#hours'),
-			minutes = timer.querySelector('#minutes'),
-			timeInterval = setInterval(updatClock, 1000);
 
-		updatClock();
 
-		function updatClock() {
-			const t = getTimeRemaining(endtime);
+		const timer = document.querySelectorAll(selector);
+		timer.forEach(el => {
+			const days = el.querySelector('#days')
+			const hours = el.querySelector('#hours')
+			const seconds = el.querySelector('#seconds');
+			const timeInterval = setInterval(updateClock, 1000);
 
-			days.innerHTML = getZero(t.days);
-			hours.innerHTML = getZero(t.hours);
-			minutes.innerHTML = getZero(t.minutes);
+			updateClock();
 
-			if (t.timer <= 0) {
-				clearInterval(timeInterval);
+			function updateClock() {
+				const t = getTimeRemaining(endtime);
+
+				days.textContent = getZero(t.days);
+				hours.textContent = getZero(t.hours);
+				seconds.textContent = getZero(t.seconds);
+
+				if (t.timer <= 0) {
+					clearInterval(timeInterval);
+				}
 			}
-		}
+
+			function getZero(num) {
+				if (num >= 0 && num < 10) {
+					return `0${num}`;
+				} else {
+					return num;
+				}
+			}
+		})
 	}
 
 	setClock('.timer', deadline);

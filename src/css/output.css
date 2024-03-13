@@ -1337,6 +1337,10 @@ video {
   line-height: 44px;
 }
 
+.leading-\[48px\] {
+  line-height: 48px;
+}
+
 .leading-\[52px\] {
   line-height: 52px;
 }
@@ -1468,6 +1472,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+input {
+  outline: none
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -1493,6 +1501,125 @@ input[type="search"]::-webkit-search-results-decoration {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.dark .btn-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .btn-light svg path {
+  fill: #fff;
+}
+
+.dark [data-send-btn] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .product-btn__icon path {
+  fill: #0f172a;
+}
+
+.dark .benefits-input {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .product-card .btn {
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.dark .product-card .hover-svg path {
+  fill: #fff;
+}
+
+.dark .product-card .btn+div {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .menu-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .menu-btn:hover div span {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.dark header input[type="search"] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark header input[type="search"]::-moz-placeholder, .dark .benefits-input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.dark header input[type="search"]::placeholder,
+.dark .benefits-input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.dark .menu-box {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .menu-box svg path {
+  fill: #fff;
+}
+
+.dark .menu-box .sun-icon path {
+  stroke: #fff;
+}
+
+.dark .product-categories a {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
+.dark .product-categories a div {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .services-cards div {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .services-cards div p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .services-cards div>div:first-child {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.dark header input[type="search"]+button svg path {
+  fill: #9CA3AF;
+}
+
+.dark .menu-btn div span {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .dark .header-top {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -1502,7 +1629,23 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .dark .header-top a {
   --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.dark .reviews-swiper .swiper-slide>div {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark .reviews-swiper .swiper-slide>div p {
+  --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark footer a,
+.dark footer p {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 /* dark mode */
@@ -1735,6 +1878,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .focus\:font-medium:focus {
   font-weight: 500;
+}
+
+.focus\:text-slate-900:focus {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:block {

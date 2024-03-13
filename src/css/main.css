@@ -17,6 +17,10 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
+input {
+	outline: none
+}
+
 .container {
 	@apply max-w-[1216px] mx-auto;
 }
@@ -34,12 +38,114 @@ input[type="search"]::-webkit-search-results-decoration {
 	@apply text-white
 }
 
+.dark .btn-light {
+	@apply bg-[#374151] text-white;
+}
+
+.dark .btn-light svg path {
+	@apply fill-white
+}
+
+.dark [data-send-btn] {
+	@apply bg-[#374151] text-white;
+}
+
+.dark .product-btn__icon path {
+	@apply fill-slate-900;
+}
+
+.dark .benefits-input {
+	@apply bg-[#374151] text-white
+}
+
+.dark .product-card .btn {
+	@apply bg-white text-slate-900 border-transparent;
+}
+
+.dark .product-card .hover-svg path {
+	@apply fill-white;
+}
+
+.dark .product-card .btn+div {
+	@apply bg-[#374151];
+}
+
+.dark .menu-btn:hover {
+	@apply bg-[#374151];
+}
+
+.dark .menu-btn:hover div span {
+	@apply bg-white
+}
+
+.dark header input[type="search"] {
+	@apply bg-[#374151];
+}
+
+.dark header input[type="search"]::placeholder,
+.dark .benefits-input::placeholder {
+	@apply text-[#9CA3AF]
+}
+
+.dark .menu-box {
+	@apply bg-[#374151];
+}
+
+.dark .menu-box svg path {
+	@apply fill-white;
+}
+
+.dark .menu-box .sun-icon path {
+	@apply stroke-white
+}
+
+.dark .product-categories a {
+	@apply border-[#374151]
+}
+
+.dark .product-categories a div {
+	@apply bg-[#374151]
+}
+
+.dark .services-cards div {
+	@apply bg-[#374151];
+}
+
+.dark .services-cards div p {
+	@apply text-white;
+}
+
+.dark .services-cards div>div:first-child {
+	@apply bg-slate-900
+}
+
+.dark header input[type="search"]+button svg path {
+	@apply fill-[#9CA3AF];
+}
+
+.dark .menu-btn div span {
+	@apply bg-[#374151]
+}
+
 .dark .header-top {
 	@apply bg-[#374151] text-white;
 }
 
 .dark .header-top a {
-	@apply text-white;
+	@apply text-[#9CA3AF];
+}
+
+.dark .reviews-swiper .swiper-slide>div {
+	@apply bg-[#374151];
+}
+
+.dark .reviews-swiper .swiper-slide>div p {
+	@apply text-white
+}
+
+.dark footer a,
+.dark footer p {
+	@apply text-[#9CA3AF];
 }
 
 /* dark mode */

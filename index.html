@@ -67,8 +67,17 @@
 							<div class="relative">
 								<input type="search" placeholder="Найти"
 									class="w-[348px] h-[48px] px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
-								<img class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer" src="src/images/icons/search.svg"
-									alt="search icon" width="18" height="18">
+								<button class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M9.58342 2.41675C5.62537 2.41675 2.41675 5.62537 2.41675 9.58342C2.41675 13.5415 5.62537 16.7501 9.58342 16.7501C13.5415 16.7501 16.7501 13.5415 16.7501 9.58342C16.7501 5.62537 13.5415 2.41675 9.58342 2.41675ZM0.916748 9.58342C0.916748 4.79695 4.79695 0.916748 9.58342 0.916748C14.3699 0.916748 18.2501 4.79695 18.2501 9.58342C18.2501 14.3699 14.3699 18.2501 9.58342 18.2501C4.79695 18.2501 0.916748 14.3699 0.916748 9.58342Z"
+											fill="#64748B" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M16.1364 16.1364C16.4293 15.8435 16.9042 15.8435 17.1971 16.1364L18.8637 17.8031C19.1566 18.096 19.1566 18.5709 18.8637 18.8637C18.5709 19.1566 18.096 19.1566 17.8031 18.8637L16.1364 17.1971C15.8435 16.9042 15.8435 16.4293 16.1364 16.1364Z"
+											fill="#64748B" />
+									</svg>
+								</button>
+
 							</div>
 						</div>
 					</div>
@@ -197,28 +206,28 @@
 									</p>
 								</div> -->
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl py-6">
-									<h5 class="px-6 pb-[6px]  text-base leading-[17.6px] font-medium cursor-pointer">
+									<h5 class="px-6 pb-[6px] text-slate-900 text-base leading-[17.6px] font-medium cursor-pointer">
 										Профиль</h5>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Личные данные</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Баланс</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Заказы</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
 									<button
-										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus: cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
+										class="flex hover:bg-slate-100 group duration-200 hover: focus:font-medium focus:text-slate-900 cursor-pointer px-6 py-[10px] items-center justify-between w-full text-sm leading-[18.2px] text-slate-500">
 										<span>Отзывы</span>
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
@@ -252,7 +261,7 @@
 							<div class="absolute top-full pt-4 z-10 right-0 cursor-auto group-hover:block hidden">
 								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl p-6">
 									<div class="flex items-center justify-between">
-										<h6 class=" text-sm leading-[17.6px] font-medium cursor-pointer">
+										<h6 class="text-slate-900 text-sm leading-[17.6px] font-medium cursor-pointer">
 											Корзина</h6>
 										<span class="product-count text-xs text-slate-500 leading-[13.2px] hidden">3 шт.</span>
 									</div>
@@ -271,10 +280,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -286,10 +295,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -301,10 +310,10 @@
 										<div class="flex items-start space-x-2 border-b border-slate-200 py-3">
 											<img src="src/images/product-img-1.png" alt="product-img" width="60" height="68">
 											<div>
-												<p class="font-medium text-xs leading-[13.2px] ">iPhone 15 Pro 256GB Natural
+												<p class="font-medium text-xs leading-[13.2px] text-slate-900">iPhone 15 Pro 256GB Natural
 													Titanium</p>
 												<div class="flex my-2 items-center justify-between">
-													<p class="font-medium text-xs leading-[13.2px] ">145 900 ₽</p>
+													<p class="font-medium text-xs leading-[13.2px] text-slate-900">145 900 ₽</p>
 													<p class="text-xs leading-[13.2px] text-slate-500">145 900 ₽</p>
 												</div>
 												<div class="flex items-center justify-between">
@@ -319,35 +328,47 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex space-x-2">
+				<div class="flex space-x-2 product-categories">
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/phone.svg" alt="phone" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/phone.svg" alt="phone" width="24" height="24">
+						</div>
 						<p class="info">Смартфоны</p>
 					</a>
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/laptop.svg" alt="laptop" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/laptop.svg" alt="laptop" width="24" height="24">
+						</div>
 						<p class="info">Ноутбуки</p>
 					</a>
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/tablet.svg" alt="tablet" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/tablet.svg" alt="tablet" width="24" height="24">
+						</div>
 						<p class="info">Планшеты</p>
 					</a>
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/stylers.svg" alt="stylers" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/stylers.svg" alt="stylers" width="24" height="24">
+						</div>
 						<p class="info">Стайлеры</p>
 					</a>
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/consoles.svg" alt="consoles" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/consoles.svg" alt="consoles" width="24" height="24">
+						</div>
 						<p class="info">Приставки</p>
 					</a>
 					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200"
 						href="#!">
-						<img src="src/images/accessories.svg" alt="accessories" width="24" height="24">
+						<div class="bg-slate-200 rounded-full overflow-hidden">
+							<img src="src/images/accessories.svg" alt="accessories" width="24" height="24">
+						</div>
 						<p class="info">Акссесуары</p>
 					</a>
 				</div>
@@ -448,7 +469,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -487,7 +508,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -526,7 +547,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -565,7 +586,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -604,7 +625,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -643,7 +664,7 @@
 												</div>
 												<span class="block mx-[2px] text-white">:</span>
 												<div class="bg-white rounded-[8px] flex flex-col w-8 h-8 items-center justify-center">
-													<span class="leading-3.5 text-slate-900" id="minutes">21</span>
+													<span class="leading-3.5 text-slate-900" id="seconds">21</span>
 												</div>
 											</div>
 										</div>
@@ -672,7 +693,7 @@
 						</div>
 					</div>
 
-					<div class="flex mt-6 space-x-4">
+					<div class="flex mt-6 space-x-4 services-cards">
 						<div class="min-w-[292px] w-full p-4 rounded-3xl flex items-start space-x-4 bg-slate-100">
 							<div class="rounded-full w-10 h-10 flex items-center justify-center bg-slate-900">
 								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -848,7 +869,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -914,7 +935,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -980,7 +1001,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1046,7 +1067,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1131,7 +1152,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1197,7 +1218,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1263,7 +1284,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1329,7 +1350,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1453,7 +1474,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1519,7 +1540,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1585,7 +1606,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
@@ -1651,7 +1672,7 @@
 										</svg>
 									</button>
 									<div
-										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 duration-200">
+										class="cursor-pointer px-[14px] py-[13px] bg-slate-100 rounded-xl hover-svg hover:bg-slate-900 h-[48px] duration-200 leading-[48px]">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M6.29935 3.33325C4.15873 3.33325 2.41602 5.07729 2.41602 7.24158C2.41602 9.90877 3.6467 12.0494 5.20483 13.6459C6.77201 15.2516 8.62429 16.2561 9.72499 16.6318L9.73231 16.6343L9.7323 16.6343C9.76873 16.6472 9.86547 16.6666 9.99935 16.6666C10.1332 16.6666 10.23 16.6472 10.2664 16.6343L10.2737 16.6318L10.2737 16.6318C11.3744 16.2561 13.2267 15.2516 14.7939 13.6459C16.352 12.0494 17.5827 9.90877 17.5827 7.24158C17.5827 5.07729 15.84 3.33325 13.6994 3.33325C12.4388 3.33325 11.308 3.9457 10.6015 4.89708C10.46 5.0876 10.2367 5.19992 9.99935 5.19992C9.76203 5.19992 9.53872 5.0876 9.39723 4.89708C8.69023 3.94508 7.56749 3.33325 6.29935 3.33325ZM0.916016 7.24158C0.916016 4.25588 3.3233 1.83325 6.29935 1.83325C7.73683 1.83325 9.03862 2.40014 9.9997 3.32061C10.9629 2.39983 12.2691 1.83325 13.6994 1.83325C16.6754 1.83325 19.0827 4.25588 19.0827 7.24158C19.0827 10.4077 17.6134 12.9046 15.8673 14.6936C14.1317 16.4718 12.0776 17.6003 10.7615 18.0503C10.5156 18.1363 10.2391 18.1666 9.99935 18.1666C9.75957 18.1666 9.48305 18.1363 9.23717 18.0503C7.92106 17.6003 5.86695 16.4718 4.13137 14.6936C2.38534 12.9046 0.916016 10.4077 0.916016 7.24158Z"
