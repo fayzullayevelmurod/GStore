@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+	// menu
+	const menuBtn = document.querySelector('.menu-btn');
+	menuBtn.addEventListener('click', () => {
+		menuBtn.classList.toggle('active')
+	})
 
 	// dark mode
 	const moonIcon = document.querySelector('.moon-icon');
@@ -42,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			clickable: true,
 		},
 		speed: 1000,
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
 	});
 
 	// discount-swiper-two
@@ -56,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			clickable: true,
 		},
 		speed: 1000,
-		// autoplay: {
-		// 	delay: 3500,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
 	});
 
 	// reviews-swiper
@@ -73,6 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		loop: true,
 		grabCursor: true,
 		speed: 1000,
+		breakpoints: {
+			1250: {
+				spaceBetween: 15,
+				slidesPerView: 3,
+			},
+			815: {
+				spaceBetween: 15,
+				slidesPerView: 2,
+			},
+			0: {
+				spaceBetween: 15,
+				slidesPerView: 1.144,
+			}
+		}
 	});
 
 	// Timer
