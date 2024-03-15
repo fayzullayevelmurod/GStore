@@ -630,24 +630,20 @@ video {
   right: 16px;
 }
 
+.right-\[3px\] {
+  right: 3px;
+}
+
 .top-1\/2 {
   top: 50%;
 }
 
+.top-\[3px\] {
+  top: 3px;
+}
+
 .top-full {
   top: 100%;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.left-1 {
-  left: 0.25rem;
-}
-
-.right-1 {
-  right: 0.25rem;
 }
 
 .z-10 {
@@ -782,6 +778,10 @@ video {
   height: 116px;
 }
 
+.h-\[12px\] {
+  height: 12px;
+}
+
 .h-\[14px\] {
   height: 14px;
 }
@@ -816,18 +816,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[56px\] {
-  height: 56px;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[22px\] {
-  height: 22px;
 }
 
 .min-h-6 {
@@ -897,26 +885,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-\[176\] {
-  width: 176;
-}
-
-.w-\[176px\] {
-  width: 176px;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[98px\] {
-  width: 98px;
 }
 
 .min-w-6 {
@@ -1070,14 +1038,6 @@ video {
   gap: 10px;
 }
 
-.gap-\[15px\] {
-  gap: 15px;
-}
-
-.gap-\[22px\] {
-  gap: 22px;
-}
-
 .gap-\[24px\] {
   gap: 24px;
 }
@@ -1211,6 +1171,11 @@ video {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
+.bg-cyan-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
+}
+
 .bg-orange-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 237 / var(--tw-bg-opacity));
@@ -1253,11 +1218,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
 }
 
 .bg-benefits-banner {
@@ -1332,6 +1292,10 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-4 {
@@ -1481,6 +1445,10 @@ video {
   font-size: 20px;
 }
 
+.text-\[8px\] {
+  font-size: 8px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1494,10 +1462,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[8px\] {
-  font-size: 8px;
 }
 
 .font-medium {
@@ -1526,6 +1490,10 @@ video {
 
 .leading-\[13\.2px\] {
   line-height: 13.2px;
+}
+
+.leading-\[13\.5px\] {
+  line-height: 13.5px;
 }
 
 .leading-\[14\.4px\] {
@@ -1578,18 +1546,6 @@ video {
 
 .leading-\[52px\] {
   line-height: 52px;
-}
-
-.leading-\[\] {
-  line-height: ;
-}
-
-.leading-\[14px\] {
-  line-height: 14px;
-}
-
-.leading-\[13\.5px\] {
-  line-height: 13.5px;
 }
 
 .text-\[\#0D9488\] {
@@ -1986,6 +1942,11 @@ input {
   transition-duration: 200ms;
 }
 
+.btn.menu-btn {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .btn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -2191,7 +2152,14 @@ input {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
+  .products-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 482px) {
   .btn {
     height: 2.5rem;
     border-radius: 0.5rem;
@@ -2202,6 +2170,10 @@ input {
     font-size: 0.75rem;
     line-height: 1rem;
     line-height: 13.2px;
+  }
+
+  .btn.menu-btn {
+    height: 2.5rem;
   }
 
   .btn-light {
@@ -2225,6 +2197,17 @@ input {
     font-size: 0.875rem;
     line-height: 1.25rem;
     line-height: 15px;
+  }
+
+  .gift-section .btn-light > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .gift-section .btn-light {
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
   }
 
   .info {
@@ -2363,6 +2346,14 @@ input {
     bottom: 0px;
   }
 
+  .xs\:right-\[2px\] {
+    right: 2px;
+  }
+
+  .xs\:top-1 {
+    top: 0.25rem;
+  }
+
   .xs\:my-3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
@@ -2427,6 +2418,10 @@ input {
 
   .xs\:h-8 {
     height: 2rem;
+  }
+
+  .xs\:h-\[14px\] {
+    height: 14px;
   }
 
   .xs\:h-\[auto\] {
@@ -2525,6 +2520,10 @@ input {
     border-radius: 8px;
   }
 
+  .xs\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
   .xs\:bg-discount-banner {
     background-image: url('../images/discounts-banner.png');
   }
@@ -2540,6 +2539,16 @@ input {
   .xs\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .xs\:px-\[5px\] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .xs\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .xs\:py-20 {
@@ -2663,16 +2672,8 @@ input {
     display: none;
   }
 
-  .sm\:h-\[56px\] {
-    height: 56px;
-  }
-
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:w-\[176px\] {
-    width: 176px;
   }
 
   .sm\:flex-row {
@@ -2694,6 +2695,11 @@ input {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:leading-\[17\.6px\] {

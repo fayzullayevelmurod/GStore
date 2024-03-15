@@ -180,6 +180,9 @@ input {
 .btn {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[48px] rounded-xl flex items-center relative transition-all duration-200;
 }
+.btn.menu-btn {
+	@apply text-base;
+}
 
 .btn:hover {
 	@apply bg-slate-800
@@ -329,13 +332,28 @@ input {
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
+	.products-cards {
+		@apply grid grid-cols-2;
+	}
+}
+
+@media screen and (max-width: 482px) {
+
 	.btn {
 		@apply h-10 leading-[13.2px] py-2 px-3 text-xs rounded-lg;
 	}
 
+	.btn.menu-btn {
+		@apply h-10;
+	}
+
 	.btn-light {
 		@apply bg-transparent px-3 py-1 text-sm leading-3.5 rounded-lg h-8 space-x-1 p-0 bg-transparent;
+	}
+
+	.gift-section .btn-light {
+		@apply bg-slate-100 space-x-2
 	}
 
 	.info {
