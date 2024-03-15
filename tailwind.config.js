@@ -8,10 +8,12 @@ module.exports = {
 				'transparent-bg': 'rgba(15, 23, 42, 0.75)',
 			},
 			fontSize: {
-				"32": "32px"
+				"3xl": "32px",
+				"4xl": "40px",
 			},
 			fontFamily: {
 				"SF-Pro-Display": ["SF Pro Display", 'sans-serif'],
+				"Onest": ["Onest", 'sans-serif'],
 			},
 			lineHeight: {
 				"8.5": "35.2px",
@@ -30,6 +32,9 @@ module.exports = {
 				'catalog-img-5': "url('../images/catalog-img-5.png')",
 				'catalog-img-6': "url('../images/catalog-img-6.png')",
 				'catalog-img-7': "url('../images/catalog-img-7.png')",
+				'stock-img-1': "url('../images/stock-bg-1.png')",
+				'stock-img-2': "url('../images/stock-bg-2.png')",
+				'stock-img-3': "url('../images/stock-bg-3.png')",
 			},
 			borderRadius: {
 				"32": "32px"
@@ -37,7 +42,7 @@ module.exports = {
 			screens: {
 				"992": "992px",
 				"xs": "480px"
-			}
+			},
 		},
 	},
 	plugins: [],

@@ -29,9 +29,16 @@ input {
 .dark .title-text {
 	@apply text-white
 }
+
 .dark .close-btn svg path {
 	@apply fill-white
 }
+
+.dark .white-text,
+.dark .title-xxl {
+	@apply text-white;
+}
+
 .dark .btn {
 	@apply bg-white text-[#1F2937];
 }
@@ -101,11 +108,13 @@ input {
 	@apply text-[#9CA3AF]
 }
 
-.dark .menu-box {
+.dark .menu-box,
+.dark .pagination>div {
 	@apply bg-[#374151];
 }
 
-.dark .menu-box svg path {
+.dark .menu-box svg path,
+.dark .pagination>div svg path {
 	@apply fill-white;
 }
 
@@ -170,9 +179,14 @@ input {
 	@apply bg-[#374151] text-white;
 }
 
-/* dark mode */
+/* dark mode end */
+
 .title-text {
-	@apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal;
+	@apply font-SF-Pro-Display text-3xl font-medium leading-8.5 text-slate-900 tracking-normal;
+}
+
+.title-xxl {
+	@apply text-4xl leading-[44px] font-medium text-slate-900;
 }
 
 .info-text {
@@ -294,6 +308,10 @@ input {
 
 .catalog {
 	@apply scale-y-0 origin-top;
+}
+
+.pagination>div.active {
+	@apply bg-slate-900 text-white
 }
 
 @media screen and (max-width: 640px) {
