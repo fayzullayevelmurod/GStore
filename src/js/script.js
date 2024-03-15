@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function catalogFunc() {
 		menuBtn.classList.toggle('active')
 		catalog.classList.toggle('active');
-		document.querySelector('wrapper').classList.toggle('overflow-hidden');
+		// document.body.classList.toggle('overflow-hidden');
 	}
 	closeBtn.addEventListener('click', catalogFunc);
 	menuBtn.addEventListener('click', catalogFunc);

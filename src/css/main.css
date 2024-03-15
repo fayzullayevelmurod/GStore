@@ -180,6 +180,7 @@ input {
 .btn {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[48px] rounded-xl flex items-center relative transition-all duration-200;
 }
+
 .btn.menu-btn {
 	@apply text-base;
 }
@@ -284,8 +285,23 @@ input {
 	width: 0;
 	height: 0;
 }
+
 .catalog.active {
-	@apply sm:scale-y-100 scale-x-100
+	@apply scale-y-100
+}
+
+.catalog {
+	@apply scale-y-0 origin-top;
+}
+
+@media screen and (max-width: 640px) {
+	.catalog {
+		@apply scale-y-100 scale-x-0 origin-left
+	}
+
+	.catalog.active {
+		@apply scale-x-100;
+	}
 }
 
 /* media query start */
