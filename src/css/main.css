@@ -47,7 +47,8 @@ input {
 	@apply text-white
 }
 
-.dark .btn-light {
+.dark .btn-light,
+.dark .btn-light__two {
 	@apply bg-[#374151] text-white;
 }
 
@@ -55,7 +56,8 @@ input {
 	@apply fill-[#9CA3AF]
 }
 
-.dark .btn-light svg path {
+.dark .btn-light svg path,
+.dark .btn-light__two svg path {
 	@apply fill-white
 }
 
@@ -63,7 +65,8 @@ input {
 	@apply bg-[#374151] text-white;
 }
 
-.dark .dark-white {
+.dark .dark-white,
+.dark .btn-light {
 	@apply text-white
 }
 
@@ -206,15 +209,15 @@ input {
 }
 
 .btn-light {
-	@apply flex items-center space-x-2 text-sm font-medium leading-3.5 text-slate-900 duration-200 bg-slate-100 px-4 py-[14px] rounded-xl
+	@apply hover:bg-slate-900 hover:text-white flex items-center space-x-2 text-sm font-medium leading-3.5 text-slate-900 duration-200 bg-slate-100 px-4 py-[14px] rounded-xl
 }
 
-
-.btn-light:hover {
-	@apply bg-slate-900 text-white
+.btn-light__two {
+	@apply hover:bg-slate-900 hover:text-white flex items-center space-x-2 text-sm font-medium leading-3.5 text-slate-900 duration-200 bg-slate-100 px-4 py-[14px] rounded-xl
 }
 
-.btn-light:hover svg path {
+.btn-light:hover svg path,
+.btn-light__two:hover svg path {
 	@apply fill-white
 }
 
@@ -384,8 +387,12 @@ input {
 		@apply h-10;
 	}
 
+	.dark .btn-light {
+		@apply bg-transparent
+	}
+
 	.btn-light {
-		@apply bg-transparent px-3 py-1 text-sm leading-3.5 rounded-lg h-8 space-x-1 p-0 bg-transparent;
+		@apply pl-3 py-1 text-sm leading-3.5 rounded-lg h-8 space-x-1 p-0 bg-transparent;
 	}
 
 	.gift-section .btn-light {
@@ -416,7 +423,8 @@ input {
 		@apply w-[151px] h-[174px];
 	}
 
-	.title-text {
+	.title-text,
+	.title-xxl {
 		@apply text-[20px] leading-[22px];
 	}
 
