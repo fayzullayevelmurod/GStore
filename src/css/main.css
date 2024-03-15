@@ -29,7 +29,9 @@ input {
 .dark .title-text {
 	@apply text-white
 }
-
+.dark .close-btn svg path {
+	@apply fill-white
+}
 .dark .btn {
 	@apply bg-white text-[#1F2937];
 }

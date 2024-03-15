@@ -1276,8 +1276,12 @@ video {
   --tw-gradient-to: #f97316 var(--tw-gradient-to-position);
 }
 
-.bg-contain {
-  background-size: contain;
+.bg-\[length\:25\%_100\%\] {
+  background-size: 25% 100%;
+}
+
+.bg-\[length\:30\%_100\%\] {
+  background-size: 30% 100%;
 }
 
 .bg-cover {
@@ -1705,6 +1709,10 @@ input {
 .dark .title-text {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .close-btn svg path {
+  fill: #fff;
 }
 
 .dark .btn {
@@ -2739,6 +2747,10 @@ input {
   .sm\:rounded-b-32 {
     border-bottom-right-radius: 32px;
     border-bottom-left-radius: 32px;
+  }
+
+  .sm\:bg-contain {
+    background-size: contain;
   }
 
   .sm\:p-6 {
