@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	// menu
 	const menuBtn = document.querySelector('.menu-btn');
 	const catalog = document.querySelector('.catalog');
-
+	const closeBtn = document.querySelector('.close-btn');
 	function catalogFunc() {
 		menuBtn.classList.toggle('active')
-		catalog.classList.toggle('scale-y-0');
-		document.body.classList.toggle('overflow-hidden');
+		catalog.classList.toggle('active');
+		document.querySelector('wrapper').classList.toggle('overflow-hidden');
 	}
-
-	menuBtn.addEventListener('click', catalogFunc)
+	closeBtn.addEventListener('click', catalogFunc);
+	menuBtn.addEventListener('click', catalogFunc);
 	catalog.addEventListener('click', (e) => {
 		if (e.target.classList.contains('catalog')) {
 			catalogFunc();

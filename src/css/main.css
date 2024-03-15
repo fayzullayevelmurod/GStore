@@ -284,9 +284,9 @@ input {
 	width: 0;
 	height: 0;
 }
-
-/* catalog */
-
+.catalog.active {
+	@apply sm:scale-y-100 scale-x-100
+}
 
 /* media query start */
 @media screen and (max-width: 1250px) {
