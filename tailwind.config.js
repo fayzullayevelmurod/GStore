@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				"dark-slate-gray": "#374151"
+				"dark-slate-gray": "#374151",
+				'transparent-bg': 'rgba(15, 23, 42, 0.75)',
 			},
 			fontSize: {
 				"32": "32px"
@@ -21,6 +22,13 @@ module.exports = {
 				'gift-banner': "url('../images/gift.png')",
 				'delivery-banner': "url('../images/delivery.png')",
 				'benefits-banner': "url('../images/benefits-banner.png')",
+				'catalog-img-1': "url('../images/catalog-img-1.png')",
+				'catalog-img-2': "url('../images/catalog-img-2.png')",
+				'catalog-img-3': "url('../images/catalog-img-3.png')",
+				'catalog-img-4': "url('../images/catalog-img-4.png')",
+				'catalog-img-5': "url('../images/catalog-img-5.png')",
+				'catalog-img-6': "url('../images/catalog-img-6.png')",
+				'catalog-img-7': "url('../images/catalog-img-7.png')",
 			},
 			borderRadius: {
 				"32": "32px"

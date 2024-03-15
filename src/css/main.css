@@ -160,6 +160,13 @@ input {
 	@apply text-[#9CA3AF];
 }
 
+.dark .catalog>div {
+	@apply bg-[#1F2937];
+}
+
+.dark .catalog .catalog-box {
+	@apply bg-[#374151] text-white;
+}
 /* dark mode */
 .title-text {
 	@apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal;
@@ -236,7 +243,7 @@ input {
 
 /* products */
 .products-cards {
-	@apply flex justify-between gap-[15px] flex-wrap;
+	@apply flex justify-between gap-[16px] flex-wrap;
 }
 
 .products-cards>div {
@@ -273,6 +280,8 @@ input {
 	width: 0;
 	height: 0;
 }
+
+/* catalog */
 
 
 /* media query start */

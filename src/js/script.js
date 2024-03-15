@@ -1,8 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 	// menu
 	const menuBtn = document.querySelector('.menu-btn');
-	menuBtn.addEventListener('click', () => {
+	const catalog = document.querySelector('.catalog');
+
+	function catalogFunc() {
 		menuBtn.classList.toggle('active')
+		catalog.classList.toggle('scale-y-0');
+		document.body.classList.toggle('overflow-hidden');
+	}
+
+	menuBtn.addEventListener('click', catalogFunc)
+	catalog.addEventListener('click', (e) => {
+		if (e.target.classList.contains('catalog')) {
+			catalogFunc();
+		}
 	})
 
 	// dark mode
@@ -25,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	// Saqlangan dark mode holatini tekshirish
 	const savedDarkMode = localStorage.getItem('darkMode');
 	if (savedDarkMode === 'enabled') {
 		body.classList.add('dark');
@@ -34,11 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		sunIcon.classList.remove('hidden');
 	}
 
-
-	// responsive navbar
-
 	// swiper
-
 	// discount-swiper
 	var swiper = new Swiper(".discount-swiper", {
 		spaceBetween: 30,
