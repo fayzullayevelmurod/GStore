@@ -774,6 +774,10 @@ video {
   height: 116px;
 }
 
+.h-\[14px\] {
+  height: 14px;
+}
+
 .h-\[180px\] {
   height: 180px;
 }
@@ -842,6 +846,10 @@ video {
   width: 13.17px;
 }
 
+.w-\[14px\] {
+  width: 14px;
+}
+
 .w-\[1px\] {
   width: 1px;
 }
@@ -875,6 +883,10 @@ video {
   min-width: 1.5rem;
 }
 
+.min-w-\[190px\] {
+  min-width: 190px;
+}
+
 .min-w-\[258px\] {
   min-width: 258px;
 }
@@ -897,10 +909,6 @@ video {
 
 .max-w-\[176px\] {
   max-width: 176px;
-}
-
-.max-w-\[190px\] {
-  max-width: 190px;
 }
 
 .max-w-\[232px\] {
@@ -982,6 +990,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1052,6 +1064,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-\[6px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(6px * var(--tw-space-x-reverse));
+  margin-left: calc(6px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1225,8 +1243,8 @@ video {
   background-image: url('../images/delivery.png');
 }
 
-.bg-discount-banner {
-  background-image: url('../images/discounts-banner.png');
+.bg-discount-media-banner {
+  background-image: url('../images/discounts-media-banner.png');
 }
 
 .bg-gift-banner {
@@ -1245,10 +1263,6 @@ video {
 
 .to-orange-500 {
   --tw-gradient-to: #f97316 var(--tw-gradient-to-position);
-}
-
-.bg-\[length\:100\%_100\%\] {
-  background-size: 100% 100%;
 }
 
 .bg-contain {
@@ -1381,8 +1395,8 @@ video {
   padding-left: 0.25rem;
 }
 
-.pr-\[14px\] {
-  padding-right: 14px;
+.pr-\[7px\] {
+  padding-right: 7px;
 }
 
 .pt-4 {
@@ -2192,6 +2206,20 @@ input {
     width: 10px !important;
     display: none;
   }
+
+  .btn {
+    height: 32px;
+  }
+}
+
+.placeholder\:text-sm::-moz-placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.placeholder\:text-sm::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .placeholder\:text-slate-500::-moz-placeholder {
@@ -2247,6 +2275,14 @@ input {
 }
 
 @media (min-width: 480px) {
+  .xs\:relative {
+    position: relative;
+  }
+
+  .xs\:bottom-0 {
+    bottom: 0px;
+  }
+
   .xs\:my-3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
@@ -2305,6 +2341,10 @@ input {
     height: 3rem;
   }
 
+  .xs\:h-5 {
+    height: 1.25rem;
+  }
+
   .xs\:h-8 {
     height: 2rem;
   }
@@ -2319,6 +2359,10 @@ input {
 
   .xs\:w-12 {
     width: 3rem;
+  }
+
+  .xs\:w-5 {
+    width: 1.25rem;
   }
 
   .xs\:w-8 {
@@ -2377,6 +2421,12 @@ input {
     gap: 50px;
   }
 
+  .xs\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .xs\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -2395,8 +2445,8 @@ input {
     border-radius: 8px;
   }
 
-  .xs\:bg-cover {
-    background-size: cover;
+  .xs\:bg-discount-banner {
+    background-image: url('../images/discounts-banner.png');
   }
 
   .xs\:p-6 {
@@ -2423,6 +2473,10 @@ input {
 
   .xs\:pb-\[58px\] {
     padding-bottom: 58px;
+  }
+
+  .xs\:pr-\[14px\] {
+    padding-right: 14px;
   }
 
   .xs\:text-2xl {
@@ -2488,6 +2542,16 @@ input {
   .xs\:leading-\[44px\] {
     line-height: 44px;
   }
+
+  .xs\:placeholder\:text-base::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .xs\:placeholder\:text-base::placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -2522,6 +2586,10 @@ input {
   .sm\:justify-start {
     justify-content: flex-start;
   }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2539,6 +2607,10 @@ input {
 @media (min-width: 1024px) {
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:justify-normal {
+    justify-content: normal;
   }
 
   .lg\:justify-start {

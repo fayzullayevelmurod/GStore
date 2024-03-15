@@ -54,12 +54,12 @@
 				<div class="relative flex xs:flex-wrap gap-y-3 gap-2 items-end justify-between mt-4 mb-6">
 					<div
 						class="flex sm:flex-row flex-col  gap-y-4 sm:items-end lg:w-auto xs:w-full w-fit lg:justify-start justify-between">
-						<div class="sm:block flex items-end justify-between">
+						<div class="sm:block flex items-end justify-between xs:relative">
 							<a href="#!">
 								<img class="xs:w-auto xs:h-auto w-[94px] h-[30px]" src="src/images/icons/company-logo.svg"
 									alt="company-logo" width="172" height="56">
 							</a>
-							<a class="sm:hidden flex items-center gap-[10px] info-text absolute bottom-[56px] right-0 dark-white"
+							<a class="sm:hidden flex items-center gap-[10px] info-text absolute xs:bottom-0 bottom-[56px] right-0 dark-white"
 								href="#!">
 								<img src="src/images/icons/location.svg" alt="location icon" width="16" height="16">
 								Кременчуг-Константиновское
@@ -75,9 +75,10 @@
 							</button>
 							<div class="relative">
 								<input type="search" placeholder="Найти"
-									class="xs:w-[348px] max-w-[190px]  xs:h-12 h-10 px-4 bg-slate-100 outline-slate-900 outline-1 placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
+									class="xs:w-[348px] min-w-[190px]  xs:h-12 h-10 px-4 bg-slate-100 outline-slate-900 outline-1 xs:placeholder:text-base placeholder:text-sm placeholder:text-slate-500 text-base leading-[18px]  rounded-xl">
 								<button class="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="xs:w-5 xs:h-5 w-[14px] h-[14px]" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd"
 											d="M9.58342 2.41675C5.62537 2.41675 2.41675 5.62537 2.41675 9.58342C2.41675 13.5415 5.62537 16.7501 9.58342 16.7501C13.5415 16.7501 16.7501 13.5415 16.7501 9.58342C16.7501 5.62537 13.5415 2.41675 9.58342 2.41675ZM0.916748 9.58342C0.916748 4.79695 4.79695 0.916748 9.58342 0.916748C14.3699 0.916748 18.2501 4.79695 18.2501 9.58342C18.2501 14.3699 14.3699 18.2501 9.58342 18.2501C4.79695 18.2501 0.916748 14.3699 0.916748 9.58342Z"
 											fill="#64748B" />
@@ -90,7 +91,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex items-center xs:gap-3 gap-2 lg:w-auto xs:w-full w-fit lg:justify-start justify-between">
+					<div class="flex items-center xs:gap-3 gap-2 lg:w-auto xs:w-full w-fit lg:justify-normal sm:justify-end justify-start">
 						<div class="relative group">
 							<input class="hidden dark-mode__btn" type="checkbox" id="darkMode">
 							<label for="darkMode"
@@ -337,43 +338,43 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex space-x-2 product-categories overflow-x-auto no-scroll xs:mr-0 -mr-4">
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+				<div class="flex xs:space-x-2 space-x-1 product-categories overflow-x-auto no-scroll xs:mr-0 -mr-4">
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/phone.svg" alt="phone" width="24" height="24">
 						</div>
 						<p class="info">Смартфоны</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/laptop.svg" alt="laptop" width="24" height="24">
 						</div>
 						<p class="info">Ноутбуки</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/tablet.svg" alt="tablet" width="24" height="24">
 						</div>
 						<p class="info">Планшеты</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/stylers.svg" alt="stylers" width="24" height="24">
 						</div>
 						<p class="info">Стайлеры</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/consoles.svg" alt="consoles" width="24" height="24">
 						</div>
 						<p class="info">Приставки</p>
 					</a>
-					<a class="py-1 pl-1 pr-[14px] rounded-full border-slate-200 border flex items-center space-x-2 hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
+					<a class="py-1 pl-1 xs:pr-[14px] pr-[7px] xs:h-auto h-[32px] rounded-full border-slate-200 border flex items-center xs:space-x-2 space-x-[6px] hover:bg-slate-900 hover:border-slate-900 hover:text-white duration-200 w-full max-w-[137px]"
 						href="#!">
 						<div class="bg-slate-200 rounded-full overflow-hidden min-w-6 min-h-6">
 							<img src="src/images/accessories.svg" alt="accessories" width="24" height="24">
@@ -526,81 +527,105 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div
-										class="bg-discount-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat xs:bg-cover bg-[length:100%_100%] text-white">
-										<div class="bg-white rounded-full py-2 px-3 info-text w-fit mb-[31px]">Cкидки до 20%</div>
-										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] mb-3">
+										class="xs:bg-discount-banner bg-discount-media-banner xs:p-8 p-4 xs:pb-[58px] xs:rounded-32 rounded-2xl bg-no-repeat bg-cover text-white">
+										<div
+											class="bg-white xs:text-sm leading-3.5 text-slate-900 text-[10px] rounded-full py-2 px-3  w-fit mb-[31px]">
+											Cкидки до 20%
+										</div>
+										<h1 class="font-medium xs:text-[40px] text-2xl xs:leading-[44px] leading-[26.4px] xs:mb-3 mb-2">
 											Раскрываем <br> новые горизонты</h1>
-										<p class="leading-[22px] mb-4 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
+										<p class="leading-[22px] xs:mb-4 mb-3 xs:text-base text-sm">Выгода до десяти тысяч рублей</p>
 										<a class="btn w-fit hover:bg-slate-800" href="#!">Выбрать подарок</a>
 									</div>
 								</div>

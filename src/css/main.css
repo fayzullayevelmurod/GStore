@@ -167,6 +167,7 @@ input {
 .dark .catalog .catalog-box {
 	@apply bg-[#374151] text-white;
 }
+
 /* dark mode */
 .title-text {
 	@apply font-SF-Pro-Display text-32 font-medium leading-8.5 text-slate-900 tracking-normal;
@@ -380,5 +381,9 @@ input {
 	.slide-box .slider-img {
 		width: 10px !important;
 		display: none;
+	}
+
+	.btn {
+		height: 32px;
 	}
 }
