@@ -638,6 +638,18 @@ video {
   top: 100%;
 }
 
+.top-1 {
+  top: 0.25rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.right-1 {
+  right: 0.25rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -708,10 +720,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -810,6 +818,18 @@ video {
   height: 100%;
 }
 
+.h-\[56px\] {
+  height: 56px;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[22px\] {
+  height: 22px;
+}
+
 .min-h-6 {
   min-height: 1.5rem;
 }
@@ -877,6 +897,26 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-\[176\] {
+  width: 176;
+}
+
+.w-\[176px\] {
+  width: 176px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[98px\] {
+  width: 98px;
 }
 
 .min-w-6 {
@@ -1032,6 +1072,14 @@ video {
 
 .gap-\[15px\] {
   gap: 15px;
+}
+
+.gap-\[22px\] {
+  gap: 22px;
+}
+
+.gap-\[24px\] {
+  gap: 24px;
 }
 
 .gap-y-3 {
@@ -1205,6 +1253,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
 }
 
 .bg-benefits-banner {
@@ -1443,6 +1496,10 @@ video {
   line-height: 1rem;
 }
 
+.text-\[8px\] {
+  font-size: 8px;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1521,6 +1578,18 @@ video {
 
 .leading-\[52px\] {
   line-height: 52px;
+}
+
+.leading-\[\] {
+  line-height: ;
+}
+
+.leading-\[14px\] {
+  line-height: 14px;
+}
+
+.leading-\[13\.5px\] {
+  line-height: 13.5px;
 }
 
 .text-\[\#0D9488\] {
@@ -2137,14 +2206,25 @@ input {
 
   .btn-light {
     height: 2rem;
+  }
+
+  .btn-light > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .btn-light {
     border-radius: 0.5rem;
+    background-color: transparent;
+    padding: 0px;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    line-height: 13.2px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    line-height: 15px;
   }
 
   .info {
@@ -2559,6 +2639,18 @@ input {
     margin-left: 2.25rem;
   }
 
+  .sm\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2571,8 +2663,16 @@ input {
     display: none;
   }
 
+  .sm\:h-\[56px\] {
+    height: 56px;
+  }
+
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-\[176px\] {
+    width: 176px;
   }
 
   .sm\:flex-row {
@@ -2589,6 +2689,15 @@ input {
 
   .sm\:justify-end {
     justify-content: flex-end;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .sm\:leading-\[17\.6px\] {
+    line-height: 17.6px;
   }
 }
 

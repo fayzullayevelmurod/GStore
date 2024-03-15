@@ -335,7 +335,7 @@ input {
 	}
 
 	.btn-light {
-		@apply px-3 py-1 text-xs leading-[13.2px] rounded-lg h-8;
+		@apply bg-transparent px-3 py-1 text-sm leading-3.5 rounded-lg h-8 space-x-1 p-0 bg-transparent;
 	}
 
 	.info {
@@ -384,6 +384,6 @@ input {
 	}
 
 	.btn {
-		height: 32px;
+		@apply h-[32px];
 	}
 }
