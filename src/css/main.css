@@ -317,6 +317,10 @@ input {
 	@apply bg-slate-900 text-white
 }
 
+.gift-section .btn-light {
+	@apply pr-4;
+}
+
 @media screen and (max-width: 640px) {
 	.catalog {
 		@apply scale-y-100 scale-x-0 origin-left
@@ -324,6 +328,10 @@ input {
 
 	.catalog.active {
 		@apply scale-x-100;
+	}
+
+	.menu-btn {
+		@apply h-10
 	}
 }
 
@@ -377,7 +385,7 @@ input {
 	}
 }
 
-@media screen and (max-width: 482px) {
+@media screen and (max-width: 640px) {
 
 	.btn {
 		@apply h-10 leading-[13.2px] py-2 px-3 text-xs rounded-lg;
@@ -396,7 +404,7 @@ input {
 	}
 
 	.gift-section .btn-light {
-		@apply bg-slate-100 space-x-2
+		@apply bg-slate-100 space-x-2 pr-3
 	}
 
 	.info {

@@ -32,6 +32,13 @@ module.exports = {
 				'catalog-img-5': "url('../images/catalog-img-5.png')",
 				'catalog-img-6': "url('../images/catalog-img-6.png')",
 				'catalog-img-7': "url('../images/catalog-img-7.png')",
+				'media-catalog-img-1': "url('../images/media-catalog-img-1.png')",
+				'media-catalog-img-2': "url('../images/media-catalog-img-2.png')",
+				'media-catalog-img-3': "url('../images/media-catalog-img-3.png')",
+				'media-catalog-img-4': "url('../images/media-catalog-img-4.png')",
+				'media-catalog-img-5': "url('../images/media-catalog-img-5.png')",
+				'media-catalog-img-6': "url('../images/media-catalog-img-6.png')",
+				'media-catalog-img-7': "url('../images/media-catalog-img-7.png')",
 				'stock-img-1': "url('../images/stock-bg-1.png')",
 				'stock-img-2': "url('../images/stock-bg-2.png')",
 				'stock-img-3': "url('../images/stock-bg-3.png')",
@@ -41,7 +48,7 @@ module.exports = {
 			},
 			screens: {
 				"992": "992px",
-				"xs": "480px"
+				"xs": "480px",
 			},
 		},
 	},
