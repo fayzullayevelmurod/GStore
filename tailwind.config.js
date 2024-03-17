@@ -43,6 +43,8 @@ module.exports = {
 				'stock-img-2': "url('../images/stock-bg-2.png')",
 				'stock-img-3': "url('../images/stock-bg-3.png')",
 				'stock-bg': "url('../images/stock-bg.png')",
+				'g-gradient': "linear-gradient(26.49deg, #7B88FD -30.96%, #EF4158 97.02%)",
+				'gift-banner': "url('../images/gift-banner.png')",
 			},
 			borderRadius: {
 				"32": "32px"
@@ -50,11 +52,12 @@ module.exports = {
 			screens: {
 				"992": "992px",
 				"xs": "480px",
-				"tablet": "840px"
+				"tablet": "840px",
+				"tablet-sm": "740px"
 			},
 			boxShadow: {
 				"card-shadow": "0.11926236003637314px 2.6862428188323975px 7.4148149490356445px 0px #33415509"
-			}
+			},
 		},
 	},
 	plugins: [],

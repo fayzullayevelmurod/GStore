@@ -560,6 +560,12 @@ video {
   }
 }
 
+@media (min-width: 740px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -757,6 +763,10 @@ video {
   margin-bottom: 58px;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -835,6 +845,10 @@ video {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-20 {
@@ -965,6 +979,10 @@ video {
   width: 13.17px;
 }
 
+.w-\[140px\] {
+  width: 140px;
+}
+
 .w-\[14px\] {
   width: 14px;
 }
@@ -975,6 +993,10 @@ video {
 
 .w-\[1px\] {
   width: 1px;
+}
+
+.w-\[42px\] {
+  width: 42px;
 }
 
 .w-\[52px\] {
@@ -1424,6 +1446,10 @@ video {
   background-image: url('../images/benefits-banner.png');
 }
 
+.bg-catalog-img-7 {
+  background-image: url('../images/catalog-img-7.png');
+}
+
 .bg-delivery-banner {
   background-image: url('../images/delivery.png');
 }
@@ -1432,8 +1458,12 @@ video {
   background-image: url('../images/discounts-media-banner.png');
 }
 
+.bg-g-gradient {
+  background-image: linear-gradient(26.49deg, #7B88FD -30.96%, #EF4158 97.02%);
+}
+
 .bg-gift-banner {
-  background-image: url('../images/gift.png');
+  background-image: url('../images/gift-banner.png');
 }
 
 .bg-gradient-to-br {
@@ -1884,6 +1914,10 @@ video {
   line-height: 78px;
 }
 
+.leading-\[normal\] {
+  line-height: normal;
+}
+
 .text-\[\#0D9488\] {
   --tw-text-opacity: 1;
   color: rgb(13 148 136 / var(--tw-text-opacity));
@@ -2060,14 +2094,6 @@ input {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.dark .btn-light,
-.dark .btn-light__two {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .dark .footer-search__icon path {
   fill: #9CA3AF;
 }
@@ -2077,7 +2103,14 @@ input {
   fill: #fff;
 }
 
-.dark [data-send-btn] {
+.dark [data-send-btn],
+.dark .white-btn,
+.dark .white-btn:hover,
+.dark .dark-bg,
+.dark .btn-light,
+.dark .btn-light__two,
+.dark .tab-item:hover>div,
+.dark .tab-item.active-item>div {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -3086,6 +3119,10 @@ input[type="checkbox"]:checked+label span {
     margin-left: 2.25rem;
   }
 
+  .sm\:ml-\[15px\] {
+    margin-left: 15px;
+  }
+
   .sm\:mr-0 {
     margin-right: 0px;
   }
@@ -3286,6 +3323,12 @@ input[type="checkbox"]:checked+label span {
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:rounded-32 {
     border-radius: 32px;
   }
@@ -3337,6 +3380,10 @@ input[type="checkbox"]:checked+label span {
 
   .sm\:bg-discount-banner {
     background-image: url('../images/discounts-banner.png');
+  }
+
+  .sm\:bg-gift-banner {
+    background-image: url('../images/gift-banner.png');
   }
 
   .sm\:bg-\[length\:150\%_100\%\] {
@@ -3427,9 +3474,22 @@ input[type="checkbox"]:checked+label span {
     line-height: 1.25rem;
   }
 
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .sm\:leading-3 {
+    line-height: .75rem;
+  }
+
+  .sm\:leading-3\.5 {
+    line-height: 15px;
   }
 
   .sm\:leading-\[14\.4px\] {
@@ -3460,6 +3520,10 @@ input[type="checkbox"]:checked+label span {
     line-height: 22px;
   }
 
+  .sm\:leading-\[26\.4px\] {
+    line-height: 26.4px;
+  }
+
   .sm\:leading-\[26px\] {
     line-height: 26px;
   }
@@ -3488,6 +3552,16 @@ input[type="checkbox"]:checked+label span {
   .sm\:placeholder\:text-base::placeholder {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .tablet-sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .tablet-sm\:items-center {
+    align-items: center;
   }
 }
 

@@ -47,11 +47,6 @@ input {
 	@apply text-white
 }
 
-.dark .btn-light,
-.dark .btn-light__two {
-	@apply bg-[#374151] text-white;
-}
-
 .dark .footer-search__icon path {
 	@apply fill-[#9CA3AF]
 }
@@ -61,7 +56,14 @@ input {
 	@apply fill-white
 }
 
-.dark [data-send-btn] {
+.dark [data-send-btn],
+.dark .white-btn,
+.dark .white-btn:hover,
+.dark .dark-bg,
+.dark .btn-light,
+.dark .btn-light__two,
+.dark .tab-item:hover>div,
+.dark .tab-item.active-item>div {
 	@apply bg-[#374151] text-white;
 }
 
@@ -235,9 +237,11 @@ input {
 .btn {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[48px] rounded-xl flex items-center relative transition-all duration-200;
 }
+
 .black-btn {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[44px] rounded-xl flex items-center relative transition-all duration-200;
 }
+
 .btn.menu-btn {
 	@apply text-base;
 }
@@ -447,6 +451,7 @@ input[type="checkbox"]:checked+label span {
 	.catalog {
 		@apply scale-y-100 scale-x-0 origin-left
 	}
+
 	.black-btn {
 		@apply rounded-xl h-11;
 	}
