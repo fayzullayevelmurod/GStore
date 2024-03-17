@@ -50,6 +50,7 @@ module.exports = {
 			screens: {
 				"992": "992px",
 				"xs": "480px",
+				"tablet": "840px"
 			},
 			boxShadow: {
 				"card-shadow": "0.11926236003637314px 2.6862428188323975px 7.4148149490356445px 0px #33415509"

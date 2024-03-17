@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+
 	// range slider
 	try {
 		window.onload = function () {
@@ -324,9 +325,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	try {
+		const closeFilterBtn = document.querySelector('.close-filter__btn');
+		const openFilterBtn = document.querySelector('.open-filter__btn');
+		const filterContent = document.querySelector('.filter-content');
+		const applyFilters = document.querySelector('.apply-filters');
+
+		function showFilter() {
+			filterContent.classList.add('active');
+		}
+		function hiddenFilter() {
+			filterContent.classList.remove('active');
+		}
+		openFilterBtn.addEventListener('click', showFilter);
+		closeFilterBtn.addEventListener('click', hiddenFilter);
+		applyFilters.addEventListener('click', hiddenFilter);
+	} catch (error) {
+
+	}
+	try {
 		// filter
 		const inputCheckBox = document.querySelectorAll('input[type="checkbox"]');
-		const resetFiltersBtn = document.querySelector('.reset-filters__btn')
+		const resetFiltersBtn = document.querySelector('.reset-filters__btn');
 
 		if (resetFiltersBtn) {
 			resetFiltersBtn.addEventListener('click', () => {
