@@ -67,6 +67,16 @@ input {
 	@apply bg-[#374151] text-white;
 }
 
+.salom {
+	width: calc(100% - 312px);
+}
+
+@media screen and (min-width: 640px) {
+	.swiper-slide.full {
+		width: 100% !important;
+	}
+}
+
 .dark .dark-white,
 .dark .btn-light {
 	@apply text-white

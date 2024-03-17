@@ -99,6 +99,29 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
+	// reviews-swiper-two
+	var swiper = new Swiper(".reviews-swiper-two", {
+		spaceBetween: 16,
+		slidesPerView: 1.2,
+		// loop: false,
+		// grabCursor: false,
+		// speed: 1000,
+		// direction: 'vertical',
+		// breakpoints: {
+		// 	1250: {
+		// 		spaceBetween: 16,
+		// 		slidesPerView: 3,
+		// 	},
+		// 	815: {
+		// 		spaceBetween: 15,
+		// 		slidesPerView: 2,
+		// 	},
+		// 	0: {
+		// 		spaceBetween: 15,
+		// 		slidesPerView: 1.144,
+		// 	}
+		// }
+	});
 
 	// Timer
 	try {
