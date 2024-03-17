@@ -218,4 +218,126 @@ document.addEventListener('DOMContentLoaded', () => {
 		throw error
 	}
 
+	// select price
+	const priceType = document.querySelector(".price-type");
+	const selectPrice = document.querySelector('.select-price');
+	const optionItems = document.querySelectorAll('.select-price__option');
+	const optionBox = document.querySelector('.option-box');
+	const upIcon = selectPrice.querySelector('.up-icon');
+
+	function show(value, priceType) {
+		priceType.textContent = value;
+	}
+
+	selectPrice.addEventListener('click', () => {
+		optionBox.classList.toggle('active');
+		selectPrice.classList.toggle('active');
+	})
+
+	optionItems.forEach(item => {
+		item.addEventListener('click', () => {
+			optionItems.forEach(item => {
+				item.classList.remove('active');
+			})
+			show(item.textContent.trim(), priceType);
+			item.classList.toggle('active');
+			optionBox.classList.remove('active');
+			selectPrice.classList.remove('active')
+		})
+	})
+
+	// range slider
+	try {
+		window.onload = function () {
+			initSliders();
+		};
+
+		function initSliders() {
+			const sliderOne = document.getElementById("slider-1");
+			const sliderTwo = document.getElementById("slider-2");
+			const displayValOne = document.getElementById("range1");
+			const displayValTwo = document.getElementById("range2");
+			const sliderTrack = document.querySelector(".slider-track");
+			const maxSliderValue = parseInt(sliderOne.max);
+
+			const minGap = 0;
+
+			slideOne();
+			slideTwo();
+
+			sliderOne.addEventListener("input", slideOne);
+			sliderTwo.addEventListener("input", slideTwo);
+
+			function slideOne() {
+				const valueOne = parseInt(sliderOne.value);
+				const valueTwo = parseInt(sliderTwo.value);
+
+				if (valueTwo - valueOne <= minGap) {
+					sliderOne.value = valueTwo - minGap;
+				}
+
+				displayValOne.textContent = formatCurrency(valueOne);
+				fillColor();
+			}
+
+			function slideTwo() {
+				const valueOne = parseInt(sliderOne.value);
+				const valueTwo = parseInt(sliderTwo.value);
+
+				if (valueTwo - valueOne <= minGap) {
+					sliderTwo.value = valueOne + minGap;
+				}
+
+				displayValTwo.textContent = formatCurrency(valueTwo);
+				fillColor();
+			}
+
+			function fillColor() {
+				const percent1 = (parseInt(sliderOne.value) / maxSliderValue) * 100;
+				const percent2 = (parseInt(sliderTwo.value) / maxSliderValue) * 100;
+				sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}%, #0F172A ${percent1}%, #0F172A ${percent2}%, #dadae5 ${percent2}%)`;
+			}
+
+			function formatCurrency(value) {
+				return `от ${value} ₽`;
+			}
+		}
+	} catch (error) {
+		throw error
+	}
+
+	// accordion
+	try {
+		const accordions = document.querySelectorAll('.accordion');
+
+		accordions.forEach(accordion => {
+			const accordionHeader = accordion.querySelector('.accordion-header');
+			const accordionContent = accordion.querySelector('.accordion-content');
+
+			accordionHeader.addEventListener('click', () => {
+				accordionContent.classList.toggle('hidden');
+				accordionHeader.classList.toggle('active');
+			})
+		})
+	} catch (error) {
+		throw error
+	}
+
+	try {
+		// filter
+		const inputCheckBox = document.querySelectorAll('input[type="checkbox"]');
+		const resetFiltersBtn = document.querySelector('.reset-filters__btn')
+
+		if (resetFiltersBtn) {
+			resetFiltersBtn.addEventListener('click', () => {
+				inputCheckBox.forEach(checkbox => {
+					if (checkbox.checked) {
+						checkbox.checked = false;
+					}
+				})
+			})
+		}
+	} catch (error) {
+		throw error
+	}
 })

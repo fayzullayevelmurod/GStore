@@ -42,6 +42,7 @@ module.exports = {
 				'stock-img-1': "url('../images/stock-bg-1.png')",
 				'stock-img-2': "url('../images/stock-bg-2.png')",
 				'stock-img-3': "url('../images/stock-bg-3.png')",
+				'stock-bg': "url('../images/stock-bg.png')",
 			},
 			borderRadius: {
 				"32": "32px"
@@ -50,6 +51,9 @@ module.exports = {
 				"992": "992px",
 				"xs": "480px",
 			},
+			boxShadow: {
+				"card-shadow": "0.11926236003637314px 2.6862428188323975px 7.4148149490356445px 0px #33415509"
+			}
 		},
 	},
 	plugins: [],
