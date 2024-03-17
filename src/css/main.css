@@ -353,7 +353,8 @@ input {
 	@apply bg-slate-900 text-white
 }
 
-.gift-section .btn-light {
+.gift-section .btn-light,
+.stock-box .btn-light {
 	@apply pr-4;
 }
 
@@ -488,7 +489,7 @@ input[type="checkbox"]:checked+label span {
 
 @media screen and (max-width: 520px) {
 	.products-cards {
-		@apply grid grid-cols-2;
+		@apply grid grid-cols-2 gap-y-4;
 	}
 }
 
@@ -510,7 +511,8 @@ input[type="checkbox"]:checked+label span {
 		@apply pl-3 py-1 text-sm leading-3.5 rounded-lg h-8 space-x-1 p-0 bg-transparent;
 	}
 
-	.gift-section .btn-light {
+	.gift-section .btn-light,
+	.stock-box .btn-light {
 		@apply bg-slate-100 space-x-2 pr-3
 	}
 
