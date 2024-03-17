@@ -246,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const selectPrice = document.querySelector('.select-price');
 	const optionItems = document.querySelectorAll('.select-price__option');
 	const optionBox = document.querySelector('.option-box');
-	const upIcon = selectPrice.querySelector('.up-icon');
 
 	function show(value, priceType) {
 		priceType.textContent = value;
@@ -269,6 +268,33 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+
+	// modal
+	try {
+		const modal = document.querySelector('.modal');
+		const closeModalBtn = document.querySelector('.close-modal');
+		const openModalBtn = document.querySelectorAll('.open-modal');
+
+		function toggleModal() {
+			modal.classList.toggle('scale-0');
+		}
+		// function hideModal() {
+		// 	modal.classList.add('scale-0');
+		// 	modal.classList.remove('scale-100');
+		// }
+
+		closeModalBtn.addEventListener('click', toggleModal);
+		openModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
+
+		modal.addEventListener('click', (e) => {
+			if (e.target && e.target.classList.contains('modal')) {
+				toggleModal();
+			}
+		})
+
+	} catch (error) {
+
+	}
 
 	// range slider
 	try {

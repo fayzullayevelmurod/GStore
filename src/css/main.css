@@ -256,7 +256,8 @@ input {
 	@apply text-base;
 }
 
-.btn:hover {
+.btn:hover,
+.black-btn:hover {
 	@apply bg-slate-800
 }
 
@@ -447,6 +448,18 @@ input[type="checkbox"]:checked+label span {
 .filter-content {
 	@apply scale-y-0 tablet:scale-y-100;
 }
+
+form .select-price.active {
+	@apply rounded-b-none;
+}
+
+/* form .option-box {
+	@apply scale-y-100 hidden;
+}
+
+form .option-box.active {
+	@apply block;
+} */
 
 .option-box.active,
 .filter-content.active {
