@@ -242,50 +242,84 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// select price
-	const priceType = document.querySelector(".price-type");
-	const selectPrice = document.querySelector('.select-price');
-	const optionItems = document.querySelectorAll('.select-price__option');
-	const optionBox = document.querySelector('.option-box');
+	try {
+		const priceType = document.querySelector(".price-type");
+		const selectPrice = document.querySelector('.select-price');
+		const optionItems = document.querySelectorAll('.select-price__option');
+		const optionBox = document.querySelector('.option-box');
 
-	function show(value, priceType) {
-		priceType.textContent = value;
-	}
+		function show(value, priceType) {
+			priceType.value = value;
+		}
 
-	selectPrice.addEventListener('click', () => {
-		optionBox.classList.toggle('active');
-		selectPrice.classList.toggle('active');
-	})
-
-	optionItems.forEach(item => {
-		item.addEventListener('click', () => {
-			optionItems.forEach(item => {
-				item.classList.remove('active');
-			})
-			show(item.textContent.trim(), priceType);
-			item.classList.toggle('active');
-			optionBox.classList.remove('active');
-			selectPrice.classList.remove('active')
+		selectPrice.addEventListener('click', () => {
+			optionBox.classList.toggle('active');
+			selectPrice.classList.toggle('active');
 		})
-	})
+
+		optionItems.forEach(item => {
+			item.addEventListener('click', () => {
+				optionItems.forEach(item => {
+					item.classList.remove('active');
+				})
+				show(item.textContent.trim(), priceType);
+				item.classList.toggle('active');
+				optionBox.classList.remove('active');
+				selectPrice.classList.remove('active')
+			})
+		})
+	} catch (error) {
+		throw error
+	}
 
 
 	// modal
 	try {
 		const modal = document.querySelector('.modal');
-		const closeModalBtn = document.querySelector('.close-modal');
+		const closeModalBtn = document.querySelectorAll('[data-close-modal-btn]');
 		const openModalBtn = document.querySelectorAll('.open-modal');
+		const thanksModalContent = document.querySelector('.thanks-modal__content');
+		const modalContent = document.querySelector('.modal-content');
+		const modalForm = document.querySelector('.modal-form');
 
 		function toggleModal() {
 			modal.classList.toggle('scale-0');
 		}
-		// function hideModal() {
-		// 	modal.classList.add('scale-0');
-		// 	modal.classList.remove('scale-100');
-		// }
+		
+		modalForm.addEventListener('submit', (e) => {
+			e.preventDefault();
 
-		closeModalBtn.addEventListener('click', toggleModal);
+			const formFields = ['name', 'mail', 'product-select'];
+			const selectPrice = document.querySelector('.select-price');
+			let allFieldsFilled = true;
+
+			for (let i = 0; i < formFields.length; i++) {
+				const field = document.getElementById(formFields[i]);
+				const value = field.value.trim();
+				if (value === '') {
+					field.classList.add('warning');
+					selectPrice.classList.add('warning');
+					allFieldsFilled = false;
+				} else {
+					field.value = '';
+					field.classList.remove('warning');
+					selectPrice.classList.remove('warning');
+				}
+			}
+			if (allFieldsFilled) {
+				modalContent.classList.add('hidden');
+				thanksModalContent.classList.remove('hidden');
+
+				setTimeout(() => {
+					modalContent.classList.remove('hidden');
+					thanksModalContent.classList.add('hidden');
+					toggleModal();
+				}, 3000);
+			}
+		})
+
+		closeModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
 		openModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
-
 		modal.addEventListener('click', (e) => {
 			if (e.target && e.target.classList.contains('modal')) {
 				toggleModal();
@@ -293,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 
 	} catch (error) {
-
+		throw error
 	}
 
 	// range slider
@@ -391,8 +425,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	} catch (error) {
 
 	}
+
+	// filter
 	try {
-		// filter
 		const inputCheckBox = document.querySelectorAll('input[type="checkbox"]');
 		const resetFiltersBtn = document.querySelector('.reset-filters__btn');
 

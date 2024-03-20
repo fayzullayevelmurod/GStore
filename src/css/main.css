@@ -129,7 +129,8 @@ input {
 }
 
 .dark .menu-box svg path,
-.dark .pagination>div svg path {
+.dark .pagination>div svg path,
+.dark .white-icon path {
 	@apply fill-white;
 }
 
@@ -186,11 +187,20 @@ input {
 	@apply text-[#9CA3AF];
 }
 
-.dark .catalog>div {
+.dark .catalog>div,
+.dark .dark-form,
+.dark .dark-form.option-box {
 	@apply bg-[#1F2937];
 }
 
-.dark .catalog .catalog-box {
+.dark .dark-form,
+.dark .dark-form.option-box,
+.dark .dark-form.option-box .select-price__option {
+	@apply text-white placeholder:text-white
+}
+
+.dark .catalog .catalog-box,
+.dark .modal-content {
 	@apply bg-[#374151] text-white;
 }
 
@@ -348,7 +358,8 @@ input {
 	@apply border-green-500;
 }
 
-.benefits-input.warning {
+.benefits-input.warning,
+.warning {
 	@apply border-red-500;
 }
 

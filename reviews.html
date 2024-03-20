@@ -19,8 +19,7 @@
 
 <body>
 
-	<div class="flex min-h-lvh flex-col justify-between overflow-hidden relative">
-
+	<div class="flex min-h-lvh flex-col justify-between overflow-hidden relative z-10">
 		<!-- header -->
 		<header class="sm:relative">
 			<div class="header-top bg-slate-100 py-2">
@@ -1064,27 +1063,39 @@
 	</div>
 
 	<!-- modal -->
+
 	<div
-		class="modal scale-0 origin-center duration-300 flex items-center justify-center fixed top-0 left-0 w-full h-full bg-slate-900/75 z-50">
+		class="modal z-50 scale-0 origin-center duration-300 flex items-center justify-center fixed top-0 left-0 w-full h-full bg-slate-900/75">
 		<div class="modal-dialog">
-			<div class="modal-content w-[592px] bg-white p-8 rounded-32 overflow-hidden">
+			<div
+				class="modal-content overflow-y-auto sm:w-[592px] w-[343px] bg-white sm:p-8 p-4 sm:rounded-32 rounded-2xl overflow-hidden">
 				<div class="flex mb-4 sm:mb-6 justify-between items-center">
 					<h3 class="sm:text-2xl sm:leading-[26.4px] font-medium leading-[22px] text-xl">Оставить отзыв</h3>
-					<img class="cursor-pointer close-modal" src="src/images/icons/close.svg" alt="close">
+					<button data-close-modal-btn>
+						<svg class="white-icon sm:w-6 sm:h-6 w-[20px] h-[20px]" width="20" height="20" viewBox="0 0 20 20"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M4.57637 4.57564C4.81069 4.34132 5.19058 4.34132 5.4249 4.57564L10.0006 9.15139L14.5764 4.57564C14.8107 4.34132 15.1906 4.34132 15.4249 4.57564C15.6592 4.80995 15.6592 5.18985 15.4249 5.42417L10.8492 9.99992L15.4249 14.5756C15.6592 14.8099 15.6592 15.1898 15.4249 15.4241C15.1906 15.6585 14.8107 15.6585 14.5763 15.4241L10.0006 10.8484L5.4249 15.4242C5.19058 15.6585 4.81069 15.6585 4.57637 15.4242C4.34206 15.1899 4.34206 14.81 4.57637 14.5757L9.15212 9.99992L4.57637 5.42417C4.34206 5.18985 4.34206 4.80995 4.57637 4.57564Z"
+								fill="#0F172A" />
+						</svg>
+					</button>
 				</div>
-				<form>
-					<div class="flex gap-4">
-						<input class="w-full bg-slate-100 py-[14px] px-4 rounded-xl text-sm leading-3.5 text-slate-500" type="text"
-							name="name" placeholder="Имя">
-						<input class="w-full bg-slate-100 py-[14px] px-4 rounded-xl text-sm leading-3.5 text-slate-500" type="text"
-							name="name" placeholder="Имя">
+				<form class="modal-form">
+					<div class="flex sm:flex-row flex-col gap-y-3 sm:gap-4">
+						<input
+							class="w-full dark-form border border-transparent bg-slate-100 py-[14px] px-4 rounded-xl text-sm leading-3.5 text-slate-500"
+							type="text" name="name" placeholder="Имя" id="name">
+						<input
+							class="w-full dark-form border border-transparent bg-slate-100 py-[14px] px-4 rounded-xl text-sm leading-3.5 text-slate-500"
+							type="text" name="name" placeholder="Имя" id="mail">
 					</div>
-					<h5 class="font-medium leading-3.5 text-sm mt-4 mb-3">Выберите товар</h5>
+					<h5 class="font-medium leading-3.5 text-sm sm:mt-4 mt-[20px] mb-3">Выберите товар</h5>
 					<div class="relative">
 						<div
-							class="select-price cursor-pointer flex items-center justify-between w-full bg-slate-100 py-[14px] px-4 rounded-xl">
-							<p class="price-type text-sm leading-3.5 text-slate-500">
-								Товар</p>
+							class="select-price dark-form border border-transparent cursor-pointer flex items-center justify-between w-full bg-slate-100 py-[14px] px-4 rounded-xl">
+							<input
+								class="price-type dark-form cursor-pointer bg-slate-100 select-none text-sm leading-3.5 text-slate-500"
+								type="text" id="product-select" placeholder="Товар" readonly>
 							<svg class="rotate-90 duration-300" width="16" height="16" viewBox="0 0 16 16" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1093,7 +1104,7 @@
 							</svg>
 						</div>
 						<div
-							class="option-box duration-200 origin-top absolute top-full w-full z-50 bg-slate-100 px-4 rounded-b-xl">
+							class="option-box dark-form duration-200 origin-top absolute top-full w-full z-50 bg-slate-100 px-4 rounded-b-xl">
 							<div class="select-price__option py-3 text-sm leading-3.5 text-slate-500 cursor-pointer select-none">
 								Товар 1
 							</div>
@@ -1105,15 +1116,15 @@
 							</div>
 						</div>
 					</div>
-					<h5 class="font-medium leading-3.5 text-sm mt-4 mb-3">Достоинства</h5>
+					<h5 class="font-medium leading-3.5 text-sm sm:mt-4 mt-[20px] mb-3">Достоинства</h5>
 					<textarea
-						class="w-full outline-none bg-slate-100 py-[14px] resize-none px-4 rounded-xl text-sm leading-3.5 text-slate-500 h-[76px]"
+						class="w-full dark-form outline-none bg-slate-100 py-[14px] resize-none px-4 rounded-xl text-sm leading-3.5 text-slate-500 h-[76px]"
 						placeholder="Что вам понравилось в товаре?"></textarea>
-					<h5 class="font-medium leading-3.5 text-sm mt-4 mb-3">Недостатки</h5>
+					<h5 class="font-medium leading-3.5 text-sm sm:mt-4 mt-[20px] mb-3">Недостатки</h5>
 					<textarea
-						class="w-full outline-none bg-slate-100 py-[14px] resize-none px-4 rounded-xl text-sm leading-3.5 text-slate-500 h-[76px]"
+						class="w-full dark-form outline-none bg-slate-100 py-[14px] resize-none px-4 rounded-xl text-sm leading-3.5 text-slate-500 h-[76px]"
 						placeholder="Что хотелось бы улучшить?"></textarea>
-					<button class="black-btn justify-between w-full mt-4">
+					<button class="black-btn justify-between w-full mt-4" data-open-next-modal>
 						<span>Отправить</span>
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1129,9 +1140,44 @@
 					</button>
 				</form>
 			</div>
+
+			<div
+				class="modal-content hidden thanks-modal__content sm:w-[592px] w-[343px] bg-white relative sm:p-8 p-6 sm:rounded-32 rounded-2xl overflow-hidden text-center">
+				<button class="absolute sm:top-6 sm:right-6 top-4 right-4 close-btn" data-close-modal-btn>
+					<svg class="white-icon sm:w-6 sm:h-6 w-[20px] h-[20px]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M4.57637 4.57564C4.81069 4.34132 5.19058 4.34132 5.4249 4.57564L10.0006 9.15139L14.5764 4.57564C14.8107 4.34132 15.1906 4.34132 15.4249 4.57564C15.6592 4.80995 15.6592 5.18985 15.4249 5.42417L10.8492 9.99992L15.4249 14.5756C15.6592 14.8099 15.6592 15.1898 15.4249 15.4241C15.1906 15.6585 14.8107 15.6585 14.5763 15.4241L10.0006 10.8484L5.4249 15.4242C5.19058 15.6585 4.81069 15.6585 4.57637 15.4242C4.34206 15.1899 4.34206 14.81 4.57637 14.5757L9.15212 9.99992L4.57637 5.42417C4.34206 5.18985 4.34206 4.80995 4.57637 4.57564Z"
+							fill="#0F172A" />
+					</svg>
+
+				</button>
+				<div
+					class="sm:w-12 sm:h-12 w-8 h-8 flex items-center justify-center bg-[#0D9488] sm:rounded-xl rounded-lg mx-auto">
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M12.3845 4.53898C12.6391 4.75112 12.6735 5.12946 12.4613 5.38403L7.46132 11.384C7.3534 11.5135 7.19598 11.5917 7.02758 11.5993C6.85918 11.6069 6.69533 11.5434 6.57613 11.4242L3.57613 8.42418C3.34181 8.18987 3.34181 7.80997 3.57613 7.57565C3.81044 7.34134 4.19034 7.34134 4.42465 7.57565L6.96007 10.1111L11.5395 4.61581C11.7516 4.36124 12.1299 4.32685 12.3845 4.53898Z"
+							fill="#fff" />
+					</svg>
+				</div>
+				<h2 class="sm:text-3xl text-sm sm:leading-[35.2px] leading-[17.6px] font-medium sm:mt-6 mt-4 sm:mb-4 mb-2">
+					Спасибо за отзыв</h2>
+				<p
+					class="text-slate-500 white-text mx-auto sm:mb-6 mb-4 sm:text-base text-sm sm:leading-[20.8px] leading-[18.2px] max-w-[384px]">
+					Отзыв принят на модерацию.
+					После
+					успешного
+					прохождения
+					проверки мы напишем
+					вам, чтобы обсудить момент с
+					подарком.</p>
+				<a class="black-btn w-fit mx-auto space-x-2" href="#!">
+					<span>На главную</span>
+					<img src="src/images/icons/next.svg" alt="">
+				</a>
+			</div>
 		</div>
 	</div>
-
 
 	<!-- swiper js file -->
 	<script src="./src/libs/swiper-bundle.min.js"></script>
