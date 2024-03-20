@@ -22,7 +22,7 @@ module.exports = {
 			backgroundImage: {
 				'discount-banner': "url('../images/discounts-banner.png')",
 				'discount-media-banner': "url('../images/discounts-media-banner.png')",
-				'gift-banner': "url('../images/gift.png')",
+				'gift-bg': "url('../images/gift.png')",
 				'delivery-banner': "url('../images/delivery.png')",
 				'benefits-banner': "url('../images/benefits-banner.png')",
 				'catalog-img-1': "url('../images/catalog-img-1.png')",

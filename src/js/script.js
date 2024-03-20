@@ -224,6 +224,32 @@ document.addEventListener('DOMContentLoaded', () => {
 		throw error
 	}
 
+	try {
+		function validatePhoneNumber(phoneNumber) {
+			const phoneRegex = /^\+?[0-9\- ]{2,}$/;
+			return phoneRegex.test(phoneNumber);
+		}
+		const phoneField = document.querySelector('[data-validate-number]');
+		const validateCheckIcon = document.querySelector('.check-icon__tow');
+
+		if (phoneField) {
+			phoneField.addEventListener('input', () => {
+				const phoneValue = phoneField.value.trim();
+				if (validatePhoneNumber(phoneValue)) {
+					phoneField.classList.remove('warning');
+					phoneField.classList.add('active');
+					validateCheckIcon.classList.remove('hidden');
+				} else {
+					validateCheckIcon.classList.add('hidden');
+					phoneField.classList.remove('active');
+					phoneField.classList.add('warning');
+				}
+			});
+		}
+	} catch (error) {
+		throw error
+	}
+
 	// select price
 	try {
 		const priceType = document.querySelector(".price-type");
@@ -235,22 +261,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			priceType.value = value;
 		}
 
-		selectPrice.addEventListener('click', () => {
-			optionBox.classList.toggle('active');
-			selectPrice.classList.toggle('active');
-		})
-
-		optionItems.forEach(item => {
-			item.addEventListener('click', () => {
-				optionItems.forEach(item => {
-					item.classList.remove('active');
-				})
-				show(item.textContent.trim(), priceType);
-				item.classList.toggle('active');
-				optionBox.classList.remove('active');
-				selectPrice.classList.remove('active')
+		if (selectPrice) {
+			selectPrice.addEventListener('click', () => {
+				optionBox.classList.toggle('active');
+				selectPrice.classList.toggle('active');
 			})
-		})
+
+			optionItems.forEach(item => {
+				item.addEventListener('click', () => {
+					optionItems.forEach(item => {
+						item.classList.remove('active');
+					})
+					show(item.textContent.trim(), priceType);
+					item.classList.toggle('active');
+					optionBox.classList.remove('active');
+					selectPrice.classList.remove('active')
+				})
+			})
+		}
+
 	} catch (error) {
 		throw error
 	}
@@ -260,18 +289,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		const informationModal = document.querySelector('.information-modal');
 		const informationModalClose = document.querySelector('[data-close-information-modal]');
 		const openInformationModalBtn = document.querySelector('[data-open-information-modal]');
-
-		openInformationModalBtn.addEventListener('click', () => {
-			informationModal.classList.add('active');
-		})
-		informationModalClose.addEventListener('click', () => {
-			informationModal.classList.remove('active');
-		})
-		informationModal.addEventListener('click', (e) => {
-			if (e.target && e.target.classList.contains('information-modal')) {
+		if (informationModal) {
+			openInformationModalBtn.addEventListener('click', () => {
+				informationModal.classList.add('active');
+			})
+			informationModalClose.addEventListener('click', () => {
 				informationModal.classList.remove('active');
-			}
-		})
+			})
+			informationModal.addEventListener('click', (e) => {
+				if (e.target && e.target.classList.contains('information-modal')) {
+					informationModal.classList.remove('active');
+				}
+			})
+		}
 	} catch (error) {
 		throw error
 	}
@@ -289,45 +319,47 @@ document.addEventListener('DOMContentLoaded', () => {
 			modal.classList.toggle('scale-0');
 		}
 
-		modalForm.addEventListener('submit', (e) => {
-			e.preventDefault();
+		if (modal) {
+			modalForm.addEventListener('submit', (e) => {
+				e.preventDefault();
 
-			const formFields = ['name', 'mail', 'product-select'];
-			const selectPrice = document.querySelector('.select-price');
-			let allFieldsFilled = true;
+				const formFields = ['name', 'mail', 'product-select'];
+				const selectPrice = document.querySelector('.select-price');
+				let allFieldsFilled = true;
 
-			for (let i = 0; i < formFields.length; i++) {
-				const field = document.getElementById(formFields[i]);
-				const value = field.value.trim();
-				if (value === '') {
-					field.classList.add('warning');
-					selectPrice.classList.add('warning');
-					allFieldsFilled = false;
-				} else {
-					field.value = '';
-					field.classList.remove('warning');
-					selectPrice.classList.remove('warning');
+				for (let i = 0; i < formFields.length; i++) {
+					const field = document.getElementById(formFields[i]);
+					const value = field.value.trim();
+					if (value === '') {
+						field.classList.add('warning');
+						selectPrice.classList.add('warning');
+						allFieldsFilled = false;
+					} else {
+						field.value = '';
+						field.classList.remove('warning');
+						selectPrice.classList.remove('warning');
+					}
 				}
-			}
-			if (allFieldsFilled) {
-				modalContent.classList.add('hidden');
-				thanksModalContent.classList.remove('hidden');
+				if (allFieldsFilled) {
+					modalContent.classList.add('hidden');
+					thanksModalContent.classList.remove('hidden');
 
-				setTimeout(() => {
-					modalContent.classList.remove('hidden');
-					thanksModalContent.classList.add('hidden');
+					setTimeout(() => {
+						modalContent.classList.remove('hidden');
+						thanksModalContent.classList.add('hidden');
+						toggleModal();
+					}, 3000);
+				}
+			})
+
+			closeModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
+			openModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
+			modal.addEventListener('click', (e) => {
+				if (e.target && e.target.classList.contains('modal')) {
 					toggleModal();
-				}, 3000);
-			}
-		})
-
-		closeModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
-		openModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
-		modal.addEventListener('click', (e) => {
-			if (e.target && e.target.classList.contains('modal')) {
-				toggleModal();
-			}
-		})
+				}
+			})
+		}
 
 	} catch (error) {
 		throw error

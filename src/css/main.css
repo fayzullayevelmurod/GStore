@@ -17,6 +17,14 @@ input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
 input {
 	outline: none
 }
@@ -200,8 +208,13 @@ input {
 }
 
 .dark .catalog .catalog-box,
-.dark .modal-content {
+.dark .modal-content,
+.dark .dark-input {
 	@apply bg-[#374151] text-white;
+}
+
+.dark .benefits-input.dark-input {
+	@apply placeholder:text-slate-500;
 }
 
 .dark input[type="checkbox"]:checked+label {
@@ -333,6 +346,22 @@ input {
 	@apply flex justify-between gap-4 gap-y-20 flex-wrap;
 }
 
+.products-cards .product-card {
+	width: calc(100% / 4 - 48px / 4);
+}
+
+@media screen and (max-width: 992px) {
+	.products-cards .product-card {
+		width: calc(100% / 3 - 32px / 3);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.products-cards .product-card {
+		width: calc(50% - 8px);
+	}
+}
+
 .products-cards>div {
 	@apply max-w-[280px] w-full flex-1 px-6
 }
@@ -354,7 +383,8 @@ input {
 }
 
 /* form validation */
-.benefits-input.active {
+.benefits-input.active,
+.validate-phone__number.active {
 	@apply border-green-500;
 }
 
@@ -362,6 +392,7 @@ input {
 .warning {
 	@apply border-red-500;
 }
+
 
 /* scroll style */
 .no-scroll::-webkit-scrollbar {
@@ -544,12 +575,6 @@ form .option-box.active {
 	.discount-swiper,
 	.discount-swiper-two {
 		@apply max-w-[100%]
-	}
-}
-
-@media screen and (max-width: 520px) {
-	.products-cards {
-		@apply grid grid-cols-2 gap-y-4;
 	}
 }
 
