@@ -1389,16 +1389,22 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
 .space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(20px * var(--tw-space-y-reverse));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+.space-y-\[2px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  margin-top: calc(2px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2px * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1451,6 +1457,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-32 {
+  border-radius: 32px;
 }
 
 .rounded-b-xl {
@@ -1556,6 +1566,14 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-balance-gradient {
+  background-image: linear-gradient(42.01deg, #7B88FD 1.98%, #43CADC 113.43%);
 }
 
 .bg-benefits-banner {
@@ -1672,6 +1690,10 @@ video {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-4 {
@@ -2016,6 +2038,10 @@ video {
 
 .leading-\[26px\] {
   line-height: 26px;
+}
+
+.leading-\[35\.2px\] {
+  line-height: 35.2px;
 }
 
 .leading-\[39px\] {
@@ -2421,6 +2447,11 @@ input {
 
 .dark footer a,
 .dark footer p {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.dark .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
@@ -3404,6 +3435,10 @@ form .option-box.active {
     display: none;
   }
 
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
   .sm\:h-12 {
     height: 3rem;
   }
@@ -3446,6 +3481,10 @@ form .option-box.active {
 
   .sm\:min-h-\[44px\] {
     min-height: 44px;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
   }
 
   .sm\:w-12 {
@@ -3512,6 +3551,10 @@ form .option-box.active {
   .sm\:min-w-fit {
     min-width: -moz-fit-content;
     min-width: fit-content;
+  }
+
+  .sm\:max-w-\[105px\] {
+    max-width: 105px;
   }
 
   .sm\:max-w-\[200px\] {
@@ -3597,6 +3640,12 @@ form .option-box.active {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
   .sm\:space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -3734,6 +3783,11 @@ form .option-box.active {
     padding-bottom: 2rem;
   }
 
+  .sm\:py-\[6px\] {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
   .sm\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3742,8 +3796,16 @@ form .option-box.active {
     padding-bottom: 58px;
   }
 
+  .sm\:pl-4 {
+    padding-left: 1rem;
+  }
+
   .sm\:pr-\[14px\] {
     padding-right: 14px;
+  }
+
+  .sm\:pr-\[6px\] {
+    padding-right: 6px;
   }
 
   .sm\:pt-0 {
@@ -3883,6 +3945,10 @@ form .option-box.active {
 
   .md\:max-w-\[280px\] {
     max-width: 280px;
+  }
+
+  .md\:max-w-\[592px\] {
+    max-width: 592px;
   }
 
   .md\:flex-row {

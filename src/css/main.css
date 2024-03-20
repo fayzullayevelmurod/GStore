@@ -195,6 +195,10 @@ input {
 	@apply text-[#9CA3AF];
 }
 
+.dark .text-slate-500 {
+	@apply text-[#9CA3AF];
+}
+
 .dark .catalog>div,
 .dark .dark-form,
 .dark .dark-form.option-box {

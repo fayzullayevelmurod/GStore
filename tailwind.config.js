@@ -45,6 +45,7 @@ module.exports = {
 				'stock-bg': "url('../images/stock-bg.png')",
 				'g-gradient': "linear-gradient(26.49deg, #7B88FD -30.96%, #EF4158 97.02%)",
 				'gift-banner': "url('../images/gift-banner.png')",
+				'balance-gradient': "linear-gradient(42.01deg, #7B88FD 1.98%, #43CADC 113.43%)"
 			},
 			borderRadius: {
 				"32": "32px"
