@@ -103,24 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var swiper = new Swiper(".reviews-swiper-two", {
 		spaceBetween: 16,
 		slidesPerView: 1.2,
-		// loop: false,
-		// grabCursor: false,
-		// speed: 1000,
-		// direction: 'vertical',
-		// breakpoints: {
-		// 	1250: {
-		// 		spaceBetween: 16,
-		// 		slidesPerView: 3,
-		// 	},
-		// 	815: {
-		// 		spaceBetween: 15,
-		// 		slidesPerView: 2,
-		// 	},
-		// 	0: {
-		// 		spaceBetween: 15,
-		// 		slidesPerView: 1.144,
-		// 	}
-		// }
+		grabCursor: false,
 	});
 
 	// Timer
@@ -272,6 +255,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		throw error
 	}
 
+	// information modal
+	try {
+		const informationModal = document.querySelector('.information-modal');
+		const informationModalClose = document.querySelector('[data-close-information-modal]');
+		const openInformationModalBtn = document.querySelector('[data-open-information-modal]');
+
+		openInformationModalBtn.addEventListener('click', () => {
+			informationModal.classList.add('active');
+		})
+		informationModalClose.addEventListener('click', () => {
+			informationModal.classList.remove('active');
+		})
+		informationModal.addEventListener('click', (e) => {
+			if (e.target && e.target.classList.contains('information-modal')) {
+				informationModal.classList.remove('active');
+			}
+		})
+	} catch (error) {
+		throw error
+	}
 
 	// modal
 	try {
@@ -285,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		function toggleModal() {
 			modal.classList.toggle('scale-0');
 		}
-		
+
 		modalForm.addEventListener('submit', (e) => {
 			e.preventDefault();
 

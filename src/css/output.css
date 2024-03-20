@@ -630,6 +630,10 @@ video {
   left: -1rem;
 }
 
+.-right-full {
+  right: -100%;
+}
+
 .bottom-\[56px\] {
   bottom: 56px;
 }
@@ -644,6 +648,10 @@ video {
 
 .right-4 {
   right: 1rem;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .right-\[13px\] {
@@ -674,6 +682,10 @@ video {
   top: 1rem;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
 .top-\[21px\] {
   top: 21px;
 }
@@ -684,6 +696,10 @@ video {
 
 .top-full {
   top: 100%;
+}
+
+.right-\[20px\] {
+  right: 20px;
 }
 
 .-z-10 {
@@ -975,6 +991,10 @@ video {
   width: 3rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-20 {
   width: 5rem;
 }
@@ -1142,6 +1162,10 @@ video {
 
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-\[664px\] {
+  max-width: 664px;
 }
 
 .max-w-\[800px\] {
@@ -1365,6 +1389,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(20px * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1416,6 +1446,14 @@ video {
 .rounded-b-xl {
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-bl-32 {
+  border-bottom-left-radius: 32px;
+}
+
+.rounded-tl-32 {
+  border-top-left-radius: 32px;
 }
 
 .border {
@@ -1644,6 +1682,15 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-\[22px\] {
+  padding: 22px;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .px-2 {
@@ -1954,6 +2001,10 @@ video {
   line-height: 1;
 }
 
+.leading-\[20\.8px\] {
+  line-height: 20.8px;
+}
+
 .leading-\[22px\] {
   line-height: 22px;
 }
@@ -2049,6 +2100,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .line-through {
   text-decoration-line: line-through;
 }
@@ -2112,6 +2167,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 body {
@@ -2879,6 +2938,10 @@ form .option-box.active {
   display: block;
 }
 
+.information-modal.active {
+  right: 0px;
+}
+
 @media screen and (max-width: 640px) {
   .catalog {
     transform-origin: left;
@@ -3536,6 +3599,14 @@ form .option-box.active {
     border-bottom-left-radius: 32px;
   }
 
+  .sm\:rounded-tl-32 {
+    border-top-left-radius: 32px;
+  }
+
+  .sm\:rounded-bl-32 {
+    border-bottom-left-radius: 32px;
+  }
+
   .sm\:bg-catalog-img-1 {
     background-image: url('../images/catalog-img-1.png');
   }
@@ -3615,6 +3686,11 @@ form .option-box.active {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .sm\:pb-0 {

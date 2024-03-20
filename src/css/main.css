@@ -481,6 +481,10 @@ form .option-box.active {
 	@apply block
 }
 
+.information-modal.active {
+	@apply right-0
+}
+
 @media screen and (max-width: 640px) {
 	.catalog {
 		@apply scale-y-100 scale-x-0 origin-left
