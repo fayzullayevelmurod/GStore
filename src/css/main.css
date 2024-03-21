@@ -254,8 +254,7 @@ textarea {
 	@apply fill-white
 }
 
-.dark .option-box,
-.dark .filter-content {
+.dark .option-box {
 	@apply bg-slate-700 text-white;
 }
 
@@ -375,6 +374,12 @@ textarea {
 /* products */
 .products-cards {
 	@apply flex justify-between gap-4 gap-y-20 flex-wrap;
+}
+
+@media screen and (min-width: 992px) {
+	.filter-page .products-cards {
+		gap: 1.5rem;
+	}
 }
 
 .media-card {

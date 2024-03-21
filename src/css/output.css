@@ -897,6 +897,10 @@ video {
   margin-top: auto;
 }
 
+.mb-\[112px\] {
+  margin-bottom: 112px;
+}
+
 .block {
   display: block;
 }
@@ -1601,18 +1605,6 @@ video {
   margin-bottom: calc(6px * var(--tw-space-y-reverse));
 }
 
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0px * var(--tw-space-x-reverse));
-  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1673,10 +1665,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-32 {
-  border-radius: 32px;
-}
-
 .rounded-b-xl {
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
@@ -1692,10 +1680,6 @@ video {
 
 .border-t {
   border-top-width: 1px;
-}
-
-.border-s {
-  border-inline-start-width: 1px;
 }
 
 .border-slate-100 {
@@ -1797,26 +1781,6 @@ video {
 
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-green-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.bg-teal-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
-}
-
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
-.bg-teal-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 78 74 / var(--tw-bg-opacity));
 }
 
 .bg-balance-gradient {
@@ -2853,8 +2817,7 @@ textarea {
   fill: #fff;
 }
 
-.dark .option-box,
-.dark .filter-content {
+.dark .option-box {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -3140,6 +3103,12 @@ textarea {
   justify-content: space-between;
   gap: 1rem;
   row-gap: 5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .filter-page .products-cards {
+    gap: 1.5rem;
+  }
 }
 
 .media-card {
@@ -3852,6 +3821,11 @@ form .option-box.active {
     margin-bottom: 1rem;
   }
 
+  .sm\:my-\[104px\] {
+    margin-top: 104px;
+    margin-bottom: 104px;
+  }
+
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3958,6 +3932,10 @@ form .option-box.active {
 
   .sm\:mt-\[45px\] {
     margin-top: 45px;
+  }
+
+  .sm\:mt-1 {
+    margin-top: 0.25rem;
   }
 
   .sm\:block {
