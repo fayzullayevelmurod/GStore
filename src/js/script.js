@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } catch (error) {
     throw error;
-    console.log(error);
+    throw error
   }
 
   // range slider

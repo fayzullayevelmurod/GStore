@@ -25,8 +25,10 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0;
 }
 
-input {
-	outline: none
+input,
+textarea {
+	@apply outline-slate-200;
+	/* @apply hover:border-slate-200 border focus:outline-slate-900; */
 }
 
 .container {
@@ -282,6 +284,10 @@ input {
 
 .title-xxl {
 	@apply text-4xl leading-[44px] font-medium text-slate-900;
+}
+
+.title-sm {
+	@apply sm:text-2xl text-sm leading-3.5 sm:leading-[26.4px] font-medium
 }
 
 .info-text {
