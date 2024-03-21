@@ -544,6 +544,10 @@ form .select-price.active {
 	@apply rounded-b-none;
 }
 
+.underline-text::before {
+	@apply content-[''] absolute bottom-0 left-0 w-full h-[1px] bg-balance-gradient;
+}
+
 /* form .option-box {
 	@apply scale-y-100 hidden;
 }
