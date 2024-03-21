@@ -205,7 +205,8 @@ input {
 
 .dark .catalog>div,
 .dark .dark-form,
-.dark .dark-form.option-box {
+.dark .dark-form.option-box,
+.dark .product-btns__box {
 	@apply bg-[#1F2937];
 }
 
@@ -261,6 +262,10 @@ input {
 	@apply fill-white;
 }
 
+.dark .black-btn:hover {
+	@apply bg-slate-700;
+}
+
 /* dark mode end */
 
 .title-text {
@@ -281,6 +286,10 @@ input {
 
 .black-btn {
 	@apply px-4 py-[14px] bg-slate-900 text-white text-sm font-medium leading-3.5 h-[44px] rounded-xl flex items-center relative transition-all duration-200;
+}
+
+.black-btn.disabled {
+	@apply bg-slate-200 text-slate-500 hover:bg-slate-200 hover:text-slate-500;
 }
 
 .btn.menu-btn {
