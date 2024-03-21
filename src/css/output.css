@@ -1053,10 +1053,6 @@ video {
   max-height: 44px;
 }
 
-.max-h-\[277px\] {
-  max-height: 277px;
-}
-
 .min-h-6 {
   min-height: 1.5rem;
 }
@@ -1169,10 +1165,6 @@ video {
   width: 52px;
 }
 
-.w-\[66px\] {
-  width: 66px;
-}
-
 .w-\[72px\] {
   width: 72px;
 }
@@ -1183,10 +1175,6 @@ video {
 
 .w-\[84px\] {
   width: 84px;
-}
-
-.w-\[89px\] {
-  width: 89px;
 }
 
 .w-\[94px\] {
@@ -1278,10 +1266,6 @@ video {
   max-width: 232px;
 }
 
-.max-w-\[280px\] {
-  max-width: 280px;
-}
-
 .max-w-\[320px\] {
   max-width: 320px;
 }
@@ -1333,18 +1317,6 @@ video {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-
-.max-w-\[50px\] {
-  max-width: 50px;
-}
-
-.max-w-\[508px\] {
-  max-width: 508px;
-}
-
-.max-w-\[\] {
-  max-width: ;
 }
 
 .flex-1 {
@@ -1627,18 +1599,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(6px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(6px * var(--tw-space-y-reverse));
-}
-
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0px * var(--tw-space-x-reverse));
-  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -3171,6 +3131,20 @@ textarea {
   display: none;
 }
 
+.loading-animation {
+  animation: fa-spin 1s linear infinite;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 @media screen and (max-width: 992px) {
   .products-cards .product-card {
     width: calc(100% / 3 - 32px / 3);
@@ -3938,12 +3912,12 @@ form .option-box.active {
     margin-top: 149px;
   }
 
-  .sm\:mt-\[45px\] {
-    margin-top: 45px;
-  }
-
   .sm\:mt-\[42px\] {
     margin-top: 42px;
+  }
+
+  .sm\:mt-\[45px\] {
+    margin-top: 45px;
   }
 
   .sm\:block {
@@ -4110,14 +4084,6 @@ form .option-box.active {
 
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:w-\[66px\] {
-    width: 66px;
-  }
-
-  .sm\:w-\[89px\] {
-    width: 89px;
   }
 
   .sm\:min-w-\[171px\] {
@@ -4658,6 +4624,14 @@ form .option-box.active {
     width: 95px;
   }
 
+  .desktop\:max-w-\[280px\] {
+    max-width: 280px;
+  }
+
+  .desktop\:max-w-\[384px\] {
+    max-width: 384px;
+  }
+
   .desktop\:max-w-\[480px\] {
     max-width: 480px;
   }
@@ -4666,20 +4640,12 @@ form .option-box.active {
     max-width: 488px;
   }
 
-  .desktop\:max-w-\[592px\] {
-    max-width: 592px;
-  }
-
   .desktop\:max-w-\[508px\] {
     max-width: 508px;
   }
 
-  .desktop\:max-w-\[384px\] {
-    max-width: 384px;
-  }
-
-  .desktop\:max-w-\[280px\] {
-    max-width: 280px;
+  .desktop\:max-w-\[592px\] {
+    max-width: 592px;
   }
 
   .desktop\:flex-none {
@@ -4776,6 +4742,14 @@ form .option-box.active {
 
   .xl\:max-w-\[280px\] {
     max-width: 280px;
+  }
+
+  .xl\:max-w-\[384px\] {
+    max-width: 384px;
+  }
+
+  .xl\:max-w-\[800px\] {
+    max-width: 800px;
   }
 
   .xl\:max-w-\[95px\] {

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GStore description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GStore</title>
+  <!-- title logo -->
+  <link rel="icon" href="./src/images/icons/company-logo.svg" />
+  <!-- SF Pro Display font -->
+  <link rel="stylesheet" href="./src/fonts/sf-pro-display/stylesheet.css" />
+  <!-- swiper css file -->
+  <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+  <!-- custom css file -->
+  <link rel="stylesheet" href="./src/css/output.css" />
+</head>
+
+<body>
+  <div class="flex min-h-lvh flex-col justify-between overflow-hidden relative">
+    <!-- header -->
+    <header class="sm:relative">
+      <div class="header-top bg-slate-100 py-2 block sm:hidden">
+        <div class="container">
+          <div class="flex gap-8 w-full justify-between">
+            <a class="flex items-center gap-[10px] info-text" href="#!">
+              <img src="src/images/icons/tether-usdt.svg" alt="tether-usdt icon" width="12" height="10">
+              1 USDT = 91,87 ₽
+            </a>
+            <a class="flex items-center gap-[10px] info-text" href="#!">
+              <img src="src/images/icons/telegram.svg" alt="telegram icon" width="13" height="13">
+              Поддержка
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container sm:pt-6 pt-3">
+        <div class="flex sm:flex-wrap gap-y-4 justify-between flex-wrap">
+          <a href="#!">
+            <img class="sm:w-auto sm:h-auto w-[94px] h-[30px]" src="src/images/icons/company-logo.svg"
+              alt="company-logo" width="172" height="56" />
+          </a>
+          <div class="flex justify-between items-center gap-3">
+            <div class="relative group">
+              <input class="hidden dark-mode__btn" type="checkbox" id="darkMode" />
+              <label for="darkMode"
+                class="group text-black menu-box cursor-pointer sm:w-12 sm:h-[52px] w-8 h-8 flex flex-col items-center justify-center bg-slate-100 sm:rounded-xl rounded-lg duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="moon-icon sm:w-6 sm:h-6 w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="sun-icon hidden sm:w-6 sm:h-6 w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+              </label>
+            </div>
+            <a href="#!"
+              class="sm:flex hidden items-center sm:gap-3 gap-2 lg:w-auto sm:w-full w-fit lg:justify-normal sm:justify-end justify-start">
+              <div
+                class="p-[14px] flex gap-2 hover:text-white items-center justify-center bg-slate-100 sm:rounded-xl rounded-lg hover:bg-slate-900 duration-200 whitespace-nowrap dark-bg">
+                <img src="src/images/icons/tether-usdt.svg" alt="" width="17">
+                <span>1 USDT = 91,87 ₽</span>
+              </div>
+            </a>
+            <a href="#!"
+              class="sm:flex hidden items-center sm:gap-3 gap-2 lg:w-auto sm:w-full w-fit lg:justify-normal sm:justify-end justify-start">
+              <div
+                class="p-[14px] flex gap-2 hover:text-white items-center justify-center bg-slate-100 sm:rounded-xl rounded-lg hover:bg-slate-900 duration-200 whitespace-nowrap dark-bg">
+                <img src="src/images/icons/telegram-light.svg" alt="">
+
+                <span>Техническая поддержка</span>
+              </div>
+            </a>
+            <a href="#!"
+              class="flex items-center sm:gap-3 gap-2 lg:w-auto sm:w-full w-fit lg:justify-normal sm:justify-end justify-start">
+              <div
+                class="dark-bg sm:p-[14px] p-2 sm:text-base text-xs group flex gap-2 hover:text-white items-center justify-center bg-slate-100 sm:rounded-xl rounded-lg hover:bg-slate-900 duration-200">
+                <svg class="white-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.17366 5.66602C3.0698 5.66602 2.16699 6.56883 2.16699 7.67269V12.1593C2.16699 13.2632 3.0698 14.166 4.17366 14.166H11.827C12.9308 14.166 13.8337 13.2632 13.8337 12.1593V11.866H13.067C12.1273 11.866 11.2153 11.1789 11.129 10.1639C11.0751 9.58906 11.294 9.05206 11.6732 8.67933C12.0143 8.33145 12.4819 8.13269 12.987 8.13269H13.8337V7.67269C13.8337 6.56883 12.9308 5.66602 11.827 5.66602H4.17366ZM1.16699 7.67269C1.16699 6.01655 2.51752 4.66602 4.17366 4.66602H11.827C13.4831 4.66602 14.8337 6.01655 14.8337 7.67269V8.63269C14.8337 8.90883 14.6098 9.13269 14.3337 9.13269H12.987C12.7476 9.13269 12.5371 9.2255 12.3852 9.38148L12.3764 9.39058L12.3763 9.39046C12.1989 9.56361 12.0998 9.81014 12.1247 10.0719L12.1253 10.0778L12.1253 10.0778C12.1605 10.5011 12.5676 10.866 13.067 10.866H14.3337C14.6098 10.866 14.8337 11.0899 14.8337 11.366V12.1593C14.8337 13.8155 13.4831 15.166 11.827 15.166H4.17366C2.51752 15.166 1.16699 13.8155 1.16699 12.1593V7.67269Z"
+                    fill="#0F172A" />
+                  <path class="group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.40033 2.63236C9.40033 2.09402 8.8623 1.72443 8.36421 1.91322L3.07061 3.91332C2.52597 4.1194 2.16699 4.63925 2.16699 5.22571V8.27234C2.16699 8.54848 1.94313 8.77234 1.66699 8.77234C1.39085 8.77234 1.16699 8.54848 1.16699 8.27234V5.22571C1.16699 4.22549 1.78135 3.33196 2.71671 2.97804L8.00978 0.978137C8.00969 0.978172 8.00987 0.978101 8.00978 0.978137C9.16494 0.540507 10.4003 1.39748 10.4003 2.63236V5.16569C10.4003 5.44183 10.1765 5.66569 9.90033 5.66569C9.62418 5.66569 9.40033 5.44183 9.40033 5.16569V2.63236Z"
+                    fill="#0F172A" />
+                  <path class="group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.9862 9.13281C12.7468 9.13281 12.5363 9.22562 12.3845 9.3816L12.3756 9.3907L12.3755 9.39058C12.1981 9.56373 12.099 9.81026 12.124 10.0721L12.1245 10.0779L12.1245 10.0779C12.1598 10.5013 12.5668 10.8661 13.0662 10.8661H14.3614C14.4692 10.8592 14.5396 10.7749 14.5396 10.6862V9.31279C14.5396 9.22404 14.4692 9.13976 14.3614 9.13281H12.9862ZM11.6724 8.67945C12.0135 8.33157 12.4811 8.13281 12.9862 8.13281H14.3729C14.3788 8.13281 14.3848 8.13292 14.3907 8.13313C15.0261 8.15582 15.5396 8.66994 15.5396 9.31279V10.6862C15.5396 11.329 15.0261 11.8431 14.3907 11.8658C14.3848 11.866 14.3788 11.8661 14.3729 11.8661H13.0662C12.1265 11.8661 11.2144 11.179 11.1282 10.1639C11.0744 9.58913 11.2932 9.05216 11.6724 8.67945Z"
+                    fill="#0F172A" />
+                  <path class="group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.16699 8C4.16699 7.72386 4.39085 7.5 4.66699 7.5H9.33366C9.6098 7.5 9.83366 7.72386 9.83366 8C9.83366 8.27614 9.6098 8.5 9.33366 8.5H4.66699C4.39085 8.5 4.16699 8.27614 4.16699 8Z"
+                    fill="#0F172A" />
+                </svg>
+
+                <div class="flex gap-2">
+                  <span class="sm:inline-block hidden">Баланс</span>
+                  <span>1 300 $</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="breadcrumb relative sm:mt-6 mt-4 mb-8">
+        <div class="container">
+          <ul class="flex items-center space-x-2 pb-0 sm:mr-0 -mr-4 sm:pr-0 pr-4 breadcrumb-list overflow-y-auto">
+            <li>
+              <a class="text-slate-500 text-sm white-text leading-3.5" href="index.html">Главная</a>
+            </li>
+            <li class="text-slate-500 text-sm white-text">/</li>
+            <li>
+              <a class="text-slate-500 text-sm white-text leading-3.5" href="cart.html">Корзина</a>
+            </li>
+            <li class="text-slate-500 text-sm white-text">/</li>
+            <li>
+              <a class="text-slate-900 whitespace-nowrap font-medium text-sm white-text leading-3.5">Оформление
+                заказа</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="container">
+        <h1 class="title-xxl sm:mb-8 mb-6">Оплата заказа № 3567</h1>
+        <div class="">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div class="sm:border border-slate-200 rounded-3xl sm:p-6 xl:max-w-[800px] w-full">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base leading-[17.6px] font-medium sm:text-2xl sm:leading-[26.4px]">Проверка транзакции…
+                </h3>
+                <div class="flex space-x-2">
+                  <p
+                    class="bg-teal-50 sm:block hidden info-box sm:block hidden dark-bg rounded-full py-1 px-2 font-medium leading-[14.4px] sm:text-xs text-[10px] text-teal-600 w-fit">
+                    Оплата в криптовалюте USDT (TRC 20)
+                  </p>
+                  <p
+                    class="bg-orange-50 warning-box dark-bg rounded-full py-1 px-2 font-medium leading-[14.4px] sm:text-xs text-[10px] text-orange-600 w-fit">
+                    Ожидаем платёж 23:59:47
+                  </p>
+                </div>
+              </div>
+              <p
+                class="sm:py-4 pt-3 pb-4 sm:text-base sm:leading-[20.8px] text-sm leading-[18.2px] text-slate-500 max-w-[560px]">
+                Отправьте точную сумму по указанному адресу. После совершения оплаты нажмите на кнопку «Проверить
+                транзакцию» для проверки транзакции.
+              </p>
+              <div
+                class="dark-bg flex items-start sm:gap-6 gap-4 bg-slate-100 p-6 sm:rounded-3xl rounded-2xl justify-between flex-wrap sm:flex-row flex-col">
+                <img class="rounded-xl sm:w-[112px] sm:h-[112px] w-[104px] h-[104px]" src="src/images/qr-code.png"
+                  alt="">
+                <div class="sm:space-y-6 space-y-4">
+                  <div class="flex sm:items-center md:gap-8 gap-4 gap-y-2 flex-wrap sm:flex-row flex-col">
+                    <h6 class="font-medium sm:leading-3.5 sm:text-sm text-[10px] leading-[11px] w-[128px]">Адрес
+                      кошелька</h6>
+                    <div class="flex items-center sm:gap-4 gap-8 justify-between">
+                      <p class="text-xs leading-[13.2px] sm:text-sm sm:leading-3.5">TRjaJveN7rWHRD1vBK6i93hs4DAGEQkQQx
+                      </p>
+                      <button
+                        class="bg-white dark-bg__two rounded-lg py-2 px-2 sm:px-3 flex items-center gap-[10px] text-xs leading-[13.2px]">
+                        <span class="sm:inline-block hidden">Скопировать</span>
+                        <svg class="white-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.73779 1.73876C6.40243 1.07412 7.38369 0.833984 8.59967 0.833984H11.3997C12.6157 0.833984 13.5969 1.07412 14.2616 1.73876C14.9262 2.40341 15.1663 3.38467 15.1663 4.60065V7.40065C15.1663 8.61663 14.9262 9.59789 14.2616 10.2625C13.5969 10.9272 12.6157 11.1673 11.3997 11.1673H10.6663C10.3902 11.1673 10.1663 10.9435 10.1663 10.6673V8.60065C10.1663 7.4833 9.93981 6.83122 9.55445 6.44587C9.1691 6.06052 8.51703 5.83398 7.39967 5.83398H5.33301C5.05687 5.83398 4.83301 5.61013 4.83301 5.33398V4.60065C4.83301 3.38467 5.07314 2.40341 5.73779 1.73876ZM6.44489 2.44587C6.05954 2.83123 5.83301 3.4833 5.83301 4.60065V4.83398H7.39967C8.61566 4.83398 9.59692 5.07412 10.2616 5.73876C10.9262 6.40341 11.1663 7.38467 11.1663 8.60065V10.1673H11.3997C12.517 10.1673 13.1691 9.94078 13.5545 9.55543C13.9398 9.17008 14.1663 8.518 14.1663 7.40065V4.60065C14.1663 3.4833 13.9398 2.83123 13.5545 2.44587C13.1691 2.06052 12.517 1.83398 11.3997 1.83398H8.59967C7.48232 1.83398 6.83025 2.06052 6.44489 2.44587Z"
+                            fill="#0F172A" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.73779 5.73876C2.40243 5.07412 3.38369 4.83398 4.59967 4.83398H7.39967C8.61566 4.83398 9.59692 5.07412 10.2616 5.73876C10.9262 6.40341 11.1663 7.38467 11.1663 8.60065V11.4007C11.1663 12.6166 10.9262 13.5979 10.2616 14.2625C9.59692 14.9272 8.61566 15.1673 7.39967 15.1673H4.59967C3.38369 15.1673 2.40243 14.9272 1.73779 14.2625C1.07314 13.5979 0.833008 12.6166 0.833008 11.4007V8.60065C0.833008 7.38467 1.07314 6.40341 1.73779 5.73876ZM2.44489 6.44587C2.05954 6.83123 1.83301 7.4833 1.83301 8.60065V11.4007C1.83301 12.518 2.05954 13.1701 2.44489 13.5554C2.83025 13.9408 3.48232 14.1673 4.59967 14.1673H7.39967C8.51703 14.1673 9.1691 13.9408 9.55445 13.5554C9.93981 13.1701 10.1663 12.518 10.1663 11.4007V8.60065C10.1663 7.4833 9.93981 6.83123 9.55445 6.44587C9.1691 6.06052 8.51703 5.83398 7.39967 5.83398H4.59967C3.48232 5.83398 2.83025 6.06052 2.44489 6.44587Z"
+                            fill="#0F172A" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.29917 8.34716C8.49468 8.54218 8.49509 8.85876 8.30008 9.05427L5.70674 11.6543C5.61301 11.7482 5.48577 11.8011 5.35306 11.8012C5.22034 11.8013 5.09303 11.7486 4.99918 11.6547L3.69918 10.3547C3.50392 10.1595 3.50392 9.84288 3.69918 9.64762C3.89444 9.45236 4.21103 9.45236 4.40629 9.64762L5.35228 10.5936L7.59206 8.34807C7.78707 8.15256 8.10365 8.15215 8.29917 8.34716Z"
+                            fill="#0F172A" />
+                        </svg>
+
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2 sm:space-y-6">
+                    <div class="flex items-center md:gap-8 gap-4 gap-y-4 flex-wrap">
+                      <h6 class="font-medium sm:leading-3.5 sm:text-sm text-[10px] leading-[11px] w-[128px]">Сеть
+                      </h6>
+                      <div class="flex items-center sm:gap-4 gap-8 justify-between">
+                        <p class="text-xs leading-[13.2px] sm:text-sm sm:leading-3.5">TRC 20</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center md:gap-8 gap-4 gap-y-4 flex-wrap">
+                      <h6 class="font-medium sm:leading-3.5 sm:text-sm text-[10px] leading-[11px] w-[128px]">
+                        Обработка платежа</h6>
+                      <div class="flex items-center sm:gap-4 gap-8 justify-between">
+                        <p class="text-xs leading-[13.2px] sm:text-sm sm:leading-3.5">15–20 минут</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="bg-teal-50 info-box sm:hidden block dark-bg rounded-full py-1 px-2 font-medium leading-[14.4px] sm:text-xs text-[10px] text-teal-600 w-fit">
+                    Оплата в криптовалюте USDT (TRC 20)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="xl:max-w-[384px] border border-slate-200 rounded-3xl p-6 space-y-4 w-full">
+              <div class="flex justify-between items-center">
+                <h5 class="leading-[17.6px] text-base font-medium sm:text-[20px] sm:leading-[22px]">К оплате</h5>
+                <h5 class="leading-[17.6px] text-base font-medium sm:text-[20px] sm:leading-[22px]">2 750 $</h5>
+              </div>
+              <p class="text-slate-500 text-sm leading-[18.2px]">
+                После оплаты обязательно нажмите на кнопку «Проверить транзакцию».
+              </p>
+              <a class="w-full black-btn justify-between" href="#!">
+                <span>Проверка транзакции</span>
+                <img class="loading-animation" src="src/images/icons/loading.svg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="sm:border border-slate-200 rounded-3xl sm:p-6 sm:mt-4 mt-8 xl:max-w-[800px]">
+            <div class="space-y-6">
+              <div class="max-w-[580px]">
+                <h3 class="text-base leading-[17.6px] font-medium sm:text-2xl sm:leading-[26.4px]">Как оплатить?</h3>
+                <p class="text-slate-500 sm:text-base text-sm sm:leading-[20.8px] leading-[18.2px] my-4">На примере
+                  криптобиржи Bybit.</p>
+                <ul class="list-decimal pl-6">
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Откройте приложение
+                    Bybit
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Нажмите на «Активы»
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Выберите «Вывод
+                    средств»
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Выберите USDT</li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">В поле «Адрес»
+                    вставьте
+                    адрес, который расположен выше</li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Выберите тип сети
+                    «TRC20»
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Введите точную
+                    сумму
+                    заказа</li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Нажмите «Вывод
+                    средств»
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">Подтвердите вывод
+                    средств
+                  </li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">На сайте Gstore
+                    нажмите
+                    на кнопку «Проверить»</li>
+                  <li class="text-slate-500 sm:text-base text-sm sm:leading-[20px] leading-[18px]">В течение
+                    15–20 минут
+                    ваш заказ обработается и деньги зачислятся на счёт. заказ будет оплачен.</li>
+                </ul>
+              </div>
+              <div class="max-w-[580px]">
+                <h3 class="text-base leading-[17.6px] font-medium sm:text-2xl sm:leading-[26.4px]">Я выбрал
+                  неправильню
+                  сеть
+                  или ввёл адрес кошелька с ошибкой?</h3>
+                <p class="text-slate-500 sm:text-base text-sm sm:leading-[20.8px] leading-[18.2px] my-4">К сожалению
+                  вы не сможете отменить платёж. Вам придётся провести оплату снова указав верные реквизиты. Описать
+                  почему
+                  это так и чем такой платёж отличается от банковского</p>
+              </div>
+              <div class="max-w-[580px]">
+                <h3 class="text-base leading-[17.6px] font-medium sm:text-2xl sm:leading-[26.4px]">Я выбрал
+                  неправильню
+                  сеть
+                  или ввёл адрес кошелька с ошибкой?</h3>
+                <p class="text-slate-500 sm:text-base text-sm sm:leading-[20.8px] leading-[18.2px] my-4">К сожалению
+                  вы не сможете отменить платёж. Вам придётся провести оплату снова указав верные реквизиты. Описать
+                  почему
+                  это так и чем такой платёж отличается от банковского</p>
+              </div>
+              <div class="overflow-x-auto flex gap-x-6 no-scroll max-w-[600px]">
+                <img class="w-[184px]" src="src/images/app-img-1.png" alt="app img">
+                <img class="w-[184px]" src="src/images/app-img-2.png" alt="app img">
+                <img class="w-[184px]" src="src/images/app-img-3.png" alt="app img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="sm:mt-[149px] mt-14 bg-slate-900 pt-8">
+      <div class="container flex items-start justify-between flex-wrap gap-10">
+        <div class="sm:block flex justify-between items-end sm:w-auto w-full">
+          <a class="sm:mb-6 inline-block sm:w-auto sm:h-auto w-[100px] h-[32px]" href="#!">
+            <img src="src/images/icons/gstore-logo.svg" alt="gstore-logo" width="176" height="56" />
+          </a>
+          <p class="text-slate-500 text-sm leading-[15.4px]">
+            © 2016–2024 «Gstore»
+          </p>
+        </div>
+        <div class="relative w-full sm:hidden block">
+          <input
+            class="min-w-full bg-slate-100 rounded-lg py-[13px] px-3 text-slate-900 placeholder:text-slate-500 text-sm leading-[13.2px]"
+            type="text" placeholder="Найти" />
+          <svg class="absolute top-1/2 right-[13px] -translate-y-1/2 footer-search__icon" width="20" height="20"
+            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.58342 2.41675C5.62537 2.41675 2.41675 5.62537 2.41675 9.58342C2.41675 13.5415 5.62537 16.7501 9.58342 16.7501C13.5415 16.7501 16.7501 13.5415 16.7501 9.58342C16.7501 5.62537 13.5415 2.41675 9.58342 2.41675ZM0.916748 9.58342C0.916748 4.79695 4.79695 0.916748 9.58342 0.916748C14.3699 0.916748 18.2501 4.79695 18.2501 9.58342C18.2501 14.3699 14.3699 18.2501 9.58342 18.2501C4.79695 18.2501 0.916748 14.3699 0.916748 9.58342Z"
+              fill="#64748B" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16.1364 16.1364C16.4293 15.8435 16.9042 15.8435 17.1971 16.1364L18.8637 17.8031C19.1566 18.096 19.1566 18.5709 18.8637 18.8637C18.5709 19.1566 18.096 19.1566 17.8031 18.8637L16.1364 17.1971C15.8435 16.9042 15.8435 16.4293 16.1364 16.1364Z"
+              fill="#64748B" />
+          </svg>
+        </div>
+        <div
+          class="md:pt-[21px] pt-0 flex sm:gap-[50px] gap-y-6 gap-[15px] sm:justify-normal xs:justify-between justify-start flex-wrap">
+          <div class="sm:min-w-fit min-w-[104px]">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              GStore
+            </h5>
+            <div class="sm:inline-block flex sm:gap-6 gap-[15px]">
+              <ul class="sm:max-w-fit max-w-[104px]">
+                <li>
+                  <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block"
+                    href="#!">О компании</a>
+                </li>
+                <li>
+                  <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block"
+                    href="#!">Контакты</a>
+                </li>
+                <li>
+                  <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Оплата
+                    и доставка</a>
+                </li>
+              </ul>
+              <ul class="sm:max-w-fit max-w-[104px]">
+                <li>
+                  <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Медиа</a>
+                </li>
+                <li>
+                  <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Акции</a>
+                </li>
+                <li>
+                  <a class="text-slate-500 text-sm leading-[15.4px] inline-block" href="#!">Отзывы</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px] sm:ml-0 ml-auto">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Смартфоны
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+              </li>
+              <li>
+                <a class="text-slate-500 text-sm leading-[15.4px]inline-block" href="#!">Samsung</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px]">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Ноутбуки
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+              </li>
+              <li>
+                <a class="text-slate-500 text-sm leading-[15.4px] inline-block" href="#!">Xiaomi</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px]">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Планшеты
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px] xs:ml-0 ml-auto">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Стайлеры
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Dyson</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px]">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Приставки
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block"
+                  href="#!">Playstation</a>
+              </li>
+              <li>
+                <a class="text-slate-500 text-sm leading-[15.4px]inline-block" href="#!">Xbox</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sm:min-w-fit min-w-[104px]">
+            <h5 class="text-white font-medium sm:leading-[17.6px] leading-[13.5px] sm:text-base text-sm mb-6">
+              Акссесуары
+            </h5>
+            <ul>
+              <li>
+                <a class="text-slate-500 sm:text-base text-sm leading-[15.4px] mb-6 inline-block" href="#!">Apple</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-700 w-full h-[1px] sm:mt-14 mt-8"></div>
+      <div class="container py-4 flex flex-wrap gap-4 items-center justify-between">
+        <p class="text-slate-500 text-sm leading-[15.4px]">
+          Политика обработки персональных данных
+        </p>
+        <p class="text-slate-500 text-sm leading-[15.4px]">
+          Возникли сложности? Пишите в бот —
+          <a href="#!">@gstore_help</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- swiper js file -->
+  <script src="./src/libs/swiper-bundle.min.js"></script>
+  <!-- custom js file -->
+  <script src="./src/js/script.js"></script>
+</body>
+
+</html>
