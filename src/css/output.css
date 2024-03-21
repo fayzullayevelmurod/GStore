@@ -642,6 +642,10 @@ video {
   left: 0px;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -718,6 +722,11 @@ video {
   order: -1;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-\[2px\] {
   margin-left: 2px;
   margin-right: 2px;
@@ -736,6 +745,11 @@ video {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-8 {
@@ -1076,6 +1090,10 @@ video {
   width: 100%;
 }
 
+.min-w-10 {
+  min-width: 2.5rem;
+}
+
 .min-w-6 {
   min-width: 1.5rem;
 }
@@ -1154,6 +1172,10 @@ video {
 
 .max-w-\[442px\] {
   max-width: 442px;
+}
+
+.max-w-\[592px\] {
+  max-width: 592px;
 }
 
 .max-w-\[600px\] {
@@ -1439,6 +1461,10 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
 .rounded-\[4px\] {
   border-radius: 4px;
 }
@@ -1457,10 +1483,6 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-32 {
-  border-radius: 32px;
 }
 
 .rounded-b-xl {
@@ -1688,6 +1710,11 @@ video {
   background-repeat: no-repeat;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1807,6 +1834,10 @@ video {
   padding-bottom: 6.75px;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1859,6 +1890,18 @@ video {
   padding-top: 2rem;
 }
 
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1869,6 +1912,10 @@ video {
 
 .font-Onest {
   font-family: Onest, sans-serif;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-2xl {
@@ -1954,6 +2001,10 @@ video {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .leading-3 {
@@ -2770,19 +2821,65 @@ input {
   row-gap: 5rem;
 }
 
+.media-card {
+  width: calc(100% / 3 - 64px / 3);
+}
+
 .products-cards .product-card {
   width: calc(100% / 4 - 48px / 4);
+}
+
+.gradient-text {
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(42.01deg, #7B88FD 1.98%, #43CADC 113.43%);
+}
+
+.logo-gradient {
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 24.49%, #EF4158);
+}
+
+.breadcrumb-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 @media screen and (max-width: 992px) {
   .products-cards .product-card {
     width: calc(100% / 3 - 32px / 3);
   }
+
+  .media-cards {
+    gap: 1rem;
+  }
+
+  .media-card {
+    width: calc(50% - 8px);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .products-cards .product-card {
     width: calc(50% - 8px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .media-card {
+    width: calc(100%);
+  }
+
+  .breadcrumb::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 2rem;
+    width: 2rem;
+    --tw-content: '';
+    content: var(--tw-content);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   }
 }
 
@@ -3329,6 +3426,11 @@ form .option-box.active {
     order: 1;
   }
 
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .sm\:my-3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
@@ -3439,6 +3541,10 @@ form .option-box.active {
     height: 2.5rem;
   }
 
+  .sm\:h-11 {
+    height: 2.75rem;
+  }
+
   .sm\:h-12 {
     height: 3rem;
   }
@@ -3475,6 +3581,11 @@ form .option-box.active {
     height: auto;
   }
 
+  .sm\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
   .sm\:max-h-\[48px\] {
     max-height: 48px;
   }
@@ -3485,6 +3596,10 @@ form .option-box.active {
 
   .sm\:w-10 {
     width: 2.5rem;
+  }
+
+  .sm\:w-11 {
+    width: 2.75rem;
   }
 
   .sm\:w-12 {
@@ -3660,6 +3775,12 @@ form .option-box.active {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
+  .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:overflow-hidden {
     overflow: hidden;
   }
@@ -3810,6 +3931,14 @@ form .option-box.active {
 
   .sm\:pt-0 {
     padding-top: 0px;
+  }
+
+  .sm\:pr-0 {
+    padding-right: 0px;
+  }
+
+  .sm\:text-center {
+    text-align: center;
   }
 
   .sm\:text-2xl {
