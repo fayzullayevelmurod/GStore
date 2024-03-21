@@ -853,6 +853,38 @@ video {
   margin-top: auto;
 }
 
+.mt-\[14\] {
+  margin-top: 14;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mt-\[108px\] {
+  margin-top: 108px;
+}
+
+.mb-\[2\] {
+  margin-bottom: 2;
+}
+
+.mb-\[273px\] {
+  margin-bottom: 273px;
+}
+
+.mb-\[217px\] {
+  margin-bottom: 217px;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -981,10 +1013,6 @@ video {
   height: 100%;
 }
 
-.h-\[3px\] {
-  height: 3px;
-}
-
 .max-h-\[40px\] {
   max-height: 40px;
 }
@@ -995,6 +1023,10 @@ video {
 
 .min-h-6 {
   min-height: 1.5rem;
+}
+
+.min-h-\[48px\] {
+  min-height: 48px;
 }
 
 .min-h-lvh {
@@ -1108,10 +1140,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[3px\] {
-  width: 3px;
 }
 
 .min-w-10 {
@@ -1301,10 +1329,6 @@ video {
   resize: both;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1477,18 +1501,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(6px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(6px * var(--tw-space-y-reverse));
-}
-
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0px * var(--tw-space-x-reverse));
-  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1924,6 +1936,10 @@ video {
   padding-left: 0.25rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .pl-\[19px\] {
   padding-left: 19px;
 }
@@ -1954,10 +1970,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
 }
 
 .text-left {
@@ -2185,10 +2197,6 @@ video {
   line-height: normal;
 }
 
-.leading-\[\] {
-  line-height: ;
-}
-
 .text-\[\#0D9488\] {
   --tw-text-opacity: 1;
   color: rgb(13 148 136 / var(--tw-text-opacity));
@@ -2389,6 +2397,11 @@ input {
 .dark .btn-light svg path,
 .dark .btn-light__two svg path {
   fill: #fff;
+}
+
+.dark .white-bg::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .dark [data-send-btn],
@@ -2904,8 +2917,7 @@ input {
 .logo-gradient {
   -webkit-background-clip: text;
   color: transparent;
-  /* background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 24.49%, #EF4158); */
-  background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 48.49%, #EF4158 100.05%);
+  background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 4.49%, #EF4158 10.05%);
 }
 
 .breadcrumb-list::-webkit-scrollbar {
@@ -3420,59 +3432,9 @@ form .option-box.active {
   position: absolute;
 }
 
-.before\:top-0::before {
-  content: var(--tw-content);
-  top: 0px;
-}
-
-.before\:left-0::before {
-  content: var(--tw-content);
-  left: 0px;
-}
-
-.before\:top-\[10px\]::before {
-  content: var(--tw-content);
-  top: 10px;
-}
-
-.before\:top-\[8px\]::before {
-  content: var(--tw-content);
-  top: 8px;
-}
-
-.before\:left-\[\]::before {
-  content: var(--tw-content);
-  left: ;
-}
-
-.before\:left-\[10PX\]::before {
-  content: var(--tw-content);
-  left: 10PX;
-}
-
-.before\:left-\[10px\]::before {
-  content: var(--tw-content);
-  left: 10px;
-}
-
 .before\:left-\[-10px\]::before {
   content: var(--tw-content);
   left: -10px;
-}
-
-.before\:left-\[-20px\]::before {
-  content: var(--tw-content);
-  left: -20px;
-}
-
-.before\:left-\[20px\]::before {
-  content: var(--tw-content);
-  left: 20px;
-}
-
-.before\:left-\[0px\]::before {
-  content: var(--tw-content);
-  left: 0px;
 }
 
 .before\:top-\[9px\]::before {
@@ -3698,8 +3660,20 @@ form .option-box.active {
     margin-top: 2rem;
   }
 
+  .sm\:mt-\[104px\] {
+    margin-top: 104px;
+  }
+
   .sm\:mt-\[45px\] {
     margin-top: 45px;
+  }
+
+  .sm\:mt-\[108px\] {
+    margin-top: 108px;
+  }
+
+  .sm\:mb-\[217px\] {
+    margin-bottom: 217px;
   }
 
   .sm\:block {
@@ -3860,6 +3834,10 @@ form .option-box.active {
   .sm\:max-w-fit {
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+
+  .sm\:max-w-\[384px\] {
+    max-width: 384px;
   }
 
   .sm\:flex-row {

@@ -64,6 +64,10 @@ input {
 	@apply fill-white
 }
 
+.dark .white-bg::before {
+	@apply bg-white;
+}
+
 .dark [data-send-btn],
 .dark .white-btn,
 .dark .white-btn:hover,
@@ -367,8 +371,7 @@ input {
 .logo-gradient {
 	-webkit-background-clip: text;
 	color: transparent;
-	/* background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 24.49%, #EF4158); */
-	background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 48.49%, #EF4158 100.05%);
+	background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 4.49%, #EF4158 10.05%);
 }
 
 .breadcrumb-list::-webkit-scrollbar {
