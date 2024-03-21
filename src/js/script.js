@@ -1,20 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   // menu
-  const menuBtn = document.querySelector(".menu-btn");
-  const catalog = document.querySelector(".catalog");
-  const closeBtn = document.querySelector(".close-btn");
-  function catalogFunc() {
-    menuBtn.classList.toggle("active");
-    catalog.classList.toggle("active");
-    // document.body.classList.toggle('overflow-hidden');
-  }
-  closeBtn.addEventListener("click", catalogFunc);
-  menuBtn.addEventListener("click", catalogFunc);
-  catalog.addEventListener("click", (e) => {
-    if (e.target.classList.contains("catalog")) {
-      catalogFunc();
+  try {
+    const catalog = document.querySelector(".catalog");
+
+    if (catalog) {
+      const menuBtn = document.querySelector(".menu-btn");
+      const closeBtn = document.querySelector(".close-btn");
+      function catalogFunc() {
+        menuBtn.classList.toggle("active");
+        catalog.classList.toggle("active");
+        // document.body.classList.toggle('overflow-hidden');
+      }
+      closeBtn.addEventListener("click", catalogFunc);
+      menuBtn.addEventListener("click", catalogFunc);
+      catalog.addEventListener("click", (e) => {
+        if (e.target.classList.contains("catalog")) {
+          catalogFunc();
+        }
+      });
     }
-  });
+  } catch (error) {
+    throw error;
+  }
 
   // dark mode
   const moonIcon = document.querySelector(".moon-icon");
@@ -366,86 +373,66 @@ document.addEventListener("DOMContentLoaded", () => {
     throw error;
   }
 
-  // // counter
-  // const counters = document.querySelectorAll(".counter");
+  try {
+    function formatNumberWithSpaces(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
 
-  // counters.forEach((counter) => {
-  //   const incrementBtn = counter.querySelector("[data-plus-btn]");
-  //   const decrementBtn = counter.querySelector("[data-minus-btn]");
-  //   const count = counter.querySelector(".count");
-  // 	const oldPrice = counter.querySelector('.old-price');
-  // 	const newPrice = counter.querySelector('.new-price');
+    document.querySelectorAll(".counter").forEach((counter) => {
+      const incrementBtn = counter.querySelector("[data-plus-btn]");
+      const decrementBtn = counter.querySelector("[data-minus-btn]");
+      const count = counter.querySelector(".count");
+      const oldPrice = counter.querySelector(".old-price");
+      const newPrice = counter.querySelector(".new-price");
+      const usdt = counter.querySelector(".usdt");
+      const productMoreBtns = counter.querySelector(".product-more__btns");
+      const productBtnBox = counter.querySelector(".product-btns__box");
 
-  //   let currentCount = 1;
-  // 	let currentOldPrice = 179900; // agarda increment btn bosilsa currentOldPrice 1 taga oshsin yani (179900+1), agarda decrement bosilsa 1taga kamaysin
-  // 	let currentPrice = 145900; // // agarda increment btn bosilsa currentPrice 1 taga oshsin yani(145900+1), agarda decrement bosilsa 1taga kamaysin
+      productMoreBtns.addEventListener("click", () => {
+        productBtnBox.classList.toggle("scale-y-0");
+      });
 
-  //   incrementBtn.addEventListener("click", () => {
-  //     currentCount++;
-  //     count.textContent = currentCount;
-  //   });
-  //   decrementBtn.addEventListener("click", () => {
-  //     if (currentCount > 0) {
-  //       currentCount--;
-  //       count.textContent = currentCount;
-  //     }
-  //   });
-  // });
-  function formatNumberWithSpaces(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  }
+      let currentCount = 1;
+      let currentOldPrice = 179900;
+      let currentPrice = 145900;
+      let currentUsdt = 560;
 
-  document.querySelectorAll(".counter").forEach((counter) => {
-    const incrementBtn = counter.querySelector("[data-plus-btn]");
-    const decrementBtn = counter.querySelector("[data-minus-btn]");
-    const count = counter.querySelector(".count");
-    const oldPrice = counter.querySelector(".old-price");
-    const newPrice = counter.querySelector(".new-price");
-    const usdt = counter.querySelector(".usdt");
-    const productMoreBtns = counter.querySelector(".product-more__btns");
-    const productBtnBox = counter.querySelector(".product-btns__box");
+      const updateCount = () => {
+        count.textContent = currentCount;
+      };
 
-    productMoreBtns.addEventListener("click", () => {
-      productBtnBox.classList.toggle("scale-y-0");
-    });
+      const updatePrices = () => {
+        oldPrice.textContent = formatNumberWithSpaces(currentOldPrice) + " ₽";
+        newPrice.textContent = formatNumberWithSpaces(currentPrice) + " ₽";
+        usdt.textContent = formatNumberWithSpaces(currentUsdt) + " $";
+      };
 
-    let currentCount = 1;
-    let currentOldPrice = 179900;
-    let currentPrice = 145900;
-    let currentUsdt = 560;
-
-    const updateCount = () => {
-      count.textContent = currentCount;
-    };
-
-    const updatePrices = () => {
-      oldPrice.textContent = formatNumberWithSpaces(currentOldPrice) + " ₽";
-      newPrice.textContent = formatNumberWithSpaces(currentPrice) + " ₽";
-      usdt.textContent = formatNumberWithSpaces(currentUsdt) + " $";
-    };
-
-    incrementBtn.addEventListener("click", () => {
-      currentCount++;
-      currentOldPrice += 179900;
-      currentPrice += 145900;
-      currentUsdt += 560;
-      updateCount();
-      updatePrices();
-    });
-
-    decrementBtn.addEventListener("click", () => {
-      if (currentCount > 1) {
-        currentCount--;
-        currentOldPrice -= 179900;
-        currentPrice -= 145900;
-        currentUsdt -= 560;
+      incrementBtn.addEventListener("click", () => {
+        currentCount++;
+        currentOldPrice += 179900;
+        currentPrice += 145900;
+        currentUsdt += 560;
         updateCount();
         updatePrices();
-      }
-    });
+      });
 
-    updatePrices();
-  });
+      decrementBtn.addEventListener("click", () => {
+        if (currentCount > 1) {
+          currentCount--;
+          currentOldPrice -= 179900;
+          currentPrice -= 145900;
+          currentUsdt -= 560;
+          updateCount();
+          updatePrices();
+        }
+      });
+
+      updatePrices();
+    });
+  } catch (error) {
+    throw error;
+    console.log(error);
+  }
 
   // range slider
   try {

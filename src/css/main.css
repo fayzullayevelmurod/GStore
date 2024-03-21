@@ -79,8 +79,16 @@ input {
 	@apply bg-[#374151] text-white;
 }
 
-.salom {
-	width: calc(100% - 312px);
+.dark .info-box {
+	@apply bg-teal-50 text-teal-600;
+}
+
+.dark .warning-box {
+	@apply bg-orange-50 text-orange-600;
+}
+
+.dark .dark-bg__two {
+	@apply bg-slate-900
 }
 
 @media screen and (min-width: 640px) {
@@ -417,7 +425,7 @@ input {
 		width: calc(100%);
 	}
 
-	.breadcrumb::before {
+	.breadcrumb.before::before {
 		@apply content-[''] absolute top-0 right-0 w-8 h-8;
 		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
 	}
