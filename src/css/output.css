@@ -973,6 +973,10 @@ video {
   height: 100%;
 }
 
+.h-\[143px\] {
+  height: 143px;
+}
+
 .max-h-\[40px\] {
   max-height: 40px;
 }
@@ -1023,6 +1027,10 @@ video {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[12px\] {
+  width: 12px;
 }
 
 .w-\[13\.17px\] {
@@ -1114,6 +1122,10 @@ video {
   min-width: 190px;
 }
 
+.min-w-\[225px\] {
+  min-width: 225px;
+}
+
 .min-w-\[258px\] {
   min-width: 258px;
 }
@@ -1156,6 +1168,10 @@ video {
 
 .max-w-\[320px\] {
   max-width: 320px;
+}
+
+.max-w-\[32px\] {
+  max-width: 32px;
 }
 
 .max-w-\[377px\] {
@@ -1267,6 +1283,10 @@ video {
 
 .resize {
   resize: both;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -1427,6 +1447,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[6px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(6px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(6px * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1866,6 +1892,10 @@ video {
   padding-left: 19px;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-\[7px\] {
   padding-right: 7px;
 }
@@ -1888,18 +1918,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .text-left {
@@ -2838,12 +2856,17 @@ input {
 .logo-gradient {
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 24.49%, #EF4158);
+  /* background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 24.49%, #EF4158); */
+  background-image: linear-gradient(90deg, #43CADC 0.05%, #7B88FD 48.49%, #EF4158 100.05%);
 }
 
 .breadcrumb-list::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+.breadcrumb.no-beffore::before {
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -3272,10 +3295,15 @@ form .option-box.active {
     width: 151px;
   }
 
-  .title-text,
-	.title-xxl {
+  .title-text {
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .title-xxl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    line-height: 26px;
   }
 
   .product-card .btn {
@@ -3384,6 +3412,10 @@ form .option-box.active {
     margin-left: 0px;
   }
 
+  .xs\:h-auto {
+    height: auto;
+  }
+
   .xs\:max-w-\[280px\] {
     max-width: 280px;
   }
@@ -3447,6 +3479,10 @@ form .option-box.active {
 
   .sm\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .sm\:mb-14 {
+    margin-bottom: 3.5rem;
   }
 
   .sm\:mb-3 {
@@ -3584,6 +3620,10 @@ form .option-box.active {
   .sm\:h-fit {
     height: -moz-fit-content;
     height: fit-content;
+  }
+
+  .sm\:h-\[446px\] {
+    height: 446px;
   }
 
   .sm\:max-h-\[48px\] {
@@ -3921,6 +3961,10 @@ form .option-box.active {
     padding-left: 1rem;
   }
 
+  .sm\:pr-0 {
+    padding-right: 0px;
+  }
+
   .sm\:pr-\[14px\] {
     padding-right: 14px;
   }
@@ -3931,10 +3975,6 @@ form .option-box.active {
 
   .sm\:pt-0 {
     padding-top: 0px;
-  }
-
-  .sm\:pr-0 {
-    padding-right: 0px;
   }
 
   .sm\:text-center {
@@ -4137,8 +4177,20 @@ form .option-box.active {
 }
 
 @media (min-width: 992px) {
-  .\39 92\:flex-row {
-    flex-direction: row;
+  .desktop\:max-w-\[480px\] {
+    max-width: 480px;
+  }
+
+  .desktop\:max-w-\[488px\] {
+    max-width: 488px;
+  }
+
+  .desktop\:max-w-\[592px\] {
+    max-width: 592px;
+  }
+
+  .desktop\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 }
 
@@ -4155,8 +4207,20 @@ form .option-box.active {
     max-width: 280px;
   }
 
+  .lg\:max-w-\[488px\] {
+    max-width: 488px;
+  }
+
+  .lg\:max-w-\[592px\] {
+    max-width: 592px;
+  }
+
   .lg\:flex-none {
     flex: none;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .lg\:justify-normal {

@@ -51,7 +51,7 @@ module.exports = {
 				"32": "32px"
 			},
 			screens: {
-				"992": "992px",
+				"desktop": "992px",
 				"xs": "480px",
 				"tablet": "840px",
 				"tablet-sm": "740px"
