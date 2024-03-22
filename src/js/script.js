@@ -4,15 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const catalog = document.querySelector(".catalog");
 
     if (catalog) {
-      const menuBtn = document.querySelector(".menu-btn");
+      const menuBtn = document.querySelectorAll(".menu-btn");
       const closeBtn = document.querySelector(".close-btn");
       function catalogFunc() {
-        menuBtn.classList.toggle("active");
+        menuBtn.forEach((el) => el.classList.toggle("active"));
         catalog.classList.toggle("active");
-        // document.body.classList.toggle('overflow-hidden');
       }
       closeBtn.addEventListener("click", catalogFunc);
-      menuBtn.addEventListener("click", catalogFunc);
+      menuBtn.forEach((btn) => btn.addEventListener("click", catalogFunc));
       catalog.addEventListener("click", (e) => {
         if (e.target.classList.contains("catalog")) {
           catalogFunc();
