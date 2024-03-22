@@ -385,13 +385,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const thanksModalContent = document.querySelector(".thanks-modal__content");
     const modalContent = document.querySelector(".modal-content");
     const modalForm = document.querySelector(".modal-form");
-
+    const modalFormBtn = document.querySelector(".modal-form-btn");
     function toggleModal() {
       modal.classList.toggle("scale-0");
     }
 
     if (modal) {
-      modalForm.addEventListener("submit", (e) => {
+      modalFormBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
         const formFields = ["name", "mail", "product-select"];
@@ -495,6 +495,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } catch (error) {
     throw error;
+  }
+
+  // validate form
+  try {
+    const validateInput = document.querySelector(".check-validate-input");
+    const checkValidateBtn = document.querySelector(".check-validate-btn");
+    const nextModal = document.querySelector(".next-modal");
+    const oldModal = document.querySelector(".old-modal");
+    const modall = document.querySelectorAll(".modall");
+    const validateCode = document.querySelectorAll(".validate-code");
+    const openFormModal = document.querySelectorAll(".open-form-modal-btn");
+    const modalTwo = document.querySelector(".modal-two");
+    const openErrorModal = document.querySelector(".open-error-modal");
+    const errorModal = document.querySelector(".error-modal");
+
+    function toggleModal() {
+      modalTwo.classList.toggle("scale-0");
+      oldModal.classList.add("active");
+      nextModal.classList.remove("active");
+      errorModal.classList.remove("active");
+    }
+
+    openFormModal.forEach((btn) => btn.addEventListener("click", toggleModal));
+    modalTwo.addEventListener("click", (e) => {
+      if (e && e.target.classList.contains("modal-two")) {
+        toggleModal();
+      }
+    });
+
+    validateInput.addEventListener("input", () => {
+      if (validateInput.value) {
+        checkValidateBtn.classList.remove("disabled");
+        checkValidateBtn.addEventListener("click", () => {
+          oldModal.classList.remove("active");
+          nextModal.classList.add("active");
+          errorModal.classList.remove("active");
+        });
+      }
+    });
+
+    validateCode.forEach((el) => {
+      el.addEventListener("input", () => {
+        if (el.value) {
+          el.classList.add("active");
+        }
+      });
+    });
+    modall.forEach((modal) => {
+      const modalClose = modal.querySelector("[data-close-modal-btn]");
+      modalClose.addEventListener("click", toggleModal);
+      const prevModalBtn = modal.querySelector(".prev-modal-btn");
+      if (prevModalBtn) {
+        prevModalBtn.addEventListener("click", () => {
+          oldModal.classList.add("active");
+          nextModal.classList.remove("active");
+          errorModal.classList.remove("active");
+        });
+      }
+    });
+    openErrorModal.addEventListener("click", () => {
+      errorModal.classList.add("active");
+      nextModal.classList.remove("active");
+    });
+  } catch (error) {
     throw error;
   }
 

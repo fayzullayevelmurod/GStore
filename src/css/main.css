@@ -433,6 +433,24 @@ textarea {
 	display: none;
 }
 
+.validate-code.active {
+	border-color: #0F172A !important;
+	@apply outline-none
+}
+.old-modal {
+	@apply hidden
+}
+.old-modal.active {
+	@apply block
+}
+.error-modal.active {
+	@apply block
+}
+
+.next-modal.active {
+	@apply block
+}
+
 @keyframes fa-spin {
 	0% {
 		-webkit-transform: rotate(0deg);
@@ -469,9 +487,27 @@ textarea {
 	}
 }
 
+.error-modal {
+	@apply hidden
+}
+
+.next-modal {
+	@apply hidden
+}
+
 @media screen and (max-width: 640px) {
 	.media-card {
 		width: calc(100%);
+	}
+
+	.next-modal.active {
+		@apply flex
+	}
+	.old-modal.active {
+		@apply flex
+	}
+	.error-modal.active {
+		@apply flex
 	}
 
 	[data-send-btn] {

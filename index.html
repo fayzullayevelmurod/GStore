@@ -209,14 +209,16 @@
 							</svg>
 
 							<div class="absolute top-full pt-4 z-10 right-0 cursor-auto group-hover:block hidden">
-								<!-- <div class="min-w-[258px] p-6 w-full bg-white rounded-3xl shadow-2xl">
-									<h5 class=" text-base leading-[17.6px] font-medium cursor-pointer">Вход или регистрация
+								<div class="min-w-[258px] p-6 w-full bg-white rounded-3xl shadow-2xl">
+									<h5 class="open-form-modal-btn text-base text-slate-900 leading-[17.6px] font-medium cursor-pointer">
+										Вход
+										или регистрация
 									</h5>
 									<p class="text-sm leading-[18.2px] text-slate-500 mt-3">
 										Вы сможете отслеживать заказ, оставлять отзывы и пополнять баланс
 									</p>
-								</div> -->
-								<div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl py-6">
+								</div>
+								<!-- <div class="min-w-[258px] overflow-hidden w-full bg-white rounded-3xl shadow-2xl py-6">
 									<h5 class="px-6 pb-[6px] text-slate-900 text-base leading-[17.6px] font-medium">
 										Профиль</h5>
 									<button
@@ -243,7 +245,7 @@
 										<img class="hidden group-focus:block" src="src/images/icons/radio-check.svg" alt="radio-check"
 											width="16" height="16">
 									</button>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div
@@ -2375,7 +2377,7 @@
 
 		<!-- media menu -->
 		<div
-			class="fixed bottom-[-1px] left-0 z-[200] bg-white dark-bg w-full h-[48px] sm:hidden flex items-center justify-between">
+			class="fixed bottom-[-1px] left-0 z-40 bg-white dark-bg w-full h-[48px] sm:hidden flex items-center justify-between">
 			<button class="w-[75px] text-center py-[6px] space-y-[6px]">
 				<svg class="mx-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
@@ -2411,7 +2413,7 @@
 				</svg>
 				<p class="font-medium text-slate-500 leading-[11px] text-[10px]">Избранное</p>
 			</button>
-			<button class="w-[75px] text-center py-[6px] space-y-[6px]">
+			<button class="w-[75px] text-center py-[6px] space-y-[6px] open-form-modal-btn">
 				<svg class="mx-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 						d="M10.0016 2.41675C8.11465 2.41675 6.58496 3.94644 6.58496 5.83342C6.58496 7.72039 8.11465 9.25008 10.0016 9.25008C11.8886 9.25008 13.4183 7.72039 13.4183 5.83342C13.4183 3.94644 11.8886 2.41675 10.0016 2.41675ZM5.08496 5.83342C5.08496 3.11801 7.28623 0.916748 10.0016 0.916748C12.717 0.916748 14.9183 3.11801 14.9183 5.83342C14.9183 8.54882 12.717 10.7501 10.0016 10.7501C7.28623 10.7501 5.08496 8.54882 5.08496 5.83342Z"
@@ -2428,6 +2430,140 @@
 			</button>
 		</div>
 
+	</div>
+
+	<!-- register modal -->
+	<div
+		class="modal-two z-50 origin-center duration-300 flex items-center justify-center fixed top-0 left-0 w-full h-full bg-slate-900/75 scale-0">
+		<div class="modal-dialog sm:w-fit w-full sm:h-fit h-full">
+			<div
+				class="modal-content modall sm:h-fit h-full old-modal relative overflow-y-auto sm:w-[258px] w-full bg-white sm:p-6 p-4 sm:rounded-3xl rounded-none overflow-hidden justify-center flex-col">
+				<div class="">
+					<h3 class="sm:text-base sm:leading-[26.4px] font-medium leading-[22px] text-xl">Вход или регистрация</h3>
+					<p class="text-slate-500 py-3 text-sm">
+						Вы сможете отслеживать заказ, оставлять отзывы и пополнять баланс
+					</p>
+					<button class="absolute top-[20px] right-[20px]" data-close-modal-btn="">
+						<svg class="white-icon sm:w-4 sm:h-4 w-[20px] h-[20px]" width="16" height="16" viewBox="0 0 20 20"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M4.57637 4.57564C4.81069 4.34132 5.19058 4.34132 5.4249 4.57564L10.0006 9.15139L14.5764 4.57564C14.8107 4.34132 15.1906 4.34132 15.4249 4.57564C15.6592 4.80995 15.6592 5.18985 15.4249 5.42417L10.8492 9.99992L15.4249 14.5756C15.6592 14.8099 15.6592 15.1898 15.4249 15.4241C15.1906 15.6585 14.8107 15.6585 14.5763 15.4241L10.0006 10.8484L5.4249 15.4242C5.19058 15.6585 4.81069 15.6585 4.57637 15.4242C4.34206 15.1899 4.34206 14.81 4.57637 14.5757L9.15212 9.99992L4.57637 5.42417C4.34206 5.18985 4.34206 4.80995 4.57637 4.57564Z"
+								fill="#0F172A"></path>
+						</svg>
+					</button>
+				</div>
+				<form class="modal-form">
+					<input
+						class="w-full dark-form border border-transparent bg-slate-100  py-[14px] px-4 rounded-xl text-sm leading-3.5 check-validate-input"
+						type="number" name="name" placeholder="номер телефона">
+					<button type="button" class="black-btn disabled justify-between w-full mt-4 check-validate-btn">
+						<span>Продолжить</span>
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+								fill="#64748B" />
+						</svg>
+					</button>
+				</form>
+			</div>
+
+			<div
+				class="modal-content modall sm:h-fit h-full next-modal hidden relative overflow-y-auto sm:w-[258px] w-full bg-white sm:p-6 p-4 sm:rounded-3xl rounded-none overflow-hidden justify-center flex-col">
+				<div class="">
+					<h3 class="sm:text-base sm:leading-[26.4px] font-medium leading-[22px] text-xl">Введите код</h3>
+					<p class="text-slate-500 py-3 text-sm">
+						Мы отправили код на номер <br class="sm:block hidden">
+						+7 *** ***-98–32
+					</p>
+					<button class="underline text-sm leading-[18.2px] prev-modal-btn mb-3">Изменить номер</button>
+					<button type="button" class="absolute top-[20px] right-[20px]" data-close-modal-btn="">
+						<svg class="white-icon sm:w-4 sm:h-4 w-[20px] h-[20px]" width="16" height="16" viewBox="0 0 20 20"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M4.57637 4.57564C4.81069 4.34132 5.19058 4.34132 5.4249 4.57564L10.0006 9.15139L14.5764 4.57564C14.8107 4.34132 15.1906 4.34132 15.4249 4.57564C15.6592 4.80995 15.6592 5.18985 15.4249 5.42417L10.8492 9.99992L15.4249 14.5756C15.6592 14.8099 15.6592 15.1898 15.4249 15.4241C15.1906 15.6585 14.8107 15.6585 14.5763 15.4241L10.0006 10.8484L5.4249 15.4242C5.19058 15.6585 4.81069 15.6585 4.57637 15.4242C4.34206 15.1899 4.34206 14.81 4.57637 14.5757L9.15212 9.99992L4.57637 5.42417C4.34206 5.18985 4.34206 4.80995 4.57637 4.57564Z"
+								fill="#0F172A"></path>
+						</svg>
+					</button>
+				</div>
+				<form class="modal-form">
+					<div class="flex sm:gap-[11px] gap-4">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+					</div>
+					<button type="button" class="black-btn justify-between w-full mt-4 open-error-modal">
+						<span>Продолжить</span>
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+								fill="#64748B" />
+						</svg>
+					</button>
+					<p class="text-slate-500 pt-3 text-sm">
+						Отправить код повторно: 02:52
+					</p>
+				</form>
+			</div>
+
+			<div
+				class="modal-content modall sm:h-fit h-full error-modal hidden relative overflow-y-auto sm:w-[258px] w-full bg-white sm:p-6 p-4 sm:rounded-3xl rounded-none overflow-hidden justify-center flex-col">
+				<div class="">
+					<h3 class="sm:text-base sm:leading-[26.4px] font-medium leading-[22px] text-xl">Введите код</h3>
+					<p class="text-slate-500 py-3 text-sm">
+						Мы отправили код на номер <br class="sm:block hidden">
+						+7 *** ***-98–32
+					</p>
+					<button class="underline text-sm leading-[18.2px] prev-modal-btn mb-3">Изменить номер</button>
+					<button type="button" class="absolute top-[20px] right-[20px]" data-close-modal-btn="">
+						<svg class="white-icon sm:w-4 sm:h-4 w-[20px] h-[20px]" width="16" height="16" viewBox="0 0 20 20"
+							fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M4.57637 4.57564C4.81069 4.34132 5.19058 4.34132 5.4249 4.57564L10.0006 9.15139L14.5764 4.57564C14.8107 4.34132 15.1906 4.34132 15.4249 4.57564C15.6592 4.80995 15.6592 5.18985 15.4249 5.42417L10.8492 9.99992L15.4249 14.5756C15.6592 14.8099 15.6592 15.1898 15.4249 15.4241C15.1906 15.6585 14.8107 15.6585 14.5763 15.4241L10.0006 10.8484L5.4249 15.4242C5.19058 15.6585 4.81069 15.6585 4.57637 15.4242C4.34206 15.1899 4.34206 14.81 4.57637 14.5757L9.15212 9.99992L4.57637 5.42417C4.34206 5.18985 4.34206 4.80995 4.57637 4.57564Z"
+								fill="#0F172A"></path>
+						</svg>
+					</button>
+				</div>
+				<form class="modal-form">
+					<div class="flex sm:gap-[11px] gap-4">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal warning rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal warning rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal warning rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+						<input
+							class="w-full text-center dark-form validate-code border border-transparent bg-slate-100  py-[14px] font-medium placeholder:font-normal warning rounded-xl h-[48px] text-2xl leading-3.5 check-validate-input"
+							type="number" placeholder="*" min="1" max="1">
+					</div>
+					<div class="bg-red-50 text-red-600 rounded-full py-1 px-2 text-xs leading-[14px] w-fit mt-[6px]">Код введён
+						неверно
+					</div>
+					<button type="button" class="black-btn justify-between w-full mt-4 check-validate-btn">
+						<span>Продолжить</span>
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M5.57613 2.90913C5.81044 2.67482 6.19034 2.67482 6.42465 2.90913L11.0913 7.5758C11.3256 7.81012 11.3256 8.19001 11.0913 8.42433L6.42465 13.091C6.19034 13.3253 5.81044 13.3253 5.57613 13.091C5.34181 12.8567 5.34181 12.4768 5.57613 12.2425L9.81853 8.00006L5.57613 3.75766C5.34181 3.52335 5.34181 3.14345 5.57613 2.90913Z"
+								fill="#64748B" />
+						</svg>
+					</button>
+					<p class="pt-3 text-center text-sm">
+						Отправить код повторно
+					</p>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<!-- swiper js file -->
