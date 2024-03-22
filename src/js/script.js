@@ -163,6 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // media slider
+
   // reviews-swiper-two
   var swiper = new Swiper(".reviews-swiper-two", {
     spaceBetween: 16,
