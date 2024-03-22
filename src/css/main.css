@@ -503,9 +503,29 @@ textarea {
 	height: 44px;
 }
 
+header .catalog {
+	transform-origin: bottom;
+}
+
+header .catalog.active {
+	top: 165px !important;
+}
+
 @media screen and (max-width: 640px) {
 	.media-card {
 		width: calc(100%);
+	}
+
+	header .catalog {
+		transform-origin: left;
+	}
+
+	header .catalog.active {
+		top: 0 !important;
+	}
+
+	header .catalog>div {
+		height: 100vh;
 	}
 
 	.header-top .info-text {

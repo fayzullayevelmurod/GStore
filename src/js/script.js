@@ -627,11 +627,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModal = document.querySelector("[menu-modal-close]");
     console.log(closeModal);
     closeModal.addEventListener("click", () => {
-      menuModal.classList.add("scale-y-0");
+      menuModal.classList.add("scale-0");
     });
     console.log(openMenuBtn);
     openMenuBtn.addEventListener("click", () => {
-      menuModal.classList.toggle("scale-y-0");
+      menuModal.classList.toggle("scale-0");
     });
   } catch (error) {}
 
