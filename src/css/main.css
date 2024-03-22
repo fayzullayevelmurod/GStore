@@ -373,7 +373,11 @@ textarea {
 
 /* products */
 .products-cards {
-	@apply flex justify-between gap-4 gap-y-20 flex-wrap;
+	@apply flex justify-between gap-20 gap-y-20 flex-wrap;
+}
+
+.products-cards .product-card {
+	width: calc(100% / 4 - 240px / 4);
 }
 
 @media screen and (min-width: 992px) {
@@ -386,9 +390,7 @@ textarea {
 	width: calc(100% / 3 - 64px / 3);
 }
 
-.products-cards .product-card {
-	width: calc(100% / 4 - 48px / 4);
-}
+
 
 .gradient-text {
 	-webkit-background-clip: text;
@@ -415,6 +417,13 @@ textarea {
 	animation: fa-spin 1s linear infinite;
 }
 
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+	display: none;
+}
+
 @keyframes fa-spin {
 	0% {
 		-webkit-transform: rotate(0deg);
@@ -430,6 +439,10 @@ textarea {
 @media screen and (max-width: 992px) {
 	.products-cards .product-card {
 		width: calc(100% / 3 - 32px / 3);
+	}
+
+	.products-cards {
+		@apply gap-[15px];
 	}
 
 	.media-cards {
@@ -450,6 +463,10 @@ textarea {
 @media screen and (max-width: 640px) {
 	.media-card {
 		width: calc(100%);
+	}
+
+	[data-send-btn] {
+		height: 40px !important;
 	}
 
 	.breadcrumb.before::before {
@@ -570,6 +587,14 @@ input[type="checkbox"]:checked+label span {
 .accordion-header.active svg,
 .select-price.active svg {
 	@apply -rotate-90;
+}
+
+.accordion-header.active .active-icon {
+	@apply bg-slate-900
+}
+
+.accordion-header.active .active-icon svg path {
+	@apply fill-white;
 }
 
 /* accordion */

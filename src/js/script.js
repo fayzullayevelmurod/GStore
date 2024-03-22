@@ -106,6 +106,63 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+  // gallery-swiper
+  var swiper = new Swiper(".gallery-swiper", {
+    spaceBetween: 32,
+    slidesPerView: 6,
+    navigation: {
+      nextEl: ".swiper-button__next1",
+      prevEl: ".swiper-button__prev1",
+    },
+    loop: true,
+    grabCursor: true,
+    speed: 1000,
+    breakpoints: {
+      1250: {
+        spaceBetween: 15,
+        slidesPerView: 6,
+      },
+      815: {
+        spaceBetween: 15,
+        slidesPerView: 4,
+      },
+      0: {
+        spaceBetween: 15,
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  // vertical swiper
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    centeredSlidesBounds: true,
+    slidesPerView: 4,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: "vertical",
+    spaceBetween: 13,
+    loop: true,
+    navigation: {
+      nextEl: ".next-2",
+      prevEl: ".prev-2",
+    },
+  });
+
+  var galleryMain = new Swiper(".gallery-main", {
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    preventInteractionOnTransition: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+
   // reviews-swiper-two
   var swiper = new Swiper(".reviews-swiper-two", {
     spaceBetween: 16,
@@ -431,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } catch (error) {
     throw error;
-    throw error
+    throw error;
   }
 
   // range slider
