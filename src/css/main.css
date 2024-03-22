@@ -437,12 +437,15 @@ textarea {
 	border-color: #0F172A !important;
 	@apply outline-none
 }
+
 .old-modal {
 	@apply hidden
 }
+
 .old-modal.active {
 	@apply block
 }
+
 .error-modal.active {
 	@apply block
 }
@@ -495,17 +498,29 @@ textarea {
 	@apply hidden
 }
 
+.btn.sm-text {
+	font-size: 14px;
+	height: 44px;
+}
+
 @media screen and (max-width: 640px) {
 	.media-card {
 		width: calc(100%);
 	}
 
+	.header-top .info-text {
+		font-size: 12px !important;
+		line-height: 13px !important;
+	}
+
 	.next-modal.active {
 		@apply flex
 	}
+
 	.old-modal.active {
 		@apply flex
 	}
+
 	.error-modal.active {
 		@apply flex
 	}

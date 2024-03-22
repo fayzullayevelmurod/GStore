@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     speed: 1000,
     breakpoints: {
       1250: {
-        spaceBetween: 15,
+        spaceBetween: 32,
         slidesPerView: 6,
       },
       815: {
@@ -231,6 +231,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setClock(".timer", deadline);
+  } catch (error) {
+    throw error;
+  }
+
+  try {
+    const deadline = "2024-04-25";
+
+    function getTimeRemaining(endtime) {
+      const total = Date.parse(endtime) - Date.parse(new Date());
+      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((total / 1000 / 60) % 60);
+      const seconds = Math.floor((total / 1000) % 60);
+
+      return {
+        total,
+        hours,
+        minutes,
+        seconds,
+      };
+    }
+
+    function setClock(selector, endtime) {
+      const timer = document.querySelectorAll(selector);
+      timer.forEach((el) => {
+        const hours = el.querySelector("#hours");
+        const minutes = el.querySelector("#minutes");
+        const seconds = el.querySelector("#seconds");
+
+        const timeInterval = setInterval(updateClock, 1000);
+
+        updateClock();
+
+        function updateClock() {
+          const t = getTimeRemaining(endtime);
+
+          hours.textContent = getZero(t.hours);
+          minutes.textContent = getZero(t.minutes);
+          seconds.textContent = getZero(t.seconds);
+
+          if (t.total <= 0) {
+            clearInterval(timeInterval);
+          }
+        }
+
+        function getZero(num) {
+          return (num < 10 ? "0" : "") + num;
+        }
+      });
+    }
+
+    setClock("#timer-two", deadline);
   } catch (error) {
     throw error;
   }
@@ -510,30 +561,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const openErrorModal = document.querySelector(".open-error-modal");
     const errorModal = document.querySelector(".error-modal");
 
-    function toggleModal() {
-      modalTwo.classList.toggle("scale-0");
-      oldModal.classList.add("active");
-      nextModal.classList.remove("active");
-      errorModal.classList.remove("active");
+    if (modalTwo) {
+      function toggleModal() {
+        modalTwo.classList.toggle("scale-0");
+        oldModal.classList.add("active");
+        nextModal.classList.remove("active");
+        errorModal.classList.remove("active");
+      }
+
+      openFormModal.forEach((btn) =>
+        btn.addEventListener("click", toggleModal)
+      );
+      modalTwo.addEventListener("click", (e) => {
+        if (e && e.target.classList.contains("modal-two")) {
+          toggleModal();
+        }
+      });
     }
 
-    openFormModal.forEach((btn) => btn.addEventListener("click", toggleModal));
-    modalTwo.addEventListener("click", (e) => {
-      if (e && e.target.classList.contains("modal-two")) {
-        toggleModal();
-      }
-    });
-
-    validateInput.addEventListener("input", () => {
-      if (validateInput.value) {
-        checkValidateBtn.classList.remove("disabled");
-        checkValidateBtn.addEventListener("click", () => {
-          oldModal.classList.remove("active");
-          nextModal.classList.add("active");
-          errorModal.classList.remove("active");
-        });
-      }
-    });
+    if (validateInput) {
+      validateInput.addEventListener("input", () => {
+        if (validateInput.value) {
+          checkValidateBtn.classList.remove("disabled");
+          checkValidateBtn.addEventListener("click", () => {
+            oldModal.classList.remove("active");
+            nextModal.classList.add("active");
+            errorModal.classList.remove("active");
+          });
+        }
+      });
+    }
 
     validateCode.forEach((el) => {
       el.addEventListener("input", () => {
@@ -554,13 +611,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-    openErrorModal.addEventListener("click", () => {
-      errorModal.classList.add("active");
-      nextModal.classList.remove("active");
-    });
+    if (openErrorModal) {
+      openErrorModal.addEventListener("click", () => {
+        errorModal.classList.add("active");
+        nextModal.classList.remove("active");
+      });
+    }
   } catch (error) {
     throw error;
   }
+
+  try {
+    const openMenuBtn = document.querySelector("[open-menu-btn]");
+    const menuModal = document.querySelector(".profile-modal");
+    const closeModal = document.querySelector("[menu-modal-close]");
+    console.log(closeModal);
+    closeModal.addEventListener("click", () => {
+      menuModal.classList.add("scale-y-0");
+    });
+    console.log(openMenuBtn);
+    openMenuBtn.addEventListener("click", () => {
+      menuModal.classList.toggle("scale-y-0");
+    });
+  } catch (error) {}
 
   // range slider
   try {
