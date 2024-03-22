@@ -165,6 +165,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // media slider
 
+  var mediaSwiper = new Swiper(".media-swiper", {
+    spaceBetween: 12,
+    slidesPerView: 1.5,
+    grabCursor: false,
+  });
+
   // reviews-swiper-two
   var swiper = new Swiper(".reviews-swiper-two", {
     spaceBetween: 16,

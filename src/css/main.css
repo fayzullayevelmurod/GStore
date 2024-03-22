@@ -380,9 +380,18 @@ textarea {
 	width: calc(100% / 4 - 240px / 4);
 }
 
-@media screen and (min-width: 992px) {
+.filter-page .products-cards .product-card {
+	width: calc(100% / 3 - 240px / 3);
+}
+
+@media screen and (max-width: 1200px) {
 	.filter-page .products-cards {
-		gap: 1.5rem;
+		gap: 2rem;
+	}
+
+	.filter-page .products-cards .product-card {
+		width: calc(50% - 64px);
+
 	}
 }
 
@@ -438,11 +447,11 @@ textarea {
 
 @media screen and (max-width: 992px) {
 	.products-cards .product-card {
-		width: calc(100% / 3 - 32px / 3);
+		width: calc(100% / 3 - 32px / 3) !important;
 	}
 
 	.products-cards {
-		@apply gap-[15px];
+		gap: 15px !important;
 	}
 
 	.media-cards {
@@ -456,7 +465,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
 	.products-cards .product-card {
-		width: calc(50% - 8px);
+		width: calc(50% - 8px) !important;
 	}
 }
 
